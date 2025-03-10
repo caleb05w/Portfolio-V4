@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../portfolio/components/button'
+import Button from '../components/button'
 
 function navbar() {
   return (
