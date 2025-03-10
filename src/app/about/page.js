@@ -1,10 +1,7 @@
 import React from 'react'
 import Demo from '../../../components/demo'
 import CaseContainer from '../../../components/caseContainer'
-import Case1 from '../../../public/images/case1.png'
-import Case2 from '../../../public/images/case2.png'
 import Navbar from '../../../components/navbar'
-import Video from '../../../components/video'
 
 function page() {
   return (
