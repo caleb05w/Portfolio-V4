@@ -1,11 +1,15 @@
 module.exports = {
     content: [
-      './src/**/*.{html,js,jsx,ts,tsx}', // Adjust paths as per your project structure
+      "./app/**/*.{js,ts,jsx,tsx}", // For Next.js App Router
+      "./pages/**/*.{js,ts,jsx,tsx}", // For Next.js Pages Router
+      "./components/**/*.{js,ts,jsx,tsx}", // For components
+      "./src/**/*.{js,ts,jsx,tsx}", // If using `src/` folder
     ],
     theme: {
       extend: {
         screens: {
-          'lg': '768px',
+          // Optional: If you really want 'lg' to be 768px, rename it to avoid conflicts
+          'custom-lg': '768px', 
         },
       },
     },

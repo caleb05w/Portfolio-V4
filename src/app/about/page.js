@@ -16,7 +16,7 @@ function page() {
         <section className=''><Demo /></section>
         <div className='flex flex-col lg:flex-row gap-[10px] w-full'>
         <CaseContainer 
-        Title="Innota Technologiess"
+        Title="Innota Technologies"
         Body1="Web Redesign"
         Body2="User Research"
         Case={'https://www.youtube.com/embed/g2C0SvvXtH0?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=g2C0SvvXtH0'}
