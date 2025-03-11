@@ -21,7 +21,7 @@ function Page() {
     height: "fit-content",
     transform: "scale(1)",
     opacity: "1",
-    transition: "all 1000ms cubic-bezier(0.62, 0.61, 0.02, 1)",
+    transition: "all 1100ms cubic-bezier(0.62, 0.61, 0.12, 1)",
     zIndex: "10",
   };
   const close = {
