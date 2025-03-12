@@ -10,16 +10,21 @@ module.exports = {
         "my-orange": "#FF7F32", // Custom orange color
         "my-gray": "#999999",
       },
+      screens: {
+        xl: "1200px",
+      },
       spacing: {
         // side padding
-        "gutter-lg": "220px", // Custom gap size
+        "gutter-xl": "12vw", // Custom gap size
+        "gutter-lg": "160px",
         "gutter-md": "120px", // Custom gap size
         "gutter-sm": "30px", // Custom gap size
 
         // side padding
-        "gap-lg": "160px", // Custom gap size
-        "gap-md": "120px", // Custom gap size
-        "gap-sm": "30px", // Custom gap size
+        "gap-xl": "160px", // Custom gap size
+        "gap-lg": "120px",
+        "gap-md": "80px", // Custom gap size
+        "gap-sm": "60px", // Custom gap size
 
         "img-gap-lg": "20px",
       },

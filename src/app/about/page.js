@@ -42,6 +42,7 @@ function Page() {
           onClick={() => {
             setCaseHeight(close);
             setCaseOpen(false);
+            scrollToTop();
           }}
         >
           Close Case
