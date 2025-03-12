@@ -8,6 +8,20 @@ module.exports = {
     extend: {
       colors: {
         "my-orange": "#FF7F32", // Custom orange color
+        "my-gray": "#999999",
+      },
+      spacing: {
+        // side padding
+        "gutter-lg": "220px", // Custom gap size
+        "gutter-md": "120px", // Custom gap size
+        "gutter-sm": "30px", // Custom gap size
+
+        // side padding
+        "gap-lg": "160px", // Custom gap size
+        "gap-md": "120px", // Custom gap size
+        "gap-sm": "30px", // Custom gap size
+
+        "img-gap-lg": "20px",
       },
       transitionTimingFunction: {
         // "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",

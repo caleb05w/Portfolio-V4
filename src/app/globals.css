@@ -41,6 +41,15 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  font-weight: 400;
+  color: white;
+}
+
 h5 {
   font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -58,6 +67,15 @@ h4 {
   font-weight: 400;
 }
 
+p {
+  font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 2%;
+  font-weight: 500;
+  color: white;
+}
+
 h6 {
   font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -65,6 +83,24 @@ h6 {
   letter-spacing: 1px;
   font-weight: 350;
   color: white;
+}
+
+/* //section container */
+.containerBody {
+  width: fit-contents;
+}
+
+.container-2-img {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nextImg {
+  max-height: 56.25rem;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Add responsive styles for smaller screens */
