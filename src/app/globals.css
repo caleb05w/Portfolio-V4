@@ -27,15 +27,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
+html,
+body {
   background-color: black;
+  scroll-behavior: smooth;
 }
 
 h1 {
   font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
   /* font-size: 5.2vw; */
   font-size: 4.8vw;
-  letter-spacing: -1%;
+  letter-spacing: -1px;
   line-height: 130%;
   font-weight: 400;
   color: white;
@@ -43,10 +45,10 @@ h1 {
 
 h2 {
   font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
-  font-size: 2.7vw;
+  font-size: 2.2vw;
   line-height: 140%;
-  letter-spacing: 1%;
-  font-weight: 400;
+  letter-spacing: 0.7px;
+  font-weight: 450;
   color: white;
 }
 
@@ -57,6 +59,7 @@ h5 {
   letter-spacing: 0%;
   font-weight: 500;
   color: white;
+  letter-spacing: 0.7px;
 }
 
 h4 {
@@ -69,17 +72,17 @@ h4 {
 
 p {
   font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 150%;
   letter-spacing: 2%;
   font-weight: 400;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 h6 {
   font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: 1px;
   font-weight: 350;
