@@ -12,7 +12,7 @@ function page({ stylePlaceholder }) {
       <div className="flex flex-col gap-my-lg justify-center w-full lg:gap-gap-lg md:gap-gap-md gap-gap-sm lg:mt-[180px] mt-[60px]">
         <section className="gap-lg">
           <div className="xl:mx-gutter-xl lg:mx-gutter-lg mx-gutter-sm flex flex-col gap-[40px]">
-            <h1 className="text-white"> Hey! I'm Caleb.</h1>
+            <h1 className="text-white"> Hey! I&apos;m Caleb.</h1>
             <p>
               I’m a product designer focused on the intersection between design
               and business. With 3x hackathon wins under my belt, I’m proficient
