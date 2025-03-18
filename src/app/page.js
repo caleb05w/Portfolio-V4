@@ -1,12 +1,18 @@
 "use client";
 
+// TO DO
+
+// * Fix the prootype video and the live demo on Innota
+// * route about page properly
+// * Fix the nav bar
+
 import React, { useState } from "react";
 import Demo from "../../components/demo";
 import CaseContainer from "../../components/caseContainer";
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import TestCase from "../../components/testCase";
 import Navigator from "../../components/navigator";
+import NavButton from "../../components/navButton";
 
 function Page() {
   //scrolls to top of page for case studies
@@ -40,8 +46,9 @@ function Page() {
     <div className="relative">
       {/* Nav bars for test cases */}
       <div className=" ">
+        {/* Case Studies */}
         <section
-          className={`flex flex-row-reverse justify-between xl:px-gutter-xl lg:px-gutter-lg px-gutter-sm h-[2rem] fixed w-full  z-[12] 
+          className={`flex flex-row-reverse justify-between xl:px-[1vw] lg:px-[2vw] px-gutter-sm h-[2rem] fixed w-full  z-[12] 
         ${caseOpen === false ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[700ms] duration-[1100ms] ease-fastEase"}`}
         >
           <Navigator openNav={caseOpen} />
@@ -62,6 +69,30 @@ function Page() {
             >
               <h6 className="text-[12px]">Close Case</h6>
             </button>
+          </div>
+        </section>
+        {/* Home Page */}
+        <section
+          className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-gutter-sm h-[2rem] fixed w-full  z-[12] 
+        ${caseOpen === true ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[300ms] duration-[1100ms] ease-fastEase"}`}
+        >
+          <NavButton
+            openNav={caseOpen}
+            openPrompt="about"
+            closePrompt="about"
+          />
+          <div className="flex flex-row gap-[1rem] ">
+            <NavButton
+              openNav={caseOpen}
+              openPrompt="About"
+              closePrompt="Close Prompt"
+              link="/about"
+            />
+            <NavButton
+              openNav={caseOpen}
+              openPrompt="Gallery"
+              closePrompt="Close Prompt"
+            />
           </div>
         </section>
       </div>
@@ -137,7 +168,7 @@ function Page() {
               Body1="Web Redesign"
               Body2="User Research"
               Case={
-                "https://www.youtube.com/embed/IaIF-HaLqXM?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=IaIF-HaLqXM"
+                "https://www.youtube.com/embed/Dl3muNlmm7o?si=-OR7BNPI1ZJlQn0b&autoplay=1&loop=1&playlist=Dl3muNlmm7o&cc_load_policy=1&modestbranding=1&rel=0&mute=1"
               }
             />
           </div>

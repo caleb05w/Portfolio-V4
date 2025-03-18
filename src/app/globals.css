@@ -53,31 +53,36 @@ h2 {
 }
 
 h5 {
-  font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
+  font-family:
+    "Adventure", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial",
+    "sans-serif";
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 0%;
   font-weight: 500;
   color: white;
-  letter-spacing: 0.7px;
+  letter-spacing: -0.2px;
 }
 
 h4 {
-  font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
+  font-family:
+    "Adventure", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial",
+    "sans-serif";
   font-size: 24px;
   line-height: 150%;
-  letter-spacing: 2%;
   font-weight: 400;
 }
 
 p {
-  font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
+  font-family:
+    "Adventure", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial",
+    "sans-serif";
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 2%;
   font-weight: 400;
   color: white;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.3px;
 }
 
 h6 {

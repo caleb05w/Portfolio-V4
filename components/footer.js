@@ -28,7 +28,7 @@ function Footer({ place }) {
     ${place === "home" ? "mx-[7rem]" : "xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm"}`}
     >
       <div className="flex flex-row justify-between text-white">
-        <h3>Designed on Figma, Coded on Cursor</h3>
+        <h3>Designed on Figma, Built on NextJS</h3>
         <div className="flex flex-row justify-end text-white w-[50%] items-end gap-[2%]">
           <button onClick={() => copyEmail()}>
             <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">

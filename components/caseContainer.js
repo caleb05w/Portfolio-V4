@@ -13,7 +13,7 @@ function CaseContainer({ Case, Title, Body1, Body2 }) {
               className='w-full h-full object-cover brightness-[75%]'
             /> */}
         <div className="w-full h-full min-h-[80vh] object-cover brightness-[75%]">
-          <Video placeholder={Case} brightness={"75%"} />
+          <Video placeholder={Case} brightness={"95%"} />
         </div>
       </div>
       <div className="absolute top-0 flex flex-row gap-[20%] w-full pt-[4%] px-[2%] whitespace-nowrap">
