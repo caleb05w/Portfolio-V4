@@ -13,6 +13,8 @@ import Footer from "../../components/footer";
 import TestCase from "../../components/testCase";
 import Navigator from "../../components/navigator";
 import NavButton from "../../components/navButton";
+import { FaCentos } from "react-icons/fa";
+import { FaCircle } from "react-icons/fa";
 
 function Page() {
   //scrolls to top of page for case studies
@@ -78,20 +80,46 @@ function Page() {
         >
           <NavButton
             openNav={caseOpen}
-            openPrompt="about"
-            closePrompt="about"
+            customScroll={true}
+            customScrollDefault="Portfolio In Progress"
+            customScrollActive="Curious? Check out the Github!"
+            customScrollTarget={"https://github.com/caleb05w/Portfolio-V4"}
+            customScrollDot={true}
+
+            // Custom dropdown for nav buttons in case you need it
+            // customDropDown={
+            //   <div className="h-fill w-full mt-[-2rem] group-hover:mt-[-2rem] absolute z-[-10]">
+            //     <a
+            //       href="https://github.com/caleb05w/Portfolio-V4"
+            //       target="_blank"
+            //     >
+            //       <div className="bg-white h-fit w-full px-[16px] py-[0px] opacity-[0%] rounded-full group-hover:opacity-[100%] mt-[1rem] group-hover:mt-[3rem] group-hover:py-[6px] duration-[400ms] ease-slowEase transition-all">
+            //         <p className="text-[12px] border-transparent border text-black hover:border hover:border-b-black w-fit">
+            //           Check out the Github here!{" "}
+            //         </p>
+            //       </div>
+            //     </a>
+            //   </div>
+            // }
           />
+          <FaCentos />
           <div className="flex flex-row gap-[1rem] ">
             <NavButton
               openNav={caseOpen}
-              openPrompt="About"
-              closePrompt="Close Prompt"
-              link="/about"
+              // link="/about"
+              customScroll={true}
+              customScrollDefault="About"
+              customScrollActive="In Progress"
+              customScrollDotSecondary={true}
             />
             <NavButton
               openNav={caseOpen}
-              openPrompt="Gallery"
-              closePrompt="Close Prompt"
+              // openPrompt="Gallery"
+              // closePrompt="Close Prompt"
+              customScroll={true}
+              customScrollDefault="Gallery"
+              customScrollActive="Also In Progress"
+              customScrollDotSecondary={true}
             />
           </div>
         </section>

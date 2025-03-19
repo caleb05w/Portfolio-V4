@@ -18,6 +18,8 @@ function page({ stylePlaceholder }) {
               and business. With 3x hackathon wins under my belt, I’m proficient
               in both front end & design -- specializing in producing quick
               streamlined interfaces under short periods of time.
+
+              Strategic, results driven, but above all, empathetic -- I excel in driving delicatley deliberate human-centric solutions.
             </p>
 
             {/* footer */}

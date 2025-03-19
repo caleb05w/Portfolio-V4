@@ -287,7 +287,7 @@ function TestCase({ stylePlaceholder, caseOpen }) {
               <div className="xl:w-[80%] lg:w-[80%] w-[100%] xl:h-auto lg:h-auto h-[50vh]">
                 <Video
                   placeholder={
-                    "https://www.youtube.com/embed/w8R3G3Anpjo?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=w8R3G3Anpjo"
+                    "https://www.youtube.com/embed/K_SK4KghuUU?si=7qleFwhHEnKWct_2&autoplay=1&mute=1&loop=1&playlist=K_SK4KghuUU&modestbranding=1&rel=0&fs=1"
                   }
                   brightness={"100%"}
                 />
@@ -362,13 +362,22 @@ function TestCase({ stylePlaceholder, caseOpen }) {
               </section>
 
               <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-                <Image
+                <div className="xl:w-[80%] lg:w-[80%] w-[100%] xl:h-auto lg:h-auto h-[50vh]">
+                  <Video
+                    placeholder={
+                      "https://www.youtube.com/embed/lhfgqkCaHc0?si=pnDNXC7tzlso1ukB&autoplay=1&mute=1&loop=1&playlist=lhfgqkCaHc0&modestbranding=1&rel=0&fs=1"
+                    }
+                    brightness={"100%"}
+                  />
+                </div>
+
+                {/* <Image
                   src="/images/proto.png"
                   alt="Prototype video"
                   width={1608} // Set the width
                   height={900} // Set the height
                   className="w-[100%] nextImg"
-                />
+                /> */}
               </section>
 
               <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm w-fit">
