@@ -9,7 +9,9 @@ function Demo() {
     1: "/videos/carousel1.mp4",
     2: "/videos/carousel2.mp4",
     3: "/videos/carousel3.MP4",
-    4: "/videos/carousel5.MP4",
+    4: "/videos/carousel4.MP4",
+    5: "/videos/carousel5.MP4",
+    6: "/videos/carousel6.MP4",
   };
 
   // Add cache busting to the video source to prevent caching
@@ -51,7 +53,7 @@ function Demo() {
 
     // Change the image after the animation delay
     setTimeout(() => {
-      setPlaceholder((prev) => (prev % 4) + 1); // Change the image
+      setPlaceholder((prev) => (prev % 6) + 1); // Change the image
       setToggle(true); // Reopen with the new image
     }, 500); // Delay of 500ms before reopening the image
   };
@@ -91,10 +93,18 @@ function Demo() {
           >
             <div className="w-fit h-fit">
               <div className="w-[110px] h-[110px] rounded-[5px] overflow-hidden bg-white">
-                {/* <Video
-                  placeholder="https://www.youtube.com/embed/w8R3G3Anpjo?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=w8R3G3Anpjo"
-                  brightness={"95%"}
-                /> */}
+                <video
+                  key={currentImage} // Force React to treat the video as a new component
+                  width="128"
+                  height="128"
+                  className="w-full h-full object-cover"
+                  muted
+                  autoPlay
+                  loop
+                >
+                  <source src={currentImage} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
