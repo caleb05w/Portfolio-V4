@@ -61,7 +61,7 @@ function Video({ placeholder, brightness }) {
       ></iframe>
 
       {/* Overlay div to prevent any unwanted UI or popup effects on hover */}
-      <div className="w-full h-full min-h-[80vh] absolute top-0 left-0 z-10 brightness-[100%] bg-white opacity-[20%]"></div>
+      <div className="w-full h-full min-h-[80vh] absolute top-0 left-0 z-10 brightness-[100%] bg-white opacity-[0%]"></div>
     </div>
   );
 }
