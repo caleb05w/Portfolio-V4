@@ -13,7 +13,6 @@ import Footer from "../../components/footer";
 import TestCase from "../../components/testCase";
 import Navigator from "../../components/navigator";
 import NavButton from "../../components/navButton";
-import { FaCentos } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa";
 
 function Page() {
@@ -75,7 +74,7 @@ function Page() {
         </section>
         {/* Home Page */}
         <section
-          className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-gutter-sm h-[2rem] fixed w-full  z-[12] 
+          className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[30px] h-[2rem] fixed w-full  z-[12] 
         ${caseOpen === true ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[300ms] duration-[1100ms] ease-fastEase"}`}
         >
           <NavButton
@@ -102,8 +101,8 @@ function Page() {
             //   </div>
             // }
           />
-          <FaCentos />
-          <div className="flex flex-row gap-[1rem] ">
+
+          <div className="xl:flex lg:flex  md:flex hidden flex-row gap-[1rem]  ">
             <NavButton
               openNav={caseOpen}
               // link="/about"
@@ -169,7 +168,7 @@ function Page() {
           <Navbar />
         </section> */}
 
-        <section className="flex flex-col lg:mx-[120px] mx-[20px] py-[120px] lg:mt-[180px] mt-[60px] gap-[120px] lg:gap-[320px] items-center w-full px-[30px] lg:px-[120px]">
+        <section className="flex flex-col lg:mx-[120px] mx-[20px] lg:py-gap-lg xl:py-gap-lg md:py-gap-md py-gap-sm lg:mt-[180px] mt-[60px] gap-[120px] lg:gap-[320px] items-center w-full px-[30px] lg:px-[120px]">
           <section className="">
             <Demo />
           </section>
@@ -189,6 +188,7 @@ function Page() {
                 Case={
                   "https://www.youtube.com/embed/w8R3G3Anpjo?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=w8R3G3Anpjo"
                 }
+                styles={"opacity-[20%] bg-black"}
               />
             </div>
             <CaseContainer
@@ -198,6 +198,7 @@ function Page() {
               Case={
                 "https://www.youtube.com/embed/Dl3muNlmm7o?si=-OR7BNPI1ZJlQn0b&autoplay=1&loop=1&playlist=Dl3muNlmm7o&cc_load_policy=1&modestbranding=1&rel=0&mute=1"
               }
+              styles={"opacity-[15%] bg-white"}
             />
           </div>
         </section>

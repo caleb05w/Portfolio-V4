@@ -16,9 +16,9 @@ function Demo() {
     1: carousel1,
     2: carousel2,
     3: carousel3,
-    4: carousel4,
-    5: carousel5,
-    6: carousel6,
+    // 4: carousel4,
+    // 5: carousel5,
+    // 4: carousel6,
   };
 
   const currentImage = imageMap[placeholder];
@@ -56,7 +56,7 @@ function Demo() {
   const changeImage = () => {
     setToggle(false); // Close the image container
     setTimeout(() => {
-      setPlaceholder((prev) => (prev % 4) + 1); // Change the image
+      setPlaceholder((prev) => (prev % 3) + 1); // Change the image
       setToggle(true); // Reopen with the new image
     }, 500); // Delay of 500ms before reopening the image
   };
@@ -77,21 +77,19 @@ function Demo() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-[40px] text-[#A0A0A0]" ref={containerRef}>
-      <h4>Hey! I’m Caleb — Currently @Metalab</h4>
-
+    <div className="flex flex-col" ref={containerRef}>
       {/* Conditionally Render Desktop or Mobile Layout */}
       {isMobile.current ? (
         // Mobile layout
-        <div className="w-fit h-fit flex flex-col items-start justify-start gap-[0.5rem]">
+        <div className="w-fit h-fit flex flex-col items-start justify-start gap-[0.5rem]  overflow-hidden">
           {/* Container for the image with toggle transition */}
           <div
-            className={`transition-all ease-in-out duration-[500ms] overflow-hidden ${
+            className={`transition-all ease-in-out duration-[500ms] overflow-hidden rounded-[5px] mb-[1rem] ${
               toggle ? "w-[128px] h-[128px]" : "w-0 h-[128px]"
             } transform ${toggle ? "scale-110" : "scale-0"} transform-origin-center`}
           >
-            <div className="w-fit h-fit">
-              <div className="w-[110px] h-[110px] rounded-[5px] overflow-hidden">
+            <div className="w-full h-full p-[10px] ">
+              <div className="w-full h-full rounded-[5px] overflow-hidden">
                 <Image
                   src={currentImage}
                   alt="Sunset"
@@ -104,7 +102,7 @@ function Demo() {
           </div>
 
           <div className="flex flex-col gap-[2rem]">
-            <div className="flex flex-col gap-[5px] text-[#A0A0A0]">
+            <div className="flex flex-col gap-[5px] text-[#A0A0A0] opacity-[100%]">
               <h4>Hey! I’m Caleb </h4>
               <h4>Currently @Metalab</h4>
             </div>
@@ -116,34 +114,37 @@ function Demo() {
         </div>
       ) : (
         // Desktop layout
-        <div className="w-fit h-fit flex justify-center items-center">
-          <div className="h-[128px] flex flex-col items-center justify-center">
-            <h1>Designer by Day</h1>
-          </div>
+        <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px]">
+          <h4>Hey! I’m Caleb — Currently @Metalab</h4>
+          <div className="w-fit h-fit flex justify-center items-center">
+            <div className="h-[128px] flex flex-col items-center justify-center">
+              <h1>Designer by Day</h1>
+            </div>
 
-          {/* Container for the image with toggle transition */}
-          <div
-            className={`transition-all ease-in-out duration-[500ms] overflow-hidden object-cover ${
-              toggle
-                ? "w-[6.5vw] h-[6.5vw] mx-[30px] min-w-[70px] min-h-[70px]"
-                : "w-0 h-0 mx-[20px] min-w-[0px] min-h-[0px]"
-            } transform ${toggle ? "scale-110" : "scale-0"} transform-origin-center`}
-          >
-            <div className="w-fit h-fit">
-              <div className="min-w-[70px] min-h-[70px] w-[6.5vw] h-[6.5vw] object-cover rounded-[5px] overflow-hidden">
-                <Image
-                  src={currentImage}
-                  alt="Sunset"
-                  width={128}
-                  height={128}
-                  className="w-fill h-[100%] object-cover"
-                />
+            {/* Container for the image with toggle transition */}
+            <div
+              className={`transition-all ease-in-out duration-[500ms] overflow-hidden object-cover ${
+                toggle
+                  ? "w-[6.5vw] h-[6.5vw] mx-[30px] min-w-[70px] min-h-[70px]"
+                  : "w-0 h-0 mx-[20px] min-w-[0px] min-h-[0px]"
+              } transform ${toggle ? "scale-110" : "scale-0"} transform-origin-center`}
+            >
+              <div className="w-fit h-fit">
+                <div className="min-w-[70px] min-h-[70px] w-[6.5vw] h-[6.5vw] object-cover rounded-[5px] overflow-hidden">
+                  <Image
+                    src={currentImage}
+                    alt="Sunset"
+                    width={128}
+                    height={128}
+                    className="w-fill h-[100%] object-cover"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="h-[128px] flex flex-col justify-center items-center">
-            <h1>Dev by Night.</h1>
+            <div className="h-[128px] flex flex-col justify-center items-center">
+              <h1>Dev by Night.</h1>
+            </div>
           </div>
         </div>
       )}

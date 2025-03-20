@@ -62,7 +62,7 @@ function NavButton({
                       <FaCircle className=" h-0 w-0 " />
                     )}
                   </div>
-                  <div className="flex flex-col mt-[18px] group-hover:mt-[-18px] duration-[400ms] ease-fastEase ">
+                  <div className="flex flex-col mt-[20px] group-hover:mt-[-18px] duration-[400ms] ease-fastEase ">
                     <p className="text-[12px] max-w-[180px] text-nowrap opacity-[100%] group-hover:opacity-[0%] group-hover:max-w-[50px] duration-[450ms] ease-fastEase ransition-all ">
                       {customScrollDefault}
                     </p>

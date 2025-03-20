@@ -24,12 +24,12 @@ function Footer({ place }) {
 
   return (
     <div
-      className={`relative bottom-[10] pb-[10vh]
-    ${place === "home" ? "mx-[7rem]" : "xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm"}`}
+      className={`relative bottom-[10] pb-[2vh]
+    ${place === "home" ? "xl:mx-[7rem] lg:mx-[7rem] mx-[2rem]" : "xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm"}`}
     >
-      <div className="flex flex-row justify-between text-white">
+      <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-between text-white gap-[5px]">
         <h3>Designed on Figma, Built on NextJS</h3>
-        <div className="flex flex-row justify-end text-white w-[50%] items-end gap-[2%]">
+        <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[2%]">
           <button onClick={() => copyEmail()}>
             <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">
               Email
