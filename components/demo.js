@@ -1,21 +1,27 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import carousel1 from "../public/videos/carousel1.gif";
+import carousel2 from "../public/videos/carousel2.gif";
+import carousel3 from "../public/videos/carousel3.gif";
+import carousel4 from "../public/videos/carousel4.gif";
+import carousel5 from "../public/videos/carousel5.gif";
+import carousel6 from "../public/videos/carousel6.gif";
 
 function Demo() {
   const [toggle, setToggle] = useState(false);
   const [placeholder, setPlaceholder] = useState(1);
   const imageMap = {
-    1: "/videos/carousel1.mp4",
-    2: "/videos/carousel2.mp4",
-    3: "/videos/carousel3.MP4",
-    4: "/videos/carousel4.MP4",
-    5: "/videos/carousel5.MP4",
-    6: "/videos/carousel6.MP4",
+    1: carousel1,
+    2: carousel2,
+    3: carousel3,
+    4: carousel4,
+    5: carousel5,
+    6: carousel6,
   };
 
-  // Add cache busting to the video source to prevent caching
-  const currentImage = `${imageMap[placeholder]}?t=${new Date().getTime()}`;
+  const currentImage = imageMap[placeholder];
   const intervalRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -48,12 +54,9 @@ function Demo() {
 
   // This function handles the image swapping and container toggling
   const changeImage = () => {
-    console.log("Changing image...");
     setToggle(false); // Close the image container
-
-    // Change the image after the animation delay
     setTimeout(() => {
-      setPlaceholder((prev) => (prev % 6) + 1); // Change the image
+      setPlaceholder((prev) => (prev % 4) + 1); // Change the image
       setToggle(true); // Reopen with the new image
     }, 500); // Delay of 500ms before reopening the image
   };
@@ -73,10 +76,6 @@ function Demo() {
     setToggle(true);
   }, []);
 
-  // Log the placeholder and current image for debugging
-  console.log("Placeholder:", placeholder);
-  console.log("Current Image:", currentImage);
-
   return (
     <div className="flex flex-col gap-[40px] text-[#A0A0A0]" ref={containerRef}>
       <h4>Hey! I’m Caleb — Currently @Metalab</h4>
@@ -92,19 +91,14 @@ function Demo() {
             } transform ${toggle ? "scale-110" : "scale-0"} transform-origin-center`}
           >
             <div className="w-fit h-fit">
-              <div className="w-[110px] h-[110px] rounded-[5px] overflow-hidden bg-white">
-                <video
-                  key={currentImage} // Force React to treat the video as a new component
-                  width="128"
-                  height="128"
-                  className="w-full h-full object-cover"
-                  muted
-                  autoPlay
-                  loop
-                >
-                  <source src={currentImage} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <div className="w-[110px] h-[110px] rounded-[5px] overflow-hidden">
+                <Image
+                  src={currentImage}
+                  alt="Sunset"
+                  width={128}
+                  height={128}
+                  className="w-fit h-fit"
+                />
               </div>
             </div>
           </div>
@@ -137,19 +131,13 @@ function Demo() {
           >
             <div className="w-fit h-fit">
               <div className="min-w-[70px] min-h-[70px] w-[6.5vw] h-[6.5vw] object-cover rounded-[5px] overflow-hidden">
-                {/* Video with dynamic currentImage */}
-                <video
-                  key={currentImage} // Force React to treat the video as a new component
-                  width="128"
-                  height="128"
-                  className="w-full h-full object-cover"
-                  muted
-                  autoPlay
-                  loop
-                >
-                  <source src={currentImage} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <Image
+                  src={currentImage}
+                  alt="Sunset"
+                  width={128}
+                  height={128}
+                  className="w-fill h-[100%] object-cover"
+                />
               </div>
             </div>
           </div>
