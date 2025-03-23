@@ -44,10 +44,11 @@ h1 {
 }
 
 h2 {
-  font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
-  font-size: 2.2vw;
-  line-height: 140%;
-  letter-spacing: 0.7px;
+  font-family:
+    "Adventure", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial",
+    "sans-serif";
+  font-size: 2.5vw;
+  line-height: 130%;
   font-weight: 450;
   color: white;
 }

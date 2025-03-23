@@ -6,7 +6,7 @@ import Image from "next/image";
 import Navigator from "./navigator";
 import Footer from "./footer";
 
-function TestCase({ stylePlaceholder, caseOpen, styles }) {
+function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
   const startRef = useRef(null);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
@@ -476,4 +476,4 @@ function TestCase({ stylePlaceholder, caseOpen, styles }) {
   );
 }
 
-export default TestCase;
+export default InnotaCase;
