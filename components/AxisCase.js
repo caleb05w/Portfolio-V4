@@ -128,7 +128,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
               />
               <Image
                 src="/images/Axis2.png" // Replace with your image path
-                alt="Gif from motion graphic"
+                alt="Gif from motion graphic on instagram"
                 width={579} // Set the width
                 height={900} // Set the height
                 className="w-[35%] nextImg"
