@@ -173,7 +173,7 @@ function Page() {
                 Case={
                   "https://www.youtube.com/embed/1Y5oL4GVUpo?autoplay=1&mute=1&loop=1&playlist=1Y5oL4GVUpo&controls=1&modestbranding=1"
                 }
-                styles={"opacity-[15%] bg-white"}
+                styles={"opacity-[25%] bg-black"}
               />
             </div>
           </div>
