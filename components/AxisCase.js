@@ -137,10 +137,10 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section
-            className="w-full flex flex-row justify-center text-center my-[80px]"
+            className="w-full flex flex-row xl:justify-center lg:justify-center md:justify-center text-start xl:text-center lg:text-center md:text-center my-[120px] sm:mx-gutter-sm"
             id="AxisVision"
           >
-            <div className="xl:max-w-[50vw] lg:max-w-[50vw] md:max-w-[75vw] w-[100vw]">
+            <div className="xl:max-w-[50vw] lg:max-w-[50vw] md:max-w-[55vw] w-[100vw]">
               <h5 className="text-my-gray">The Vision</h5>
               <h2 className="text-black">
                 Craft a brand to inspire awe and reignite engagement in a dying
@@ -148,8 +148,6 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
               </h2>
             </div>
           </section>
-
-          <div id="Innota-Problem" className="h-0"></div>
 
           <section
             className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
@@ -163,15 +161,15 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           {/* 1 Large landscapped image */}
-          <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+          <section className="flex flex-row gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <Image
               src="/images/Axis3.png"
               alt="Pro Plan component"
-              width={1608} // Set the width
+              width={1204} // Set the width
               height={900} // Set the height
-              className="w-[100%] nextImg"
+              className="xl:w-[80%] lg:w-[75%] w-[100%] nextImg"
             />
-            <div className="xl:w-[30%] lg:w-[60%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
+            <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
               <p className="text-black">
                 Competing against 15+ other SFU clubs, for events, participants,
                 and hiring, new users needed an immediate way to identify our
@@ -195,8 +193,8 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
             />
           </section>
 
-          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row lg:flex-row flex-col xl:gap-[2%] lg:gap-[2%] gap-[20px] min-h-[50vh]">
-            <div className="xl:w-[100%] lg:w-[100%] w-[100%]  xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh]">
+          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row flex-col xl:gap-[2%] lg:gap-[2rem] gap-[20px] min-h-[50vh]">
+            <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh]">
               <Video
                 placeholder={
                   "https://www.youtube.com/embed/ecyOBWauVDM?autoplay=1&mute=1&loop=1&playlist=ecyOBWauVDM&controls=1&modestbranding=1"
@@ -204,7 +202,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
                 brightness={"100%"}
               />
             </div>
-            <div className="xl:w-[30%] lg:w-[60%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
+            <div className="xl:w-[20%]  w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
               <p className="text-black">
                 Graphics were great, but failed to encapsulate any emotion.
               </p>
@@ -290,9 +288,9 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
                 alt="Axis stickers and lanyards from our annual Revolve Consulting Conference Pillar Event"
                 width={999} // Set the width
                 height={900} // Set the height
-                className="w-[100%] nextImg"
+                className="xl:w-[80%] lg:w-[75%] w-[100%] nextImg"
               />
-              <div className="xl:w-[30%] lg:w-[60%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
+              <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
                 <p className="text-black">
                   We aimed to break away from the notion of consulting as a
                   rigid, corporate process.
