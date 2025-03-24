@@ -110,7 +110,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
 
           {/* 2 large images */}
           <section className=" flex flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <div className="w-[100%] h-[80vh] ">
+            <div className="w-[100%] xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh] ">
               <Video
                 placeholder={
                   "https://www.youtube.com/embed/1Y5oL4GVUpo?autoplay=1&mute=1&loop=1&playlist=1Y5oL4GVUpo&controls=1&modestbranding=1"
@@ -140,7 +140,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
             className="w-full flex flex-row justify-center text-center my-[80px]"
             id="AxisVision"
           >
-            <div className="max-w-[50vw]">
+            <div className="xl:max-w-[50vw] lg:max-w-[50vw] md:max-w-[75vw] w-[100vw]">
               <h5 className="text-my-gray">The Vision</h5>
               <h2 className="text-black">
                 Craft a brand to inspire awe and reignite engagement in a dying
@@ -196,7 +196,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row lg:flex-row flex-col xl:gap-[2%] lg:gap-[2%] gap-[20px] min-h-[50vh]">
-            <div className="xl:w-[100%] lg:w-[100%] w-[100%]  h-[80vh]">
+            <div className="xl:w-[100%] lg:w-[100%] w-[100%]  xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh]">
               <Video
                 placeholder={
                   "https://www.youtube.com/embed/ecyOBWauVDM?autoplay=1&mute=1&loop=1&playlist=ecyOBWauVDM&controls=1&modestbranding=1"

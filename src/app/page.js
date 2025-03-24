@@ -71,8 +71,8 @@ function Page() {
           `}
         >
           <button
-            className={`rounded-full px-[16px] py-[5px]  backdrop-blur-sm   hover:border-[1px] hover:bg-white/0 hover:text-black ease-in-out duration-[200ms] transition-all border-[1px] border-transparent hover:cursor-pointer
-              ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white" : "border-black hover:bg-black/20 text-black"}`}
+            className={`rounded-full px-[16px] py-[5px]  backdrop-blur-sm   hover:bg-white/0 hover:text-black ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
+              ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white hover:border-[1px] border-transparent" : "border-[1px] border-black hover:bg-black/20 text-black"}`}
             onClick={() => {
               setCaseHeight(close);
               setCaseOpen(false);
@@ -90,7 +90,7 @@ function Page() {
 
       {/* Home Page Section */}
       <section
-        className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[30px] h-[2rem] fixed w-full z-[12] 
+        className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[30px] h-[2rem] fixed w-full z-[12]  transition-all 
           ${caseOpen === true ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
       >
         <NavButton
@@ -100,6 +100,17 @@ function Page() {
           customScrollActive="Curious? Check out the Github!"
           customScrollTarget={"https://github.com/caleb05w/Portfolio-V4"}
           customScrollDot={true}
+        />
+        <NavButton
+          openNav={caseOpen}
+          openPrompt="Gallery"
+          closePrompt="Close Prompt"
+          // openPrompt="Gallery"
+          // closePrompt="Close Prompt"
+          customScroll={true}
+          customScrollDefault="About"
+          customScrollActive="Also In Progress"
+          customScrollDotSecondary={true}
         />
       </section>
 

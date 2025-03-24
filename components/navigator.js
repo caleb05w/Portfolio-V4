@@ -19,9 +19,9 @@ function Navigator({ openNav, navAppear, caseContent }) {
         ${openNav !== true ? "opacity-[40%] duration-[400ms] ease-slowEase scale-[90%]" : "opacity-[100%] delay-[700ms] duration-[1100ms] ease-fastEase scale-[100%]"}`}
     >
       <button
-        className={` w-full h-fit flex flex-row gap-[7px] items-center rounded-full px-[16px] py-[5px] backdrop-blur-sm hover:border-[1px]  ease-in-out duration-[200ms] transition-all border-[1px] border-transparent hover:cursor-pointer
+        className={` w-full h-fit flex flex-row gap-[7px] items-center rounded-full px-[16px] py-[5px] backdrop-blur-sm hover:border-[1px]  ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
             ${nav === true ? "bg-white/50 text-white rounded-[10px]" : "bg-white/30 backdrop-filter rounded-[120px]"}
-            ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white" : "border-black hover:bg-black/20 text-black"}`}
+            ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white border-transparent" : "border-black hover:bg-black/20 text-black"}`}
         onClick={() => setNav(!nav)}
       >
         {nav === true ? (
