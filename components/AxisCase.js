@@ -274,14 +274,14 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
                 alt="Inspiration for color"
                 width={999} // Set the width
                 height={900} // Set the height
-                className="w-[45%] nextImg"
+                className="w-[50%] nextImg"
               />
               <Image
                 src="/images/Axis8.png" // Replace with your image path
                 alt="Our typography"
                 width={579} // Set the width
                 height={900} // Set the height
-                className="w-[55%] nextImg"
+                className="w-[50%] nextImg"
               />
             </div>
             <div className="w-[100%] max-h-[900px] flex xl:flex-row lg:flex-row md:flex-row flex-col gap-[20px]">
