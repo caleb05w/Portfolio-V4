@@ -154,7 +154,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
             id="AxisMarketingCampaign"
           >
             <TextBox
-              header="Pillar 1"
+              header="Rebuilding the Past"
               body="Dominating our media presence"
               color="black"
             ></TextBox>
@@ -186,7 +186,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
 
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]">
             <TextBox
-              header="Pillar 2"
+              header="Inspiring the Present"
               body="Reimaging Axis across a dynamic plane"
               color="black"
               id="AxisMotionReel"
@@ -220,7 +220,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
             id="AxisWebsite"
           >
             <TextBox
-              header="pillar 3"
+              header="Embracing the Future"
               body="Establishing a legacy on the web"
               color="black"
             />
@@ -259,7 +259,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
             id="AxisBrand"
           >
             <TextBox
-              header="Pillar 2"
+              header="The Art Direction"
               body="Building a Brand to Inspire"
               color="black"
             />
