@@ -107,7 +107,6 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             ></TextBox>
             {/* <p>Scrolling down: {isScrollingDown ? "Yes" : "No"}</p> */}
           </section>
-
           {/* 2 large images */}
           <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <Image
@@ -126,14 +125,12 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             />
           </section>
           <div id="Innota-Problem" className="h-0"></div>
-
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <TextBox
               header="The Problem"
               body="Despite website engagement, the web app had 0 DAU, and users weren’t being converted from leads to sales."
             ></TextBox>
           </section>
-
           {/* 1 Large landscapped image */}
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <Image
@@ -144,35 +141,45 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
               className="w-[100%] nextImg"
             />
           </section>
-
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <TextBox
               header="Solving the issue"
               body="Spearheading a User Research Campaign"
             />
           </section>
-
-          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm  overflow-hidden">
-            <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-end w-full xl:gap-[10%] lg:gap-[10%] gap-[3rem] items-end">
-              <p className="xl:max-w-[30%] lg:max-w-[50%] max-w-[100%]">
+          <section className="flex flex-row gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+            <Image
+              src="/images/UXR.png"
+              alt="Results from our 2 week UXR Campaign"
+              width={1204} // Set the width
+              height={900} // Set the height
+              className="xl:w-[80%] lg:w-[75%] w-[100%] nextImg"
+            />
+            <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end items-baseline">
+              <p className="text-white">
                 To find out where the user drop offs were happening, I launched
                 a 2 week UXR campaign to gauge pain points, and better
-                understand the users. I primarily did outreach on Discord,
-                Slack, and in person.
+                understand users. I primarily did outreach on Discord, Slack,
+                and in person.
               </p>
-              <Image
-                src="/images/UXR.png"
-                alt="Results from the UXR campaign"
-                width={971} // Set the width
-                height={430} // Set the height
-                className="xl:max-w-[60%] lg:max-w-[50%] max-w-[100%] nextImg"
-              />
             </div>
           </section>
-
+          <section
+            className="w-fill flex flex-row xl:justify-center lg:justify-center md:justify-center text-start xl:text-center lg:text-center md:text-center my-[120px] mx-gutter-sm xl:mx-0 lg:mx-0"
+            id="AxisVision"
+          >
+            <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill] xl:my-[5rem]">
+              <h5 className="text-my-gray">The Vision</h5>
+              <h2 className="text-white">
+                Create a strong web identity to rebuild trust with users.
+              </h2>
+            </div>
+          </section>
           {/* Part 1 */}
-          <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
-            <div id="Innota-Goal1" className="h-0"></div>
+          <section
+            className=" flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm "
+            id="Innota-Goal1"
+          >
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
                 header="Goal #1"
@@ -254,7 +261,6 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
               </div>
             </section>
           </section>
-
           {/* Part 2 */}
           <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
             <div id="Innota-Goal2" className="h-0"></div>
@@ -284,15 +290,15 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             </section>
 
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row lg:flex-row flex-col xl:gap-[2%] lg:gap-[2%] gap-[20px] min-h-[50vh]">
-              <div className="xl:w-[80%] lg:w-[80%] w-[100%] xl:h-auto lg:h-auto h-[50vh]">
+              <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[40vh]">
                 <Video
                   placeholder={
-                    "https://www.youtube.com/embed/K_SK4KghuUU?si=7qleFwhHEnKWct_2&autoplay=1&mute=1&loop=1&playlist=K_SK4KghuUU&modestbranding=1&rel=0&fs=1"
+                    "https://www.youtube.com/embed/WhKiRTptHEk?autoplay=1&mute=1&modestbranding=1&loop=1&playlist=WhKiRTptHEk"
                   }
                   brightness={"100%"}
                 />
               </div>
-              <div className="lg:w-[21%] xl:w-[21%] w-fill h-fit">
+              <div className="lg:w-[21%] xl:w-[21%] w-fill h-fill flex flex-col justify-end justify-items-end ">
                 <p>
                   I added a live demo on the landing page to highlight its
                   functions upfront. This gave users a much better understanding
@@ -372,7 +378,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
                 </div> */}
 
                 <Image
-                  src="/images/proto.png"
+                  src="/images/Proto.png"
                   alt="Prototype video"
                   width={1608} // Set the width
                   height={900} // Set the height
@@ -422,10 +428,10 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
               <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm w-fit ">
                 <TextBox
                   header="The Reflection"
-                  body="Being the sole product designer meant that I had to learn how to make alot of decisions on my own."
+                  body="Being the sole product designer meant I had to learn how to make alot of decisions on my own."
                 />
-                <div className=" flex flex-col gap-[40px] mt-[40px] w-fill max-w-[100%] xl:max-w-[48vw] lg:max-w-[100vw]">
-                  <div className="flex flex-col gap-[10px]">
+                <div className=" flex flex-row gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
+                  <div className="flex flex-col gap-[15px]">
                     <h5 className="text-my-gray">
                       {" "}
                       Importance of data driven insights
@@ -437,7 +443,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
                     </p>
                   </div>
 
-                  <div className="flex flex-col gap-[10px]">
+                  <div className="flex flex-col gap-[15px]">
                     <h5 className="text-my-gray"> Moderating my ideas</h5>
                     <p>
                       Given the teams tiny size, I had to learn how to
@@ -446,7 +452,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
                     </p>
                   </div>
 
-                  <div className="flex flex-col gap-[10px]">
+                  <div className="flex flex-col gap-[15px]">
                     <h5 className="text-my-gray">
                       {" "}
                       Importance of data driven insights

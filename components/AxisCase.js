@@ -137,10 +137,10 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section
-            className="w-full flex flex-row xl:justify-center lg:justify-center md:justify-center text-start xl:text-center lg:text-center md:text-center my-[120px] sm:mx-gutter-sm"
+            className="w-fill flex flex-row xl:justify-center lg:justify-center md:justify-center text-start xl:text-center lg:text-center md:text-center my-[120px] mx-gutter-sm xl:mx-0 lg:mx-0"
             id="AxisVision"
           >
-            <div className="xl:max-w-[50vw] lg:max-w-[50vw] md:max-w-[55vw] w-[100vw]">
+            <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill]">
               <h5 className="text-my-gray">The Vision</h5>
               <h2 className="text-black">
                 Craft a brand to inspire awe and reignite engagement in a dying
@@ -161,15 +161,15 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           {/* 1 Large landscapped image */}
-          <section className="flex flex-row gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+          <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <Image
               src="/images/Axis3.png"
-              alt="Pro Plan component"
+              alt="Our Social Media Posts"
               width={1204} // Set the width
               height={900} // Set the height
-              className="xl:w-[80%] lg:w-[75%] w-[100%] nextImg"
+              className="xl:w-[80%] lg:w-[75%] w-[fill] nextImg"
             />
-            <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
+            <div className="xl:w-[20%] lg:w-[25%] w-[fill] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
               <p className="text-black">
                 Competing against 15+ other SFU clubs, for events, participants,
                 and hiring, new users needed an immediate way to identify our
