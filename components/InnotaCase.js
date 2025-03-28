@@ -103,7 +103,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
           >
             <TextBox
               header="The Introduction"
-              body="Innota Technology is an educational startup gamifying the way students learn through flashcards and mind maps. As the sole product designer, I was tasked with rebuilding the web identity in preparation for the products official launch."
+              body="Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch."
             ></TextBox>
             {/* <p>Scrolling down: {isScrollingDown ? "Yes" : "No"}</p> */}
           </section>
@@ -128,7 +128,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <TextBox
               header="The Problem"
-              body="Despite website engagement, the web app had 0 DAU, and users weren’t being converted from leads to sales."
+              body="None of the incoming web traffic was converting into users."
             ></TextBox>
           </section>
           {/* 1 Large landscapped image */}
@@ -144,7 +144,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <TextBox
               header="Solving the issue"
-              body="Spearheading a User Research Campaign"
+              body="I led a two-week user research campaign to understand why users weren’t converting."
             />
           </section>
           <section className="flex flex-row gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
@@ -157,10 +157,10 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             />
             <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end items-baseline">
               <p className="text-white">
-                To find out where the user drop offs were happening, I launched
-                a 2 week UXR campaign to gauge pain points, and better
-                understand users. I primarily did outreach on Discord, Slack,
-                and in person.
+                I launched a 2 week UXR campaign to gauge pain points, identify
+                onsite friction and better understand the users. I primarily did
+                outreach on Discord, Slack, and in person, surveying 65
+                participants
               </p>
             </div>
           </section>
@@ -169,9 +169,9 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             id="AxisVision"
           >
             <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill] xl:my-[5rem]">
-              <h5 className="text-my-gray">The Vision</h5>
+              <h5 className="text-my-gray">The Conclusion</h5>
               <h2 className="text-white">
-                Create a strong web identity to rebuild trust with users.
+                Users didn’t trust the product due to poor design choices.
               </h2>
             </div>
           </section>
@@ -183,8 +183,8 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
                 header="Goal #1"
-                body="An Ambitious Web  Redesign"
-                para="Users didn’t trust the old website. Poor design looks unprofessional and lacks credibility. It became of paramount importance that a new identity was rolled out."
+                body="A web redesign was necessary in order to regain users trust."
+                para="The previous website was cluttered, featured inconsistent visual hierarchy, and featured poor design, making it difficult to navigate for new users."
               />
             </section>
 
@@ -221,8 +221,8 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
                 header="My Design Rationale"
-                body="Onsite elements were remolded into digestable chunks."
-                body2="A simple black and white colour palette made interactions clear as night and day."
+                body="Users said the previous website was cluttered and visually confusing."
+                body2="I rebuilt components to be simple and intentional. A black and white colour pallet made made interactions intuitive."
               />
             </section>
 
@@ -267,7 +267,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
                 header="Goal #2"
-                body="Fixing the Onboarding Journey"
+                body="Rebuilding an exhausting onboarding experience"
                 para="Users needed to complete the onboarding sign up process in order to gain access to the web app. Insights from the UXR campaign indicated that we lost 80% of the users during sign up."
               />
             </section>
@@ -284,8 +284,8 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
 
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
-                body="The previous webpage didn’t showcase the product — users had no idea what they were signing up for — leading to distrust before even making it to the web app."
-                body2="My solution: I brought the product to the user."
+                body="The old website failed to showcase the product, causing distrust in users."
+                body2="I added a live demo on the homepage to inform users,  highlighting the apps features."
               />
             </section>
 
@@ -430,7 +430,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
                   header="The Reflection"
                   body="Being the sole product designer meant I had to learn how to make alot of decisions on my own."
                 />
-                <div className=" flex flex-row gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
+                <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
                   <div className="flex flex-col gap-[15px]">
                     <h5 className="text-my-gray">
                       {" "}
