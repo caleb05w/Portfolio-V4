@@ -305,12 +305,12 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section
-            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
+            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
             id="AxisMarketingCampaign"
           >
             <TextBox
               header="The Color Pallete"
-              body="A Monochromatic Pallete Inspired by the Sçtars"
+              body="A Monochromatic Pallete Inspired by the Stars"
               color="black"
             ></TextBox>
           </section>
@@ -335,7 +335,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section
-            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
+            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
             id="AxisMarketingCampaign"
           >
             <TextBox
@@ -365,7 +365,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section
-            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
+            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
             id="AxisMarketingCampaign"
           >
             <TextBox
