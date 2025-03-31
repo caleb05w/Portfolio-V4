@@ -116,7 +116,7 @@ function Page() {
 
       {/* Centered Test Case */}
       <div
-        className={`w-[100vw] h-[100vh] fixed overflow-scroll
+        className={`w-[100vw] h-[100vh] fixed overflow-scroll scroll-smooth
           ${caseOpen === true ? "z-[9]" : "z-[0]"}`}
       >
         {caseContent === "Axis" ? (

@@ -25,12 +25,22 @@ body {
   background: black;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   background-color: black;
   scroll-behavior: smooth;
+}
+
+.scrollable {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  height: 100vh; /* Make it scrollable */
+  overscroll-behavior: contain; /* Prevents bounce effect */
+  scroll-behavior: smooth;
+  border: 2px solid white;
 }
 
 h1 {

@@ -5,6 +5,7 @@ import TextBox from "./textBox";
 import Image from "next/image";
 import Navigator from "./navigator";
 import Footer from "./footer";
+import "../src/app/globals.css";
 
 function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
   const startRef = useRef(null);
@@ -55,7 +56,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
   }, [caseOpen]); // This effect runs when caseOpen changes
 
   return (
-    <div ref={startRef} className="scroll-smooth">
+    <div ref={startRef} className="scrollable">
       {/* //Navigator component */}
       {/* <Navigator openNav={caseOpen} /> */}
       {/* Navbar */}

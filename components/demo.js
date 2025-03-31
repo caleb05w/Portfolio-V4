@@ -16,87 +16,68 @@ function Demo() {
     1: carousel1,
     2: carousel2,
     3: carousel3,
-    // 4: carousel4,
-    // 5: carousel5,
-    // 4: carousel6,
+    4: carousel4,
+    5: carousel5,
+    6: carousel6,
   };
 
   const currentImage = imageMap[placeholder];
   const intervalRef = useRef(null);
   const containerRef = useRef(null);
-
-  // Detect if the screen is mobile or desktop
-  const isMobile = useRef(false);
+  const isMobile = useRef(
+    typeof window !== "undefined" && window.innerWidth <= 768
+  );
 
   useEffect(() => {
-    // Initial screen width check
-    if (window.innerWidth <= 768) {
-      isMobile.current = true;
-    } else {
-      isMobile.current = false;
-    }
-
-    // Update on window resize
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        isMobile.current = true;
-      } else {
-        isMobile.current = false;
-      }
+      isMobile.current = window.innerWidth <= 768;
     };
     window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // This function handles the image swapping and container toggling
   const changeImage = () => {
-    setToggle(false); // Close the image container
+    setToggle(false);
     setTimeout(() => {
-      setPlaceholder((prev) => (prev % 3) + 1); // Change the image
-      setToggle(true); // Reopen with the new image
-    }, 500); // Delay of 500ms before reopening the image
+      setPlaceholder((prev) => (prev % 6) + 1);
+      setToggle(true);
+    }, 500);
   };
 
   useEffect(() => {
-    // Set interval to change image every 5 seconds
     intervalRef.current = setInterval(changeImage, 5000);
-
-    // Cleanup the interval on unmount
-    return () => {
-      clearInterval(intervalRef.current);
-    };
+    return () => clearInterval(intervalRef.current);
   }, []);
 
-  useEffect(() => {
-    // Start with opening the first image container
-    setToggle(true);
-  }, []);
+  useEffect(() => setToggle(true), []);
 
   return (
     <div className="flex flex-col" ref={containerRef}>
-      {/* Conditionally Render Desktop or Mobile Layout */}
       {isMobile.current ? (
-        // Mobile layout
-        <div className="w-fit h-fit flex flex-col items-start justify-start gap-[0.5rem]  overflow-hidden">
-          {/* Container for the image with toggle transition */}
+        <div className="w-fit h-fit flex flex-col items-start justify-start gap-[0.5rem] overflow-hidden">
           <div
-            className={`transition-all ease-in-out duration-[500ms] overflow-hidden rounded-[5px] mb-[1rem] ${
-              toggle ? "w-[128px] h-[128px]" : "w-0 h-[128px]"
-            } transform ${toggle ? "scale-110" : "scale-0"} transform-origin-center`}
+            className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover rounded-[10px] ${
+              toggle
+                ? "w-[120px] h-[120px] my-[10px] min-w-[70px] min-h-[70px]"
+                : "w-[120px] h-[120px] my-[10px] min-w-[20px] min-h-[70px] rounded-[1rem]"
+            } transform ${toggle ? "scale-[100%]" : "scale-[30%]"} transform-origin-center flex justify-center items-center`}
           >
-            <div className="w-full h-full p-[10px] ">
-              <div className="w-full h-full rounded-[5px] overflow-hidden">
-                <Image
-                  src={currentImage}
-                  alt="Sunset"
-                  width={128}
-                  height={128}
-                  className="w-fit h-fit"
-                />
+            <div className="w-full h-full p-[10px]">
+              <div
+                className={`h-[100%] w-[100%] transition-all ease-fastEase duration-[400ms] rounded-[10px]
+                  ${toggle ? "bg-transparent" : "bg-white"}`}
+              >
+                <div className="w-full h-[100%] rounded-[5px] overflow-hidden">
+                  <Image
+                    src={currentImage}
+                    alt="Display"
+                    width={128}
+                    height={128}
+                    className={`absolute top-0 left-0 w-[10rem] h-[10rem] min-w-full min-h-full object-cover transition-all ease-fastEase duration-[400ms]
+                      ${toggle ? "opacity-[100%]" : "opacity-[0%]"}`}
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -113,7 +94,6 @@ function Demo() {
           </div>
         </div>
       ) : (
-        // Desktop layout
         <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px]">
           <h4>Hey! I’m Caleb — Currently @Metalab</h4>
           <div className="w-fit h-fit flex justify-center items-center">
@@ -121,23 +101,29 @@ function Demo() {
               <h1>Designer by Day</h1>
             </div>
 
-            {/* Container for the image with toggle transition */}
             <div
-              className={`transition-all ease-in-out duration-[500ms] overflow-hidden object-cover ${
+              className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover rounded-[4px] ${
                 toggle
-                  ? "w-[6.5vw] h-[6.5vw] mx-[30px] min-w-[70px] min-h-[70px]"
-                  : "w-0 h-0 mx-[20px] min-w-[0px] min-h-[0px]"
-              } transform ${toggle ? "scale-110" : "scale-0"} transform-origin-center`}
+                  ? "w-[6.5vw] h-[6.5vw] mx-[3vw] min-w-[70px] min-h-[70px]"
+                  : "w-[10px] h-[10px] mx-[2.5vw] min-w-[20px] min-h-[20px] rounded-[1rem]"
+              } transform ${toggle ? "scale-110" : "scale-100"} transform-origin-center flex justify-center items-center`}
             >
               <div className="w-fit h-fit">
-                <div className="min-w-[70px] min-h-[70px] w-[6.5vw] h-[6.5vw] object-cover rounded-[5px] overflow-hidden">
-                  <Image
-                    src={currentImage}
-                    alt="Sunset"
-                    width={128}
-                    height={128}
-                    className="w-fill h-[100%] object-cover"
-                  />
+                <div
+                  className={`h-[10rem] w-[10rem] transition-all ease-fastEase duration-[400ms]
+                  ${toggle ? "bg-transparent" : "bg-white"}`}
+                >
+                  <div className="min-w-[70px] min-h-[70px] w-[6.5vw] h-[6.5vw] object-cover rounded-[5px] overflow-hidden">
+                    <Image
+                      src={currentImage}
+                      alt="Display"
+                      width={128}
+                      height={128}
+                      className={`absolute top-0 left-0 w-[10rem] h-[10rem] min-w-full min-h-full object-cover transition-all ease-fastEase duration-[400ms]
+                        ${toggle ? "opacity-[100%]" : "opacity-[0%]"}`}
+                      priority
+                    />
+                  </div>
                 </div>
               </div>
             </div>
