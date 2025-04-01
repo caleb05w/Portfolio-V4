@@ -148,7 +148,7 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
               body="I led a two-week user research campaign to understand why users weren’t converting."
             />
           </section>
-          <section className="flex flex-row gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+          <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <Image
               src="/images/UXR.png"
               alt="Results from our 2 week UXR Campaign"

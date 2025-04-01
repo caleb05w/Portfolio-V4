@@ -102,10 +102,10 @@ function Demo() {
             </div>
 
             <div
-              className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover rounded-[4px] ${
+              className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover  ${
                 toggle
-                  ? "w-[6.5vw] h-[6.5vw] mx-[3vw] min-w-[70px] min-h-[70px]"
-                  : "w-[10px] h-[10px] mx-[2.5vw] min-w-[20px] min-h-[20px] rounded-[1rem]"
+                  ? "w-[6.5vw] h-[6.5vw] mx-[3vw] min-w-[70px] min-h-[70px] rounded-[0.4vw]"
+                  : "w-[10px] h-[10px] mx-[2vw] min-w-[20px] min-h-[20px] rounded-[0.2vw]"
               } transform ${toggle ? "scale-110" : "scale-100"} transform-origin-center flex justify-center items-center`}
             >
               <div className="w-fit h-fit">
