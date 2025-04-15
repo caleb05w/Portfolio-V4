@@ -61,7 +61,7 @@ function Page() {
     <div className="relative">
       {/* Case Studies Section */}
       <section
-        className={`flex flex-row-reverse justify-between xl:px-[1vw] lg:px-[2vw] px-gutter-sm h-[2rem] fixed w-full z-[12] 
+        className={`flex flex-row-reverse justify-between xl:px-[1vw] lg:px-[2vw] h-[2rem] fixed w-full z-[12] 
           ${caseOpen === false ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[700ms] duration-[500ms] ease-fastEase"}`}
       >
         <Navigator openNav={caseOpen} caseContent={caseContent} />
@@ -90,7 +90,7 @@ function Page() {
 
       {/* Home Page Section */}
       <section
-        className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[30px] h-[2rem] fixed w-full z-[12]  transition-all 
+        className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[10px] h-[2rem] fixed w-full z-[12]  transition-all 
           ${caseOpen === true ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
       >
         <NavButton
@@ -137,7 +137,7 @@ function Page() {
           
         `}
       >
-        <section className="flex flex-col lg:mx-[120px] mx-[20px] lg:py-gap-lg xl:py-gap-lg md:py-gap-md py-gap-sm lg:mt-[180px] mt-[60px] gap-[120px] lg:gap-[320px] items-center w-full px-[30px] lg:px-[120px]">
+        <section className="flex flex-col lg:mx-[120px] md:mx-gutter-md mx-gutter-sm lg:py-gap-lg xl:py-gap-lg md:py-gap-md py-gap-sm lg:mt-[180px] mt-[60px] gap-[120px] lg:gap-[320px] items-center w-full px-gutter-sm lg:px-[120px]">
           <section className="">
             <Demo />
           </section>

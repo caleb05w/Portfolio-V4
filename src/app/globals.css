@@ -40,7 +40,6 @@ body {
   height: 100vh; /* Make it scrollable */
   overscroll-behavior: contain; /* Prevents bounce effect */
   scroll-behavior: smooth;
-  border: 2px solid white;
 }
 
 h1 {

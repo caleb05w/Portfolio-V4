@@ -18,7 +18,7 @@ module.exports = {
         "gutter-xl": "12vw", // Custom gap size
         "gutter-lg": "120px",
         "gutter-md": "120px", // Custom gap size
-        "gutter-sm": "30px", // Custom gap size
+        "gutter-sm": "15px", // Custom gap size
 
         // side padding
         "gap-xl": "160px", // Custom gap size
