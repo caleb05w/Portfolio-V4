@@ -305,7 +305,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
             />
             <div className="xl:w-[20%] lg:w-[25%] w-[fill] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
               <p className="text-black">
-                Axis Consulting's primary engagement for events and projects was
+                Axis&apos;s primary engagement for events and projects was
                 through Instagram, the main touchpoint for both new and
                 returning users. Our distinct blue and black canvas soon became
                 a trademark.
@@ -320,6 +320,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
               color="black"
               id="AxisMotionReel"
             />
+            s
           </section>
 
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row flex-col xl:gap-[2%] lg:gap-[2rem] gap-[20px] min-h-[50vh]">
