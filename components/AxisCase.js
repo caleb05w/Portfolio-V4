@@ -137,6 +137,30 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section
+            className="w-fill flex flex-row  xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm text-start  my-[120px] mx-gutter-sm xl:mx-0 lg:mx-0"
+            id="AxisProblem"
+          >
+            <div className="flex flex-col gap-[64px]">
+              <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill]">
+                <h5 className="text-my-gray">The Problem</h5>
+                <h2 className="text-black">
+                  With record-low engagement in 2024, Axis needed a bold
+                  identity to stand out among 15+ competing SFU clubs.
+                </h2>
+              </div>
+
+              <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill]">
+                <h5 className="text-my-gray">The Vision</h5>
+                <h2 className="text-black">
+                  Craft a brand to inspire awe and reignite engagement in a
+                  dying audience.
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          {/* old center vision text */}
+          {/* <section
             className="w-fill flex flex-row xl:justify-center lg:justify-center md:justify-center text-start xl:text-center lg:text-center md:text-center my-[120px] mx-gutter-sm xl:mx-0 lg:mx-0"
             id="AxisVision"
           >
@@ -147,112 +171,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
                 audience.
               </h2>
             </div>
-          </section>
-
-          <section
-            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
-            id="AxisMarketingCampaign"
-          >
-            <TextBox
-              header="Rebuilding the Past"
-              body="Dominating our media presence"
-              color="black"
-            ></TextBox>
-          </section>
-
-          {/* 1 Large landscapped image */}
-          <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <Image
-              src="/images/Axis3.png"
-              alt="Our Social Media Posts"
-              width={1204} // Set the width
-              height={900} // Set the height
-              className="xl:w-[80%] lg:w-[75%] w-[fill] nextImg"
-            />
-            <div className="xl:w-[20%] lg:w-[25%] w-[fill] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
-              <p className="text-black">
-                Competing against 15+ other SFU clubs, for events, participants,
-                and hiring, new users needed an immediate way to identify our
-                content.
-              </p>
-              <p className="text-black">
-                Axis Consulting&apos;s primary engagement for events and
-                projects was through Instagram. The pitch-black canvas, paired
-                with delicate splashes of blue, became the signature visual
-                identity that defined the brand.
-              </p>
-            </div>
-          </section>
-
-          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]">
-            <TextBox
-              header="Inspiring the Present"
-              body="Reimaging Axis across a dynamic plane"
-              color="black"
-              id="AxisMotionReel"
-            />
-          </section>
-
-          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row flex-col xl:gap-[2%] lg:gap-[2rem] gap-[20px] min-h-[50vh]">
-            <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh]">
-              <Video
-                placeholder={
-                  "https://www.youtube.com/embed/ecyOBWauVDM?autoplay=1&mute=1&loop=1&playlist=ecyOBWauVDM&controls=1&modestbranding=1"
-                }
-                brightness={"100%"}
-              />
-            </div>
-            <div className="xl:w-[20%]  w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
-              <p className="text-black">
-                Graphics were great, but failed to encapsulate any emotion.
-              </p>
-              <p className="text-black">
-                We sought to engage students on a more immersive and emotional
-                level. The motion graphic provided a fluid and compelling
-                approach, captivating the audience and reinforced Axis&apos;s
-                brand identity in a way static images never could. 
-              </p>
-            </div>
-          </section>
-
-          <section
-            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
-            id="AxisWebsite"
-          >
-            <TextBox
-              header="Embracing the Future"
-              body="Establishing a legacy on the web"
-              color="black"
-            />
-          </section>
-
-          <section className=" flex flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <div className="w-[100%] max-h-[900px] ">
-              <Image
-                src="/images/Axis4.png" // Replace with your image path
-                alt="The website landing page"
-                width={999} // Set the width
-                height={900} // Set the height
-                className="w-[100%] nextImg"
-              />
-            </div>
-            <div className="container-2-img">
-              <Image
-                src="/images/Axis5.png" // Replace with your image path
-                alt="Mobiule responsive view of the website"
-                width={999} // Set the width
-                height={900} // Set the height
-                className="w-[35%] nextImg"
-              />
-              <Image
-                src="/images/Axis6.png" // Replace with your image path
-                alt="Some of the Axis Consulting teams featured on the website"
-                width={579} // Set the width
-                height={900} // Set the height
-                className="w-[65%] nextImg"
-              />
-            </div>
-          </section>
+          </section> */}
 
           <section
             className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
@@ -310,13 +229,13 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           >
             <TextBox
               header="The Color Pallete"
-              body="A Monochromatic Pallete Inspired by the Stars"
+              body="Preserving Identity Through our Palette"
               color="black"
             ></TextBox>
           </section>
 
           {/* 1 Large landscapped image */}
-          <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+          <section className="flex xl:flex-row-reverse lg:flex-row-reverse flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <Image
               src="/images/Axis10.png"
               alt="Axis's color scheme, inspired by the stars"
@@ -324,12 +243,12 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
               height={900} // Set the height
               className="xl:w-[80%] lg:w-[75%] w-[fill] nextImg"
             />
-            <div className="xl:w-[20%] lg:w-[25%] w-[fill] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
+            <div className="xl:w-[20%] lg:w-[25%] w-[fill] flex flex-col gap-[2rem] h-fill justify-start items-baseline">
               <p className="text-black">
-                We wanted students to recognize Axis through the rebrand, so we
-                retained its iconic blue for familiarity. Inspired by the night
-                sky, we chose a black-and-white canvas, with Axis Blue as a
-                &quot;North Star&quot;—guiding our visual hierarchy.
+                To ensure Axis remained recognizable, we kept the iconic Axis
+                Blue and paired it with a black-and-white canvas inspired by the
+                night sky. This monochromatic palette made the blue more vibrant
+                and distinct, allowing it to be visually dominant.
               </p>
             </div>
           </section>
@@ -365,8 +284,108 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
           </section>
 
           <section
+            className="mt-[5rem] containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
+            id="AxisMedia"
+          >
+            <TextBox
+              header="Dominating our media presence"
+              body="We started on Social Media"
+              color="black"
+            ></TextBox>
+          </section>
+
+          {/* 1 Large landscapped image */}
+          <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+            <Image
+              src="/images/Axis3.png"
+              alt="Our Social Media Posts"
+              width={1204} // Set the width
+              height={900} // Set the height
+              className="xl:w-[80%] lg:w-[75%] w-[fill] nextImg"
+            />
+            <div className="xl:w-[20%] lg:w-[25%] w-[fill] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
+              <p className="text-black">
+                Axis Consulting's primary engagement for events and projects was
+                through Instagram, the main touchpoint for both new and
+                returning users. Our distinct blue and black canvas soon became
+                a trademark.
+              </p>
+            </div>
+          </section>
+
+          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]">
+            <TextBox
+              header="Then moved beyond the static grid"
+              body="Giving Axis a Soul"
+              color="black"
+              id="AxisMotionReel"
+            />
+          </section>
+
+          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row flex-col xl:gap-[2%] lg:gap-[2rem] gap-[20px] min-h-[50vh]">
+            <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh]">
+              <Video
+                placeholder={
+                  "https://www.youtube.com/embed/ecyOBWauVDM?autoplay=1&mute=1&loop=1&playlist=ecyOBWauVDM&controls=1&modestbranding=1"
+                }
+                brightness={"100%"}
+              />
+            </div>
+            <div className="xl:w-[20%]  w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">
+              <p className="text-black">
+                Graphics were great, but failed to encapsulate any emotion.
+              </p>
+              <p className="text-black">
+                We sought to engage students on a more immersive and emotional
+                level. The motion graphic provided a fluid and compelling
+                approach, captivating the audience and reinforced Axis&apos;s
+                brand identity in a way static images never could. 
+              </p>
+            </div>
+          </section>
+
+          <section
             className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
-            id="AxisMarketingCampaign"
+            id="AxisWebsite"
+          >
+            <TextBox
+              header="Finally, we focused on our future."
+              body="Establishing a legacy on the web"
+              color="black"
+            />
+          </section>
+
+          <section className=" flex flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+            <div className="w-[100%] max-h-[900px] ">
+              <Image
+                src="/images/Axis4.png" // Replace with your image path
+                alt="The website landing page"
+                width={999} // Set the width
+                height={900} // Set the height
+                className="w-[100%] nextImg"
+              />
+            </div>
+            <div className="container-2-img">
+              <Image
+                src="/images/Axis5.png" // Replace with your image path
+                alt="Mobiule responsive view of the website"
+                width={999} // Set the width
+                height={900} // Set the height
+                className="w-[35%] nextImg"
+              />
+              <Image
+                src="/images/Axis6.png" // Replace with your image path
+                alt="Some of the Axis Consulting teams featured on the website"
+                width={579} // Set the width
+                height={900} // Set the height
+                className="w-[65%] nextImg"
+              />
+            </div>
+          </section>
+
+          <section
+            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
+            id="AxisImpact"
           >
             <TextBox
               // header="Rebuilding the Past"

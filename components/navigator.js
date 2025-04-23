@@ -53,7 +53,7 @@ function Navigator({ openNav, navAppear, caseContent }) {
       <div
         className={`flex flex-col gap-[2px] transition-all ease-fastEase duration-[400ms] justify-start items-start bg-white w-[100%] border-[1px] p-[0.2rem] overflow-hidden
         ${nav === true ? "h-[14rem] opacity-[100%] z-[10] rounded-[10px] mt-[1rem]" : "h-[5vh] opacity-[0] z-[-10] rounded-[20px] mt-[0.5rem]"}
-        ${caseContent === "Innota" ? "border-white" : "border-black"}
+        ${caseContent === "Innota" ? "border-white" : "border-black/20"}
         `}
       >
         {caseContent === "Innota" ? (
@@ -69,9 +69,10 @@ function Navigator({ openNav, navAppear, caseContent }) {
           <>
             <NavigatorCell Case="Intro" Link="#AxisIntro" />
             <NavigatorCell Case="Vision" Link="#AxisVision" />
-            <NavigatorCell Case="Media" Link="#AxisMarketingCampaign" />
-            <NavigatorCell Case="Website" Link="#AxisWebsite" />
+            <NavigatorCell Case="Problem" Link="#AxisProblem" />
             <NavigatorCell Case="Branding" Link="#AxisBrand" />
+            <NavigatorCell Case="Media" Link="#AxisMedia" />
+
             <NavigatorCell Case="My Impact" Link="#AxisImpact" />
           </>
         )}
