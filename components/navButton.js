@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaCircle } from "react-icons/fa";
 
+
 function NavButton({
   openNav,
   openPrompt,
@@ -31,9 +32,9 @@ function NavButton({
     >
       <div className="group h-fit w-fit">
         <button
-          className={` w-full h-fit  max-h-[1.8rem]  overflow-hidden flex flex-row gap-[7px] items-center rounded-full px-[16px] py-[5px] bg-white/30 backdrop-blur-sm text-white hover:border-white hover:border-[1px] hover:bg-white/0 hover:text-black ease-in-out duration-[200ms] transition-all border-[1px] border-transparent hover:cursor-pointer
+          className={` w-fit border-[1px] h-fit  max-h-[1.8rem]  overflow-hidden flex flex-row gap-[7px] items-center rounded-[5px] px-[16px] py-[24px] bg-white/30 backdrop-blur-sm text-white hover:border-white hover:border-[1px] hover:bg-white/0 hover:text-black ease-in-out duration-[200ms] transition-all border-transparent hover:cursor-pointer
         ${nav === true ? "bg-white/30 text-white rounded-[10px]" : "bg-white/30 backdrop-filter rounded-[120px]"}`}
-          // onClick={() => setNav(!nav)}
+        // onClick={() => setNav(!nav)}
         >
           {/* {nav === true ? (
           <p className="text-[12px]">{openPrompt} </p>
@@ -62,8 +63,8 @@ function NavButton({
                       <FaCircle className=" h-0 w-0 " />
                     )}
                   </div>
-                  <div className="flex flex-col mt-[20px] group-hover:mt-[-18px] duration-[400ms] ease-fastEase ">
-                    <p className="text-[12px] max-w-[180px] text-nowrap opacity-[100%] group-hover:opacity-[0%] group-hover:max-w-[50px] duration-[450ms] ease-fastEase ransition-all ">
+                  <div className="flex flex-col mt-[32px] gap-[10px] group-hover:mt-[-26px] duration-[400ms] ease-fastEase ">
+                    <p className="text-[12px] max-w-[180px] text-nowrap opacity-[100%] group-hover:opacity-[0%] group-hover:max-w-[50px] duration-[450ms] ease-fastEase transition-all ">
                       {customScrollDefault}
                     </p>
                     <a
@@ -71,7 +72,7 @@ function NavButton({
                       target="_blank"
                       className="w-full"
                     >
-                      <p className="text-[12px] max-w-[50px] text-nowrap opacity-[100%] group-hover:opacity-[100%] group-hover:max-w-[180px] duration-[450ms] ease-fastEase transition-all">
+                      <p className="text-[12px] max-w-[10px] text-nowrap opacity-[100%] group-hover:opacity-[100%] group-hover:max-w-[180px] duration-[450ms] ease-fastEase transition-all">
                         {customScrollActive}
                       </p>
                     </a>

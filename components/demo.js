@@ -56,11 +56,10 @@ function Demo() {
       {isMobile.current ? (
         <div className="w-fit h-fit flex flex-col items-start justify-start gap-[0.5rem] overflow-hidden">
           <div
-            className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover rounded-[10px] ${
-              toggle
-                ? "w-[120px] h-[120px] my-[10px] min-w-[70px] min-h-[70px]"
-                : "w-[120px] h-[120px] my-[10px] min-w-[20px] min-h-[70px] rounded-[1rem]"
-            } transform ${toggle ? "scale-[100%]" : "scale-[30%]"} transform-origin-center flex justify-center items-center`}
+            className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover rounded-[10px] ${toggle
+              ? "w-[120px] h-[120px] my-[10px] min-w-[70px] min-h-[70px]"
+              : "w-[120px] h-[120px] my-[10px] min-w-[20px] min-h-[70px] rounded-[1rem]"
+              } transform ${toggle ? "scale-[100%]" : "scale-[30%]"} transform-origin-center flex justify-center items-center`}
           >
             <div className="w-full h-full p-[10px]">
               <div
@@ -85,7 +84,7 @@ function Demo() {
           <div className="flex flex-col gap-[2rem]">
             <div className="flex flex-col gap-[5px] text-[#A0A0A0] opacity-[100%]">
               <h4>Hey! I’m Caleb </h4>
-              <h4>Currently @Metalab</h4>
+              <h4>Currently @RevisionDojo (YC F24), Prev Metalab</h4>
             </div>
             <div className="flex flex-col gap-[5px]">
               <h1>Designer by Day,</h1>
@@ -95,18 +94,20 @@ function Demo() {
         </div>
       ) : (
         <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px]">
-          <h4>Hey! I’m Caleb — Currently @Metalab</h4>
+          <div className='flex flex-col gap-[12px]'>
+            <h4>Hey! I’m Caleb</h4>
+            <h4>Currently @RevisionDojo (YC F24), Prev Metalab</h4>
+          </div>
           <div className="w-fit h-fit flex justify-center items-center">
             <div className="h-[128px] flex flex-col items-center justify-center">
               <h1>Designer by Day</h1>
             </div>
 
             <div
-              className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover  ${
-                toggle
-                  ? "w-[6.5vw] h-[6.5vw] mx-[3vw] min-w-[70px] min-h-[70px] rounded-[0.4vw]"
-                  : "w-[10px] h-[10px] mx-[2vw] min-w-[20px] min-h-[20px] rounded-[0.2vw]"
-              } transform ${toggle ? "scale-110" : "scale-100"} transform-origin-center flex justify-center items-center`}
+              className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover  ${toggle
+                ? "w-[6.5vw] h-[6.5vw] mx-[3vw] min-w-[70px] min-h-[70px] rounded-[0.4vw]"
+                : "w-[10px] h-[10px] mx-[2vw] min-w-[20px] min-h-[20px] rounded-[0.2vw]"
+                } transform ${toggle ? "scale-110" : "scale-100"} transform-origin-center flex justify-center items-center`}
             >
               <div className="w-fit h-fit">
                 <div

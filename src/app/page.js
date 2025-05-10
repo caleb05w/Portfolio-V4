@@ -8,14 +8,19 @@ import Navigator from "../../components/navigator";
 import NavButton from "../../components/navButton";
 import InnotaCase from "../../components/InnotaCase";
 import AxisCase from "../../components/AxisCase";
+import { useCase } from "./caseContext";
+import { RiArrowLeftUpLine } from "react-icons/ri";
+import { LuConstruction } from "react-icons/lu";
+
+
+
+
+
 
 function Page() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Adds smooth scrolling
-    });
-  };
+  const { caseOpen, setCaseOpen } = useCase();
+  const { caseHeight, setCaseHeight } = useCase();
+  const { caseContent, setCaseContent } = useCase();
 
   // Memoize `open` and `close` objects to prevent them from changing on each render
   const open = useMemo(
@@ -42,9 +47,15 @@ function Page() {
     []
   );
 
-  const [caseHeight, setCaseHeight] = useState(close);
-  const [caseOpen, setCaseOpen] = useState(false);
-  const [caseContent, setCaseContent] = useState("empty");
+
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds smooth scrolling
+    });
+  };
+
 
   // Use effect to update the case based on content change
   useEffect(() => {
@@ -55,14 +66,14 @@ function Page() {
       setCaseHeight(close);
       setCaseOpen(false);
     }
-  }, [caseContent, open, close]); // Trigger whenever caseContent changes
+  }, [caseContent, open, close, setCaseOpen]); // Trigger whenever caseContent changes
 
   return (
     <div className="relative">
       {/* Case Studies Section */}
       <section
-        className={`flex flex-row-reverse justify-between xl:px-[1vw] lg:px-[2vw] h-[2rem] fixed w-full z-[12] 
-          ${caseOpen === false ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[700ms] duration-[500ms] ease-fastEase"}`}
+        className={`flex flex-row-reverse justify-between xl:px-[1vw] lg:px-[2vw] px-[2vw] h-[2rem] fixed w-full z-[12] 
+          ${caseOpen === false ? "top-[-10vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[700ms] duration-[500ms] ease-fastEase"}`}
       >
         <Navigator openNav={caseOpen} caseContent={caseContent} />
         <div
@@ -71,19 +82,21 @@ function Page() {
           `}
         >
           <button
-            className={`rounded-full px-[16px] py-[5px]  backdrop-blur-sm   hover:bg-white/0 hover:text-black ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
-              ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white hover:border-[1px] border-transparent" : "border-[1px] border-black hover:bg-black/20 text-black"}`}
+            className={`rounded-[5px] px-[16px] py-[16px]  backdrop-blur-sm   hover:text-black ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
+              ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white hover:border-[1px] border-transparent hover:text-white" : "border-[1px] border-black hover:bg-black/20 text-black"}`}
             onClick={() => {
               setCaseHeight(close);
               setCaseOpen(false);
               setCaseContent("empty");
             }}
           >
-            <h6
+            {/* <h6
               className={`text-[12px] z-[12] ${caseContent === "Innota" ? "text-white" : "text-black"}`}
             >
               Close Case
-            </h6>
+            </h6> */}
+            <RiArrowLeftUpLine />
+
           </button>
         </div>
       </section>
@@ -91,15 +104,17 @@ function Page() {
       {/* Home Page Section */}
       <section
         className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[10px] h-[2rem] fixed w-full z-[12]  transition-all 
-          ${caseOpen === true ? "top-[-5vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
+          ${caseOpen === true ? "top-[-10vh] duration-[400ms] ease-slowEase" : "top-[2vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
       >
         <NavButton
           openNav={caseOpen}
           customScroll={true}
-          customScrollDefault={"Portfolio Still in Progress"}
-          customScrollActive="Curious? Check out the Github!"
+          customScrollDefault={<LuConstruction className='w-[16px] h-auto' />
+          }
+          customScrollActive="Still Under Construction!"
           customScrollTarget={"https://github.com/caleb05w/Portfolio-V4"}
-          customScrollDot={true}
+          customScrollDotSecondary={true}
+        // customScrollDot={true}
         />
         <NavButton
           openNav={caseOpen}
@@ -129,15 +144,14 @@ function Page() {
       {/* Background Overlay Transition */}
       <div
         className={`w-[100vw] h-fit flex flex-col justify-center items-center bg-black transition-all ease-slowEase relative
-          ${
-            caseOpen === true
-              ? "opacity-[10%] scale-[95%] top-[10vh] duration-[400ms]"
-              : "opacity-[100%] top-[0vh] duration-[500ms]"
+          ${caseOpen === true
+            ? "opacity-[10%] scale-[95%] top-[10vh] duration-[400ms]"
+            : "opacity-[100%] top-[0vh] duration-[500ms]"
           }
           
         `}
       >
-        <section className="flex flex-col lg:mx-[120px] md:mx-gutter-md mx-gutter-sm lg:py-gap-lg xl:py-gap-lg md:py-gap-md py-gap-sm lg:mt-[180px] mt-[60px] gap-[120px] lg:gap-[320px] items-center w-full px-gutter-sm lg:px-[120px]">
+        <section className="flex flex-col lg:mx-[120px] md:mx-gutter-md mx-gutter-sm lg:py-gap-lg xl:py-gap-lg md:py-gap-md py-gap-sm lg:mt-[180px] mt-[60px] gap-[120px] lg:gap-[240px] items-center w-full px-gutter-sm lg:px-[120px]">
           <section className="">
             <Demo />
           </section>

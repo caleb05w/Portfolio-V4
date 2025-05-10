@@ -6,13 +6,16 @@ import Image from "next/image";
 import Navigator from "./navigator";
 import Footer from "./footer";
 import "../src/app/globals.css";
+import { useCase } from "../src/app/caseContext";
+import Navcell from "../components/navcell"
 
-function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
+function InnotaCase({ stylePlaceholder, styles }) {
+  const { caseOpen, isMobile } = useCase();
+  const { nav, setNav } = useCase();
   const startRef = useRef(null);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
   const containerRef = useRef(null);
-  const [localCase, setLocalCase] = useState(caseOpen);
 
   useEffect(() => {
     // Ensure containerRef.current is not null
@@ -57,9 +60,37 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
 
   return (
     <div ref={startRef} className="scrollable">
-      {/* //Navigator component */}
-      {/* <Navigator openNav={caseOpen} /> */}
-      {/* Navbar */}
+
+
+      {isMobile === false && <div className={` fixed flex flex-row justify-end right-[0] z-[900]`}>
+        <button onClick={() => setNav(!nav)} className={`cursor-pointer ${nav ? "w-[100vw] h-[100vh]" : "w-[0vw] h-[0vh]"}`}></button>
+
+        <div className={`h-[100vh] relative right-[0] ease-fastEase duration-[1100ms] transition-all bg-zinc-950 ${nav ? "w-[20vw] min-w-[20rem]" : "w-[0vw] min-w-[0rem] "}`}>
+
+          <div className='flex flex-col  justify-between h-[100%] py-[32px] px-[32px]'>
+            <div className="flex flex-col gap-[24px]">
+              <p className="text-white/30">About the Project</p>
+              <p>Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch.</p>
+            </div>
+
+
+            <div className="flex flex-col gap-[24px]">
+              <p className="text-white/30">Project Directory</p>
+              <div className='flex flex-col gap-[4px]'>
+                <Navcell Name="Intro" Link="#Innota-Intro" />
+                <Navcell Name="Problem" Link="#Innota-Problem" />
+                <Navcell Name="Solution #1" Link="#Innota-Goal1" />
+                <Navcell Name="Solution #2" Link="#Innota-Goal2" />
+                <Navcell Name="Handoff" Link="#Innota-Handoff" />
+                <Navcell Name="Reflection" Link="#Innota-Reflection" />
+              </div>
+            </div>
+
+          </div>
+        </div >
+
+      </div >
+      }
 
       <div
         className={`w-full bg-black h-fit overflow-hidden absolute z-[20] transition-all`}
@@ -67,309 +98,310 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
         //   caseOpen ? "ease-fastEase" : "animate-closeCase"
         style={stylePlaceholder} // Pass dynamic styles for position, scale, etc.\
       >
-        <div className="flex flex-col gap-my-lg justify-center w-full lg:gap-gap-lg md:gap-gap-md gap-gap-sm">
-          <section className="gap-lg">
-            <div className="xl:mx-gutter-xl lg:mx-gutter-lg mx-gutter-sm">
-              <h1 className="text-white"> Innota </h1>
-              <div className="flex flex-row justify-between w-[100%] mt-[20vh]">
-                <h5 className="text-my-gray"> 2024 </h5>
-                <div className="flex flex-row justify-between xl:w-[30%] lg:w-[50%] w-[70%]">
-                  <div className="flex flex-col gap-[2px] w-full h-full">
-                    <h5 className="text-my-gray"> Project </h5>
-                    <h5> 5 Weeks </h5>
-                    <h5> Web & Mobile </h5>
-                    <h5> Vision Project </h5>
-                  </div>
-                  <div className="flex flex-col gap-[2px] w-full h-full">
-                    <h5 className="text-my-gray"> Team</h5>
-                    <h5> 1 Designer (Me) </h5>
-                    <h5> 1 Front end </h5>
-                    <h5> 3 Backend </h5>
+        <div className="flex flex-row  w-[100vw]">
+          <div className={`flex flex-col gap-my-lg justify-center lg:gap-gap-lg md:gap-gap-md gap-gap-sm  ease-fastEase duration-[1100ms] transition-all ${nav && !isMobile ? "w-[80vw] blur-sm brightness-[60%]" : "w-[100vw]"}`}>
+            <section className="gap-lg">
+              <div className="xl:mx-gutter-xl lg:mx-gutter-lg mx-gutter-sm">
+                <h1 className="text-white"> Innota </h1>
+                <div className="flex flex-row justify-between w-[100%] mt-[20vh]">
+                  <h5 className="text-my-gray"> 2024 </h5>
+                  <div className="flex flex-row justify-between xl:w-[30%] lg:w-[50%] w-[70%]">
+                    <div className="flex flex-col gap-[2px] w-full h-full">
+                      <h5 className="text-my-gray"> Project </h5>
+                      <h5> 5 Weeks </h5>
+                      <h5> Web & Mobile </h5>
+                      <h5> Vision Project </h5>
+                    </div>
+                    <div className="flex flex-col gap-[2px] w-full h-full">
+                      <h5 className="text-my-gray"> Team</h5>
+                      <h5> 1 Designer (Me) </h5>
+                      <h5> 1 Front end </h5>
+                      <h5> 3 Backend </h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-[100%] h-[80vh] mt-[5vh]">
-              <Video
-                placeholder={
-                  "https://www.youtube.com/embed/w8R3G3Anpjo?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=w8R3G3Anpjo"
-                }
-                brightness={"100%"}
-              />
-            </div>
-          </section>
-          <section
-            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
-            id="Innota-Intro"
-          >
-            <TextBox
-              header="The Introduction"
-              body="Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch."
-            ></TextBox>
-            {/* <p>Scrolling down: {isScrollingDown ? "Yes" : "No"}</p> */}
-          </section>
-          {/* 2 large images */}
-          <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <Image
-              src="/images/Img1.png" // Replace with your image path
-              alt="The website showcase"
-              width={999} // Set the width
-              height={900} // Set the height
-              className="w-[65%] nextImg"
-            />
-            <Image
-              src="/images/Img2.png" // Replace with your image path
-              alt="Pro Plan component"
-              width={579} // Set the width
-              height={900} // Set the height
-              className="w-[35%] nextImg"
-            />
-          </section>
-          <div id="Innota-Problem" className="h-0"></div>
-          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <TextBox
-              header="The Problem"
-              body="None of the incoming web traffic was converting into users."
-            ></TextBox>
-          </section>
-          {/* 1 Large landscapped image */}
-          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <Image
-              src="/images/Img3.png"
-              alt="Pro Plan component"
-              width={1608} // Set the width
-              height={900} // Set the height
-              className="w-[100%] nextImg"
-            />
-          </section>
-          <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <TextBox
-              header="Solving the issue"
-              body="I led a two-week user research campaign to understand why users weren’t converting."
-            />
-          </section>
-          <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-            <Image
-              src="/images/UXR.png"
-              alt="Results from our 2 week UXR Campaign"
-              width={1204} // Set the width
-              height={900} // Set the height
-              className="xl:w-[80%] lg:w-[75%] w-[100%] nextImg"
-            />
-            <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end items-baseline">
-              <p className="text-white">
-                I launched a 2 week UXR campaign to gauge pain points, identify
-                onsite friction and better understand the users. I primarily did
-                outreach on Discord, Slack, and in person, surveying 65
-                participants
-              </p>
-            </div>
-          </section>
-          <section
-            className="w-fill flex flex-row xl:justify-center lg:justify-center md:justify-center text-start xl:text-center lg:text-center md:text-center my-[120px] mx-gutter-sm xl:mx-0 lg:mx-0"
-            id="AxisVision"
-          >
-            <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill] xl:my-[5rem]">
-              <h5 className="text-my-gray">The Conclusion</h5>
-              <h2 className="text-white">
-                Users didn’t trust the product due to poor design choices.
-              </h2>
-            </div>
-          </section>
-          {/* Part 1 */}
-          <section
-            className=" flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm "
-            id="Innota-Goal1"
-          >
-            <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-              <TextBox
-                header="Goal #1"
-                body="A web redesign was necessary in order to regain users trust."
-                para="The previous website was cluttered, featured inconsistent visual hierarchy, and featured poor design, making it difficult to navigate for new users."
-              />
-            </section>
-
-            {/* 1 Large image with 2 smaller images flex rowed's underneath */}
-            <section className="flex flex-col gap-img-gap-lg xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-              <section className="containerBody">
-                <Image
-                  src="/images/Img4.png"
-                  alt="Laptop with Innota's home page open on a wooden desk"
-                  width={1608} // Set the width
-                  height={900} // Set the height
-                  className="w-[100%] nextImg"
-                />
-              </section>
-
-              <div className="container-2-img">
-                <Image
-                  src="/images/Img5.png" // Replace with your image path
-                  alt="Showcase of some of Innota's components"
-                  width={580} // Set the width
-                  height={900} // Set the height
-                  className="w-[40%] nextImg"
-                />
-                <Image
-                  src="/images/Img6.png" // Replace with your image path
-                  alt="Mobile view of app Q&A Page"
-                  width={998} // Set the width
-                  height={900} // Set the height
-                  className="w-[60%] nextImg"
+              <div className="w-[100%] h-[80vh] mt-[5vh]">
+                <Video
+                  placeholder={
+                    "https://www.youtube.com/embed/w8R3G3Anpjo?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=w8R3G3Anpjo"
+                  }
+                  brightness={"100%"}
                 />
               </div>
             </section>
-
-            <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+            <section
+              className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
+              id="Innota-Intro"
+            >
               <TextBox
-                header="My Design Rationale"
-                body="Users said the previous website was cluttered and visually confusing."
-                body2="I rebuilt components to be simple and intentional. A black and white colour pallet made made interactions intuitive."
+                header="The Introduction"
+                body="Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch."
+              ></TextBox>
+              {/* <p>Scrolling down: {isScrollingDown ? "Yes" : "No"}</p> */}
+            </section>
+            {/* 2 large images */}
+            <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+              <Image
+                src="/images/Img1.png" // Replace with your image path
+                alt="The website showcase"
+                width={999} // Set the width
+                height={900} // Set the height
+                className="w-[65%] nextImg"
+              />
+              <Image
+                src="/images/Img2.png" // Replace with your image path
+                alt="Pro Plan component"
+                width={579} // Set the width
+                height={900} // Set the height
+                className="w-[35%] nextImg"
               />
             </section>
-
-            <section className="flex flex-col gap-img-gap-lg xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-              <div className="container-2-img">
-                <Image
-                  src="/images/Img7.png" // Replace with your image path
-                  alt="Analysis of Q&A component"
-                  width={875} // Set the width
-                  height={900} // Set the height
-                  className="nextImg w-[55%]"
-                />
-                <Image
-                  src="/images/Img8.png" // Replace with your image path
-                  alt="Analysis of Blog component"
-                  width={713} // Set the width
-                  height={900} // Set the height
-                  className="nextImg w-[45%]"
-                />
-              </div>
-              <section className="containerBody">
-                <Image
-                  src="/images/Img9.png"
-                  alt="Comparison of legacy Value proposition and refined value proposition"
-                  width={1608} // Set the width
-                  height={900} // Set the height
-                  className="nextImg w-[100%]"
-                />
-              </section>
-              <div className="xl:w-[30%] lg:w-[60%] w-[100%]">
-                <p>
-                  Inspired by other popular AI agents (ChatGPT, Perplexity,
-                  Claude ect..) I developed a new concise, clean and
-                  minimalistic interface.
-                </p>
-              </div>
-            </section>
-          </section>
-          {/* Part 2 */}
-          <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
-            <div id="Innota-Goal2" className="h-0"></div>
+            <div id="Innota-Problem" className="h-0"></div>
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
-                header="Goal #2"
-                body="Rebuilding an exhausting onboarding experience"
-                para="Users needed to complete the onboarding sign up process in order to gain access to the web app. Insights from the UXR campaign indicated that we lost 80% of the users during sign up."
-              />
+                header="The Problem"
+                body="None of the incoming web traffic was converting into users."
+              ></TextBox>
             </section>
-
+            {/* 1 Large landscapped image */}
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <Image
-                src="/images/Img10.png"
-                alt="Visualization of where users are lost"
+                src="/images/Img3.png"
+                alt="Pro Plan component"
                 width={1608} // Set the width
                 height={900} // Set the height
                 className="w-[100%] nextImg"
               />
             </section>
-
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
-                body="The old website failed to showcase the product, causing distrust in users."
-                body2="I added a live demo on the homepage to inform users,  highlighting the apps features."
+                header="Solving the issue"
+                body="I led a two-week user research campaign to understand why users weren’t converting."
               />
             </section>
-
-            <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row lg:flex-row flex-col xl:gap-[2%] lg:gap-[2%] gap-[20px] min-h-[50vh]">
-              <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[40vh]">
-                <Video
-                  placeholder={
-                    "https://www.youtube.com/embed/WhKiRTptHEk?autoplay=1&mute=1&modestbranding=1&loop=1&playlist=WhKiRTptHEk"
-                  }
-                  brightness={"100%"}
-                />
-              </div>
-              <div className="lg:w-[21%] xl:w-[21%] w-fill h-fill flex flex-col justify-end justify-items-end ">
-                <p>
-                  I added a live demo on the landing page to highlight its
-                  functions upfront. This gave users a much better understanding
-                  of the web app, reducing distrust.
+            <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+              <Image
+                src="/images/UXR.png"
+                alt="Results from our 2 week UXR Campaign"
+                width={1204} // Set the width
+                height={900} // Set the height
+                className="xl:w-[80%] lg:w-[75%] w-[100%] nextImg"
+              />
+              <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end items-baseline">
+                <p className="text-white">
+                  I launched a 2 week UXR campaign to gauge pain points, identify
+                  onsite friction and better understand the users. I primarily did
+                  outreach on Discord, Slack, and in person, surveying 65
+                  participants
                 </p>
               </div>
             </section>
-
-            <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-              <TextBox
-                body="The highest point of friction in the onboarding process was the email confirmation. Users assumed the unbranded emails from Innota were scams."
-                body2="I designed and coded custom emails to foster credibility and product authenticity."
-              />
-            </section>
-
-            <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-              <div className="flex flex-col gap-[20px]">
-                <Image
-                  src="/images/Img11.png"
-                  alt="Comparison of old email templates to the new one"
-                  width={1608} // Set the width
-                  height={900} // Set the height
-                  className="w-[100%] nextImg"
-                />
-                <Image
-                  src="/images/Img12.png"
-                  alt="The new improved user journey"
-                  width={1608} // Set the width
-                  height={900} // Set the height
-                  className="w-[100%] nextImg"
-                />
+            <section
+              className="w-fill flex flex-row xl:justify-center lg:justify-center md:justify-center text-start xl:text-center lg:text-center md:text-center my-[120px] mx-gutter-sm xl:mx-0 lg:mx-0"
+              id="AxisVision"
+            >
+              <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill] xl:my-[5rem]">
+                <h5 className="text-my-gray">The Conclusion</h5>
+                <h2 className="text-white">
+                  Users didn’t trust the product due to poor design choices.
+                </h2>
               </div>
             </section>
-
-            {/* Part 3 */}
-
-            {/* Part 2 */}
-            <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
-              <div id="Innota-Handoff" className="h-0"></div>
+            {/* Part 1 */}
+            <section
+              className=" flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm "
+              id="Innota-Goal1"
+            >
               <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
                 <TextBox
-                  header="The Handoff"
-                  body="As the only designer, I had to make sure that my work could be scaled & integrated seamlessly by a team that could barely use Figma."
-                  para="One of the early concerns the executives had was about the websites scalability -- how to update it when I left. I handed off a design system so they could build and update existing components easily."
+                  header="Goal #1"
+                  body="A web redesign was necessary in order to regain users trust."
+                  para="The previous website was cluttered, featured inconsistent visual hierarchy, and featured poor design, making it difficult to navigate for new users."
                 />
               </section>
 
-              <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-                <Image
-                  src="/images/Img13.png" // Replace with your image path
-                  alt="Showcase of the component system"
-                  width={580} // Set the width
-                  height={900} // Set the height
-                  className="w-[35%] nextImg"
+              {/* 1 Large image with 2 smaller images flex rowed's underneath */}
+              <section className="flex flex-col gap-img-gap-lg xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                <section className="containerBody">
+                  <Image
+                    src="/images/Img4.png"
+                    alt="Laptop with Innota's home page open on a wooden desk"
+                    width={1608} // Set the width
+                    height={900} // Set the height
+                    className="w-[100%] nextImg"
+                  />
+                </section>
+
+                <div className="container-2-img">
+                  <Image
+                    src="/images/Img5.png" // Replace with your image path
+                    alt="Showcase of some of Innota's components"
+                    width={580} // Set the width
+                    height={900} // Set the height
+                    className="w-[40%] nextImg"
+                  />
+                  <Image
+                    src="/images/Img6.png" // Replace with your image path
+                    alt="Mobile view of app Q&A Page"
+                    width={998} // Set the width
+                    height={900} // Set the height
+                    className="w-[60%] nextImg"
+                  />
+                </div>
+              </section>
+
+              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                <TextBox
+                  header="My Design Rationale"
+                  body="Users said the previous website was cluttered and visually confusing."
+                  body2="I rebuilt components to be simple and intentional. A black and white colour pallet made made interactions intuitive."
                 />
-                <Image
-                  src="/images/Img14.png" // Replace with your image path
-                  alt="Breaking down an individual component and its anatomy"
-                  width={998} // Set the width
-                  height={900} // Set the height
-                  className="w-[65%] nextImg"
+              </section>
+
+              <section className="flex flex-col gap-img-gap-lg xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                <div className="container-2-img">
+                  <Image
+                    src="/images/Img7.png" // Replace with your image path
+                    alt="Analysis of Q&A component"
+                    width={875} // Set the width
+                    height={900} // Set the height
+                    className="nextImg w-[55%]"
+                  />
+                  <Image
+                    src="/images/Img8.png" // Replace with your image path
+                    alt="Analysis of Blog component"
+                    width={713} // Set the width
+                    height={900} // Set the height
+                    className="nextImg w-[45%]"
+                  />
+                </div>
+                <section className="containerBody">
+                  <Image
+                    src="/images/Img9.png"
+                    alt="Comparison of legacy Value proposition and refined value proposition"
+                    width={1608} // Set the width
+                    height={900} // Set the height
+                    className="nextImg w-[100%]"
+                  />
+                </section>
+                <div className="xl:w-[30%] lg:w-[60%] w-[100%]">
+                  <p>
+                    Inspired by other popular AI agents (ChatGPT, Perplexity,
+                    Claude ect..) I developed a new concise, clean and
+                    minimalistic interface.
+                  </p>
+                </div>
+              </section>
+            </section>
+            {/* Part 2 */}
+            <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
+              <div id="Innota-Goal2" className="h-0"></div>
+              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                <TextBox
+                  header="Goal #2"
+                  body="Rebuilding an exhausting onboarding experience"
+                  para="Users needed to complete the onboarding sign up process in order to gain access to the web app. Insights from the UXR campaign indicated that we lost 80% of the users during sign up."
                 />
               </section>
 
               <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-                <TextBox body="Next, I handed a prototype off to the development team to help them map interactions." />
+                <Image
+                  src="/images/Img10.png"
+                  alt="Visualization of where users are lost"
+                  width={1608} // Set the width
+                  height={900} // Set the height
+                  className="w-[100%] nextImg"
+                />
               </section>
 
               <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-                {/* <div className="xl:w-[80%] lg:w-[80%] w-[100%] xl:h-auto lg:h-auto h-[50vh]">
+                <TextBox
+                  body="The old website failed to showcase the product, causing distrust in users."
+                  body2="I added a live demo on the homepage to inform users,  highlighting the apps features."
+                />
+              </section>
+
+              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row lg:flex-row flex-col xl:gap-[2%] lg:gap-[2%] gap-[20px] min-h-[50vh]">
+                <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[40vh]">
+                  <Video
+                    placeholder={
+                      "https://www.youtube.com/embed/WhKiRTptHEk?autoplay=1&mute=1&modestbranding=1&loop=1&playlist=WhKiRTptHEk"
+                    }
+                    brightness={"100%"}
+                  />
+                </div>
+                <div className="lg:w-[21%] xl:w-[21%] w-fill h-fill flex flex-col justify-end justify-items-end ">
+                  <p>
+                    I added a live demo on the landing page to highlight its
+                    functions upfront. This gave users a much better understanding
+                    of the web app, reducing distrust.
+                  </p>
+                </div>
+              </section>
+
+              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                <TextBox
+                  body="The highest point of friction in the onboarding process was the email confirmation. Users assumed the unbranded emails from Innota were scams."
+                  body2="I designed and coded custom emails to foster credibility and product authenticity."
+                />
+              </section>
+
+              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                <div className="flex flex-col gap-[20px]">
+                  <Image
+                    src="/images/Img11.png"
+                    alt="Comparison of old email templates to the new one"
+                    width={1608} // Set the width
+                    height={900} // Set the height
+                    className="w-[100%] nextImg"
+                  />
+                  <Image
+                    src="/images/Img12.png"
+                    alt="The new improved user journey"
+                    width={1608} // Set the width
+                    height={900} // Set the height
+                    className="w-[100%] nextImg"
+                  />
+                </div>
+              </section>
+
+              {/* Part 3 */}
+
+              {/* Part 2 */}
+              <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
+                <div id="Innota-Handoff" className="h-0"></div>
+                <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                  <TextBox
+                    header="The Handoff"
+                    body="As the only designer, I had to make sure that my work could be scaled & integrated seamlessly by a team that could barely use Figma."
+                    para="One of the early concerns the executives had was about the websites scalability -- how to update it when I left. I handed off a design system so they could build and update existing components easily."
+                  />
+                </section>
+
+                <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                  <Image
+                    src="/images/Img13.png" // Replace with your image path
+                    alt="Showcase of the component system"
+                    width={580} // Set the width
+                    height={900} // Set the height
+                    className="w-[35%] nextImg"
+                  />
+                  <Image
+                    src="/images/Img14.png" // Replace with your image path
+                    alt="Breaking down an individual component and its anatomy"
+                    width={998} // Set the width
+                    height={900} // Set the height
+                    className="w-[65%] nextImg"
+                  />
+                </section>
+
+                <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                  <TextBox body="Next, I handed a prototype off to the development team to help them map interactions." />
+                </section>
+
+                <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                  {/* <div className="xl:w-[80%] lg:w-[80%] w-[100%] xl:h-auto lg:h-auto h-[50vh]">
                   <Video
                     placeholder={
                       "https://www.youtube.com/embed/lhfgqkCaHc0?si=pnDNXC7tzlso1ukB&autoplay=1&mute=1&loop=1&playlist=lhfgqkCaHc0&modestbranding=1&rel=0&fs=1"
@@ -378,108 +410,109 @@ function InnotaCase({ stylePlaceholder, caseOpen, styles }) {
                   />
                 </div> */}
 
-                <Image
-                  src="/images/Proto.png"
-                  alt="Prototype video"
-                  width={1608} // Set the width
-                  height={900} // Set the height
-                  className="w-[100%] nextImg"
-                />
+                  <Image
+                    src="/images/Proto.png"
+                    alt="Prototype video"
+                    width={1608} // Set the width
+                    height={900} // Set the height
+                    className="w-[100%] nextImg"
+                  />
+                </section>
+
+                <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm w-fit">
+                  <TextBox
+                    header="The Handoff"
+                    body="After 5 weeks, my time with Innota was over. My handoff included:"
+                  />
+                  <div className="flex flex-col gap-[4vh] mt-[8vh]">
+                    <div className="border-b border-white h-[1px]] w-[100%]n opacity-[60%]"></div>
+                    <h2 className="text-white">
+                      A Figma file loaded with the redesign
+                    </h2>
+                    <div className="border-b border-white h-[1px]] w-[100%]n opacity-[60%]"></div>
+                    <h2 className="text-white">
+                      Fully prototyped mockup & Design system.
+                    </h2>
+                    <div className="border-b border-white h-[1px]] w-[100%]n opacity-[60%]"></div>
+                    <h2 className="text-white">7x Custom Email Templates</h2>
+                  </div>
+                </section>
+
+                <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm ">
+                  <Image
+                    src="/images/Img16.png" // Replace with your image path
+                    alt="Close up photo of the blog page"
+                    width={879} // Set the width
+                    height={900} // Set the height
+                    className="w-[60%] nextImg"
+                  />
+                  <Image
+                    src="/images/Img17.png" // Replace with your image path
+                    alt="Hand holding app"
+                    width={717} // Set the width
+                    height={900} // Set the height
+                    className="w-[40%] nextImg"
+                  />
+                </section>
               </section>
 
-              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm w-fit">
-                <TextBox
-                  header="The Handoff"
-                  body="After 5 weeks, my time with Innota was over. My handoff included:"
-                />
-                <div className="flex flex-col gap-[4vh] mt-[8vh]">
-                  <div className="border-b border-white h-[1px]] w-[100%]n opacity-[60%]"></div>
-                  <h2 className="text-white">
-                    A Figma file loaded with the redesign
-                  </h2>
-                  <div className="border-b border-white h-[1px]] w-[100%]n opacity-[60%]"></div>
-                  <h2 className="text-white">
-                    Fully prototyped mockup & Design system.
-                  </h2>
-                  <div className="border-b border-white h-[1px]] w-[100%]n opacity-[60%]"></div>
-                  <h2 className="text-white">7x Custom Email Templates</h2>
-                </div>
-              </section>
+              <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
+                <div id="Innota-Reflection" className="h-0"></div>
+                <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm w-fit ">
+                  <TextBox
+                    header="The Reflection"
+                    body="Being the sole product designer meant I had to learn how to make alot of decisions on my own."
+                  />
+                  <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
+                    <div className="flex flex-col gap-[15px]">
+                      <h5 className="text-my-gray">
+                        {" "}
+                        Importance of data driven insights
+                      </h5>
+                      <p>
+                        Learning to lean on the numbers helped me understand
+                        consensus on pain points -- and also justify my designs in
+                        weekly standups.
+                      </p>
+                    </div>
 
-              <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm ">
-                <Image
-                  src="/images/Img16.png" // Replace with your image path
-                  alt="Close up photo of the blog page"
-                  width={879} // Set the width
-                  height={900} // Set the height
-                  className="w-[60%] nextImg"
-                />
-                <Image
-                  src="/images/Img17.png" // Replace with your image path
-                  alt="Hand holding app"
-                  width={717} // Set the width
-                  height={900} // Set the height
-                  className="w-[40%] nextImg"
-                />
+                    <div className="flex flex-col gap-[15px]">
+                      <h5 className="text-my-gray"> Moderating my ideas</h5>
+                      <p>
+                        Given the teams tiny size, I had to learn how to
+                        understand which solutions could realistically be
+                        implemented.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col gap-[15px]">
+                      <h5 className="text-my-gray">
+                        {" "}
+                        Importance of data driven insights
+                      </h5>
+                      <p>
+                        Learning to lean on the numbers helped me understand
+                        consensus on pain points -- and also justify my designs in
+                        weekly standups.
+                      </p>
+                    </div>
+                  </div>
+                </section>
               </section>
+              <div className="w-[100%] h-[80vh] mt-[5vh] xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm ">
+                <Video
+                  placeholder={
+                    "https://www.youtube.com/embed/Otu-EEEURys?autoplay=1&loop=1&mute=1&modestbranding=1&controls=0&playlist=Otu-EEEURys"
+                  }
+                  brightness={"100%"}
+                />
+              </div>
             </section>
-
-            <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
-              <div id="Innota-Reflection" className="h-0"></div>
-              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm w-fit ">
-                <TextBox
-                  header="The Reflection"
-                  body="Being the sole product designer meant I had to learn how to make alot of decisions on my own."
-                />
-                <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
-                  <div className="flex flex-col gap-[15px]">
-                    <h5 className="text-my-gray">
-                      {" "}
-                      Importance of data driven insights
-                    </h5>
-                    <p>
-                      Learning to lean on the numbers helped me understand
-                      consensus on pain points -- and also justify my designs in
-                      weekly standups.
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col gap-[15px]">
-                    <h5 className="text-my-gray"> Moderating my ideas</h5>
-                    <p>
-                      Given the teams tiny size, I had to learn how to
-                      understand which solutions could realistically be
-                      implemented.
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col gap-[15px]">
-                    <h5 className="text-my-gray">
-                      {" "}
-                      Importance of data driven insights
-                    </h5>
-                    <p>
-                      Learning to lean on the numbers helped me understand
-                      consensus on pain points -- and also justify my designs in
-                      weekly standups.
-                    </p>
-                  </div>
-                </div>
-              </section>
-            </section>
-            <div className="w-[100%] h-[80vh] mt-[5vh] xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm ">
-              <Video
-                placeholder={
-                  "https://www.youtube.com/embed/Otu-EEEURys?autoplay=1&loop=1&mute=1&modestbranding=1&controls=0&playlist=Otu-EEEURys"
-                }
-                brightness={"100%"}
-              />
-            </div>
-          </section>
-          <Footer place="case" />
+            <Footer place="case" />
+          </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

@@ -5,6 +5,7 @@ import Lenis from "@studio-freight/lenis";
 import { Analytics } from "@vercel/analytics/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css"; // Ensure the path to your globals.css is correct
+import { CaseProvider } from "../app/caseContext"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,7 +61,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Analytics />
-        {children}
+        <CaseProvider>
+          {children}
+        </CaseProvider>
       </body>
     </html>
   );

@@ -4,8 +4,12 @@ import Video from "./video";
 import TextBox from "./textBox";
 import Image from "next/image";
 import Footer from "./footer";
+import { useCase } from "../src/app/caseContext";
+import Navcell from "../components/navcell"
 
-function AxisCase({ stylePlaceholder, caseOpen, styles }) {
+function AxisCase({ stylePlaceholder, styles }) {
+  const { caseOpen, isMobile } = useCase();
+  const { nav, setNav } = useCase();
   const startRef = useRef(null);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
@@ -55,9 +59,36 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
 
   return (
     <div ref={startRef} className="scroll-smooth">
-      {/* //Navigator component */}
-      {/* <Navigator openNav={caseOpen} /> */}
-      {/* Navbar */}
+
+      {isMobile === false && <div className={` fixed flex flex-row justify-end right-[0] z-[900]`}>
+        <button onClick={() => setNav(!nav)} className={`cursor-pointer ${nav ? "w-[100vw] h-[100vh]" : "w-[0vw] h-[0vh]"}`}></button>
+
+        <div className={`h-[100vh] relative right-[0] ease-fastEase duration-[1100ms] transition-all bg-zinc-950 ${nav ? "w-[20vw] min-w-[20rem]" : "w-[0vw] min-w-[0rem] "}`}>
+
+          <div className='flex flex-col  justify-between h-[100%] py-[32px] px-[32px]'>
+            <div className="flex flex-col gap-[24px]">
+              <p className="text-white/30">About the Project</p>
+              <p>Axis Consulting, a pro bono consulting club at Simon Fraser University, needed a bold rebrand to reignite engagement. As the Design Director, I developed a striking visual identity to inspire and captivate its audience.</p>
+            </div>
+
+
+            <div className="flex flex-col gap-[24px]">
+              <p className="text-white/30">Project Directory</p>
+              <div className='flex flex-col gap-[4px]'>
+                <Navcell Name="Intro" Link="#AxisIntro" />
+                <Navcell Name="Problem" Link="#AxisProblem" />
+                <Navcell Name="Branding" Link="#AxisBrand" />
+                <Navcell Name="Media" Link="#AxisMedia" />
+                <Navcell Name="My Impact" Link="#AxisImpact" />
+              </div>
+            </div>
+
+          </div>
+        </div >
+
+      </div >
+      }
+
 
       <div
         className={`w-full bg-white h-fit overflow-hidden absolute z-[20] transition-all`}
@@ -65,7 +96,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
         //   caseOpen ? "ease-fastEase" : "animate-closeCase"
         style={stylePlaceholder} // Pass dynamic styles for position, scale, etc.\
       >
-        <div className="flex flex-col gap-my-lg justify-center w-full lg:gap-gap-lg md:gap-gap-md gap-gap-sm">
+        <div className={`flex flex-col gap-my-lg justify-center lg:gap-gap-lg md:gap-gap-md gap-gap-sm  ease-fastEase duration-[1100ms] transition-all ${nav && !isMobile ? "w-[80vw] blur-sm brightness-[60%]" : "w-[100vw]"}`}>
           <section className="gap-lg">
             <div className="xl:mx-gutter-xl lg:mx-gutter-lg mx-gutter-sm">
               <h1 className="text-black"> Axis Consulting </h1>
@@ -340,7 +371,7 @@ function AxisCase({ stylePlaceholder, caseOpen, styles }) {
                 We sought to engage students on a more immersive and emotional
                 level. The motion graphic provided a fluid and compelling
                 approach, captivating the audience and reinforced Axis&apos;s
-                brand identity in a way static images never could. 
+                brand identity in a way static images never could.
               </p>
             </div>
           </section>
