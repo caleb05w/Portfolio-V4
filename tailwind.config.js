@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         "my-orange": "#FF7F32", // Custom orange color
-        "my-gray": "#999999",
+        "my-gray": "#959595",
       },
       screens: {
         xl: "1200px",

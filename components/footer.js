@@ -34,7 +34,7 @@ function Footer({ place, color }) {
       {color === "black" ? (
         <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-between text-black gap-[5px]">
           <h3>Designed on Figma, Built on NextJS</h3>
-          <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[2%]">
+          <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[4%]">
             <button onClick={() => copyEmail()}>
               <h3 className="hover:border-b-[1px] border-b-[1px] border-b-white hover:border-b-black text-black">
                 Email
@@ -51,7 +51,7 @@ function Footer({ place, color }) {
               </h3>
             </a>
             <a href="/Caleb_Wu_Resume.pdf" download target="_blank">
-              <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">
+              <h3 className="hover:border-b-[1px] border-b-[1px] text-black border-b-white hover:border-b-black">
                 Resume{" "}
               </h3>
             </a>
@@ -60,7 +60,7 @@ function Footer({ place, color }) {
       ) : (
         <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-between text-white gap-[5px]">
           <h3>Designed on Figma, Built on NextJS</h3>
-          <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[2%]">
+          <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[4%]">
             <button onClick={() => copyEmail()}>
               <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">
                 Email

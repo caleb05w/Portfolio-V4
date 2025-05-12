@@ -75,21 +75,26 @@ function About({ stylePlaceholder, styles }) {
               <section className=" flex flex-col lg:gap-[180px] md:gap-gap-md gap-[60px]">
                 <div className='flex flex-col gap-[80px]'>
                   <Image
-                    src="/images/Caleb.png" // Replace with your image path
+                    src="/images/caleb.png" // Replace with your image pat
+
                     alt="A picture of me and my best friend"
                     width={200} // Set the width
                     height={200} // Set the height
-                    className="max-w-[200px] h-fit nextImg"
+                    className="max-w-[180px] h-fit nextImg"
                   />
                   <section className='flex lg:flex-row flex-col lg:gap-[120px] gap-[40px]'>
                     <h6 className='min-w-[115px]'>TLDR</h6>
                     <div className='max-w-[450px] flex flex-col gap-[20px]'>
-                      <p className='text-[18px] text-my-gray'>
-                        Hi! I’m Caleb -- I’m a results driven go-getter who believes the best way to learn something is through getting hands on experience.
+                      <p className='text-[16px] text-my-gray'>
+                        Roblox? 2000 Hours. Front End? Self taught. Trackpad warrior? Since 2014.
                       </p>
-                      <p className='text-[18px] text-my-gray'>
-                        An excessively in-excessive product designer, I thrive in the product cycle, and love to deliver end-to-end experiences -- from concept to conceptualization.
+
+                      <p className='text-[16px] text-my-gray'>
+                        An excessively in-excessive product designer, I thrive building products from conception to creation. A go getter who believes the best way to learn is through hands on experience, you can find me tinkering on Figma, messing with Claude, or building with NextJS.
                       </p>
+
+
+
                     </div>
                   </section>
                 </div>
@@ -108,8 +113,8 @@ function About({ stylePlaceholder, styles }) {
                     <div className=' min-w-[235px]'></div>
                     <div className='flex flex-col gap-[32px] w-full'>
                       <AboutText Company="RevisionDojo (YC24)" Year="2025" Title="Design Engineer Intern" />
-                      <AboutText Company="Metlab" Year="2025" Title="Product Design Intern" />
-                      <AboutText Company="Second Savour" Year="2024" Title="FrontEnd Engineer" />
+                      <AboutText Company="Metalab" Year="2025" Title="Product Design Intern" />
+                      <AboutText Company="Second Savour" Year="2024" Title="FrontEnd Engineer Intern" />
                       <AboutText Company="InnotaAI" Year="2024" Title="Product Design Intern" />
                     </div>
                   </div>
@@ -166,10 +171,18 @@ function About({ stylePlaceholder, styles }) {
                   <div className=' flex lg:flex-row flex-col w-full h-fit'>
                     <div className=' min-w-[235px]'></div>
                     <div className='flex flex-col gap-[32px] w-full'>
-                      <p className='text-[18px] text-my-gray'>
+                      {/* <p className='text-[16px] max-w-[450px] text-my-gray'>
                         Roblox? 2000 Hours. Front End? Self taught. Trackpad warrior? Hell yeah.
-                      </p>
-                      <p className='text-[18px] text-my-gray'>
+                      </p> */}
+
+                      <p className='text-[16px] max-w-[450px] text-my-gray'> I’m a product designer focused on the intersection between design and business. With 3x hackathon wins under my belt, I’m proficient in both front end & design -- specializing in producing quick streamlined interfaces under short periods of time. </p>
+
+                      <p className='text-[16px] max-w-[450px] text-my-gray'> Currently I’m pursuing a Beedle School of Business and Interactive Arts & Technologies joint major at SFU, concentrating in design & development for web + mobile, and interactive design. </p>
+
+                      <p className='text-[16px] max-w-[450px] text-my-gray'> My go to tech stack for design is the Adobe Suite & Figma -- for bringing these designs to life I use Tailwind & ReactJS with a bit of FramerMotion -- and for project management I’m proficient in Hubspot, Microsoft Suite, and Notion. </p>
+
+
+                      <p className='text-[16px] max-w-[450px] text-my-gray'>
                         When I’m not designing the next flow on Figma, or try to catch everyyyy edge case, you can find me collecting Lego Cars, grinding out Roblox, trying to dev my own game.
                       </p>
                     </div>

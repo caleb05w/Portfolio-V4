@@ -11,7 +11,7 @@ function TextBox({ header, body, body2, para, color }) {
           <h2 className="text-white">{body}</h2>
         )}
         {body2 ? <h2 className='mt-[48px]'> {body2} </h2> : <h2 className="hidden h-0"></h2>}
-        {para ? <p> {para} </p> : <p className="hidden h-0"></p>}
+        {para ? <p className='mt-[12px]'> {para} </p> : <p className="hidden h-0"></p>}
       </div>
     </div>
   );

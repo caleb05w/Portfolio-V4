@@ -66,12 +66,12 @@ h5 {
   font-family:
     "Adventure", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial",
     "sans-serif";
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: 0%;
   font-weight: 500;
   color: white;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
 }
 
 h4 {
