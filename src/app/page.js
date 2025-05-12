@@ -8,6 +8,7 @@ import Navigator from "../../components/navigator";
 import NavButton from "../../components/navButton";
 import InnotaCase from "../../components/InnotaCase";
 import AxisCase from "../../components/AxisCase";
+import About from "../../components/About";
 import { useCase } from "./caseContext";
 import { RiArrowLeftUpLine } from "react-icons/ri";
 import { LuConstruction } from "react-icons/lu";
@@ -82,8 +83,10 @@ function Page() {
           `}
         >
           <button
-            className={`rounded-[5px] px-[16px] py-[16px]  backdrop-blur-sm   hover:text-black ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
-              ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white hover:border-[1px] border-transparent hover:text-white" : "border-[1px] border-black hover:bg-black/20 text-black"}`}
+            className={`rounded-[5px] px-[16px] py-[16px] backdrop-blur-sm hover:text-black ease-in-out duration-[200ms] transition-all border-[1px] hover:cursor-pointer
+              ${(caseContent === "Innota" || caseContent === "About")
+                ? "bg-white/30 hover:border-white text-white hover:border-[1px] border-transparent hover:text-white"
+                : "border-[1px] bg-white/30 border-black hover:bg-black/20 text-black"}`}
             onClick={() => {
               setCaseHeight(close);
               setCaseOpen(false);
@@ -116,33 +119,48 @@ function Page() {
           customScrollDotSecondary={true}
         // customScrollDot={true}
         />
-        <NavButton
-          openNav={caseOpen}
-          openPrompt="Gallery"
-          closePrompt="Close Prompt"
-          // openPrompt="Gallery"
-          // closePrompt="Close Prompt"
-          customScroll={true}
-          customScrollDefault="About"
-          customScrollActive="Also In Progress"
-          customScrollDotSecondary={true}
-        />
-      </section>
+
+
+        <div className=' w-fit h-fit'
+          onClick={() => {
+            setCaseContent("About");
+            scrollToTop();
+          }}
+        >
+          <NavButton
+            openNav={caseOpen}
+            openPrompt="About"
+            // closePrompt="Close Prompt"
+            // // openPrompt="Gallery"
+            // // closePrompt="Close Prompt"
+            // customScroll={true}
+            customScrollDefault="About"
+          // customScrollActive="Also In Progress"
+          // customScrollDotSecondary={true}
+          />
+
+        </div>
+
+      </section >
 
       {/* Centered Test Case */}
-      <div
+      < div
         className={`w-[100vw] h-[100vh] fixed overflow-scroll scroll-smooth
-          ${caseOpen === true ? "z-[9]" : "z-[0]"}`}
+          ${caseOpen === true ? "z-[9]" : "z-[0]"}`
+        }
       >
         {caseContent === "Axis" ? (
           <AxisCase stylePlaceholder={caseHeight} caseOpen={caseOpen} />
+        ) : caseContent === "About" ? (
+          <About stylePlaceholder={caseHeight} caseOpen={caseOpen} />
+
         ) : (
           <InnotaCase stylePlaceholder={caseHeight} caseOpen={caseOpen} />
         )}
-      </div>
+      </div >
 
       {/* Background Overlay Transition */}
-      <div
+      < div
         className={`w-[100vw] h-fit flex flex-col justify-center items-center bg-black transition-all ease-slowEase relative
           ${caseOpen === true
             ? "opacity-[10%] scale-[95%] top-[10vh] duration-[400ms]"
@@ -151,7 +169,7 @@ function Page() {
           
         `}
       >
-        <section className="flex flex-col lg:mx-[120px] md:mx-gutter-md mx-gutter-sm lg:py-gap-lg xl:py-gap-lg md:py-gap-md py-gap-sm lg:mt-[180px] mt-[60px] gap-[120px] lg:gap-[240px] items-center w-full px-gutter-sm lg:px-[120px]">
+        <section className="flex flex-col lg:mx-[120px] md:mx-gutter-md mx-gutter-sm lg:py-gap-lg xl:py-gap-lg md:py-gap-md py-gap-sm lg:mt-[100px] mt-[120px] gap-[120px] lg:gap-[240px] items-center w-full px-gutter-sm lg:px-[120px]">
           <section className="">
             <Demo />
           </section>
@@ -192,10 +210,10 @@ function Page() {
             </div>
           </div>
         </section>
-      </div>
+      </div >
 
       <Footer place="home" />
-    </div>
+    </div >
   );
 }
 

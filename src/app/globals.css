@@ -23,7 +23,7 @@
 
 body {
   background: black;
-    color: var(--foreground);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
@@ -43,12 +43,12 @@ body {
 }
 
 h1 {
-  font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
+  font-family: "Aeonik", Arial, Helvetica, sans-serif;
   /* font-size: 5.2vw; */
   font-size: 4.8vw;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   line-height: 130%;
-  font-weight: 400;
+  font-weight: 100;
   color: white;
 }
 
@@ -87,9 +87,8 @@ p {
   font-family:
     "Adventure", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial",
     "sans-serif";
-  font-size: 18px;
-  line-height: 150%;
-  letter-spacing: 2%;
+  font-size: 16px;
+  line-height: 140%;
   font-weight: 400;
   color: white;
   letter-spacing: 0.3px;
@@ -100,7 +99,7 @@ h6 {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 1px;
-  font-weight: 350;
+  font-weight: 500;
   color: white;
 }
 

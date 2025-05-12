@@ -32,7 +32,7 @@ function NavButton({
     >
       <div className="group h-fit w-fit">
         <button
-          className={` w-fit border-[1px] h-fit  max-h-[1.8rem]  overflow-hidden flex flex-row gap-[7px] items-center rounded-[5px] px-[16px] py-[24px] bg-white/30 backdrop-blur-sm text-white hover:border-white hover:border-[1px] hover:bg-white/0 hover:text-black ease-in-out duration-[200ms] transition-all border-transparent hover:cursor-pointer
+          className={` w-fit border-[1px] h-fit  max-h-[1.8rem]  overflow-hidden flex flex-row gap-[7px] items-center rounded-[5px] px-[16px] py-[24px] bg-white/30 backdrop-blur-sm text-white hover:border-white hover:border-[1px] hover:text-black ease-in-out duration-[200ms] transition-all border-transparent hover:cursor-pointer
         ${nav === true ? "bg-white/30 text-white rounded-[10px]" : "bg-white/30 backdrop-filter rounded-[120px]"}`}
         // onClick={() => setNav(!nav)}
         >
@@ -63,7 +63,7 @@ function NavButton({
                       <FaCircle className=" h-0 w-0 " />
                     )}
                   </div>
-                  <div className="flex flex-col mt-[32px] gap-[10px] group-hover:mt-[-26px] duration-[400ms] ease-fastEase ">
+                  <div className="flex flex-col mt-[28px] gap-[10px] group-hover:mt-[-26px] duration-[400ms] ease-fastEase ">
                     <p className="text-[12px] max-w-[180px] text-nowrap opacity-[100%] group-hover:opacity-[0%] group-hover:max-w-[50px] duration-[450ms] ease-fastEase transition-all ">
                       {customScrollDefault}
                     </p>

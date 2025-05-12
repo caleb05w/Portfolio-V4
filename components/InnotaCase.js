@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Video from "./video";
 import TextBox from "./textBox";
+import TextBoxWide from "./textBoxWide";
 import Image from "next/image";
 import Navigator from "./navigator";
 import Footer from "./footer";
@@ -69,20 +70,20 @@ function InnotaCase({ stylePlaceholder, styles }) {
 
           <div className='flex flex-col  justify-between h-[100%] py-[32px] px-[32px]'>
             <div className="flex flex-col gap-[24px]">
-              <p className="text-white/30">About the Project</p>
+              <h2 className='text-my-gray text-[20px]'> About the Project</h2>
               <p>Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch.</p>
             </div>
 
 
-            <div className="flex flex-col gap-[24px]">
-              <p className="text-white/30">Project Directory</p>
-              <div className='flex flex-col gap-[4px]'>
-                <Navcell Name="Intro" Link="#Innota-Intro" />
-                <Navcell Name="Problem" Link="#Innota-Problem" />
-                <Navcell Name="Solution #1" Link="#Innota-Goal1" />
-                <Navcell Name="Solution #2" Link="#Innota-Goal2" />
-                <Navcell Name="Handoff" Link="#Innota-Handoff" />
-                <Navcell Name="Reflection" Link="#Innota-Reflection" />
+            <div className="flex flex-col gap-[32px]">
+              <h2 className='text-my-gray text-[20px]' >Project Directory</h2>
+              <div className='flex flex-col gap-[2px]'>
+                <Navcell Name="Intro" Link="#Innota-Intro" Number="01" />
+                <Navcell Name="Problem" Link="#Innota-Problem" Number="02" />
+                <Navcell Name="The Redesign" Link="#Innota-Goal1" Number="03" />
+                <Navcell Name="The Onboarding" Link="#Innota-Goal2" Number="04" />
+                <Navcell Name="Handoff" Link="#Innota-Handoff" Number="05" />
+                <Navcell Name="Reflection" Link="#Innota-Reflection" Number="06" />
               </div>
             </div>
 
@@ -134,10 +135,10 @@ function InnotaCase({ stylePlaceholder, styles }) {
               className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
               id="Innota-Intro"
             >
-              <TextBox
+              <TextBoxWide
                 header="The Introduction"
                 body="Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch."
-              ></TextBox>
+              ></TextBoxWide>
               {/* <p>Scrolling down: {isScrollingDown ? "Yes" : "No"}</p> */}
             </section>
             {/* 2 large images */}

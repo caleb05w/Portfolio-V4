@@ -23,7 +23,9 @@ function Navigator({ navAppear }) {
       <button
         className={` w-fit h-fit flex flex-row gap-[7px] items-center rounded-[5px] px-[16px] py-[16px] backdrop-blur-sm hover:border-[1px]  ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
             ${nav === true ? "bg-white/50 text-white rounded-[10px] opacity-[40%]" : "opacity-[100%] bg-white/30 backdrop-filter rounded-[120px]"}
-            ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white border-transparent" : "border-black hover:bg-black/20 text-black"}`}
+            ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white border-transparent" :
+            caseContent === "Axis" ? "border-black hover:bg-black/20 text-black" :
+              "hidden"}`}
         onClick={() => setNav(!nav)}
       >
         {nav === true ? (
@@ -78,7 +80,6 @@ function Navigator({ navAppear }) {
                 <NavigatorCell Case="Problem" Link="#AxisProblem" />
                 <NavigatorCell Case="Branding" Link="#AxisBrand" />
                 <NavigatorCell Case="Media" Link="#AxisMedia" />
-
                 <NavigatorCell Case="My Impact" Link="#AxisImpact" />
               </>
             )}

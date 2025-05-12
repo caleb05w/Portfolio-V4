@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Video from "./video";
 import TextBox from "./textBox";
+import TextBoxWide from "./textBoxWide";
 import Image from "next/image";
 import Footer from "./footer";
 import { useCase } from "../src/app/caseContext";
@@ -75,11 +76,11 @@ function AxisCase({ stylePlaceholder, styles }) {
             <div className="flex flex-col gap-[24px]">
               <p className="text-white/30">Project Directory</p>
               <div className='flex flex-col gap-[4px]'>
-                <Navcell Name="Intro" Link="#AxisIntro" />
-                <Navcell Name="Problem" Link="#AxisProblem" />
-                <Navcell Name="Branding" Link="#AxisBrand" />
-                <Navcell Name="Media" Link="#AxisMedia" />
-                <Navcell Name="My Impact" Link="#AxisImpact" />
+                <Navcell Name="Intro" Link="#AxisIntro" Number="01" />
+                <Navcell Name="Problem" Link="#AxisProblem" Number="02" />
+                <Navcell Name="Branding" Link="#AxisBrand" Number="03" />
+                <Navcell Name="Media" Link="#AxisMedia" Number="04" />
+                <Navcell Name="My Impact" Link="#AxisImpact" Number="05" />
               </div>
             </div>
 
@@ -131,11 +132,11 @@ function AxisCase({ stylePlaceholder, styles }) {
             className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
             id="AxisIntro"
           >
-            <TextBox
+            <TextBoxWide
               header="The Introduction"
               body="Axis Consulting, a pro bono consulting club at Simon Fraser University, needed a bold rebrand to reignite engagement. As the Design Director, I developed a striking visual identity to inspire and captivate its audience."
               color="black"
-            ></TextBox>
+            ></TextBoxWide>
             {/* <p>Scrolling down: {isScrollingDown ? "Yes" : "No"}</p> */}
           </section>
 
@@ -173,15 +174,15 @@ function AxisCase({ stylePlaceholder, styles }) {
           >
             <div className="flex flex-col gap-[64px]">
               <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill]">
-                <h5 className="text-my-gray">The Problem</h5>
-                <h2 className="text-black">
+                <h5 className="text-black mb-[24px]">The Problem</h5>
+                <h2 className="text-black ">
                   With record-low engagement in 2024, Axis needed a bold
                   identity to stand out among 15+ competing SFU clubs.
                 </h2>
               </div>
 
               <div className="xl:max-w-[50vw] lg:max-w-[50vw] w-[fill]">
-                <h5 className="text-my-gray">The Vision</h5>
+                <h5 className="text-black mb-[24px]">The Vision</h5>
                 <h2 className="text-black">
                   Craft a brand to inspire awe and reignite engagement in a
                   dying audience.
@@ -205,7 +206,7 @@ function AxisCase({ stylePlaceholder, styles }) {
           </section> */}
 
           <section
-            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]"
+            className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
             id="AxisBrand"
           >
             <TextBox
@@ -347,11 +348,11 @@ function AxisCase({ stylePlaceholder, styles }) {
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm mt-[5rem]">
             <TextBox
               header="Then moved beyond the static grid"
-              body="Giving Axis a Soul"
+              body="Giving Our Brand a Soul"
               color="black"
               id="AxisMotionReel"
             />
-            s
+
           </section>
 
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row flex-col xl:gap-[2%] lg:gap-[2rem] gap-[20px] min-h-[50vh]">

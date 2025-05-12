@@ -94,9 +94,9 @@ function Demo() {
         </div>
       ) : (
         <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px]">
-          <div className='flex flex-col gap-[12px]'>
-            <h4>Hey! I’m Caleb</h4>
-            <h4>Currently @RevisionDojo (YC F24), Prev Metalab</h4>
+          <div className='flex flex-col gap-[8px]'>
+            <h4 className='text-my-gray'>Hey! I’m Caleb </h4 >
+            <h5 className='text-my-gray' >Currently @RevisionDojo (YC F24), Prev Metalab</h5>
           </div>
           <div className="w-fit h-fit flex justify-center items-center">
             <div className="h-[128px] flex flex-col items-center justify-center">

@@ -24,8 +24,12 @@ function Footer({ place, color }) {
 
   return (
     <div
-      className={`relative bottom-[10] pb-[2vh]
-    ${place === "home" ? "xl:mx-[7rem] lg:mx-[7rem] mx-[2rem]" : "xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm"}`}
+      className={`relative bottom-[10] pb-[2vh] ${place === "home"
+        ? "xl:mx-[7rem] lg:mx-[7rem] mx-[2rem]"
+        : place === "about"
+          ? "max-w-[60vw] mx-auto mt-[12rem] mb-[2rem]"
+          : "xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm"
+        }`}
     >
       {color === "black" ? (
         <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-between text-black gap-[5px]">
@@ -44,6 +48,11 @@ function Footer({ place, color }) {
             <a href="https://github.com/caleb05w" target="_blank">
               <h3 className="hover:border-b-[1px] border-b-[1px] text-black border-b-white hover:border-b-black">
                 Github{" "}
+              </h3>
+            </a>
+            <a href="/Caleb_Wu_Resume.pdf" download target="_blank">
+              <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">
+                Resume{" "}
               </h3>
             </a>
           </div>
@@ -67,6 +76,12 @@ function Footer({ place, color }) {
                 Github{" "}
               </h3>
             </a>
+            <a href="/Caleb_Wu_Resume.pdf" download target="_blank">
+              <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">
+                Resume{" "}
+              </h3>
+            </a>
+
           </div>
         </div>
       )}
