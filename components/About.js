@@ -119,7 +119,7 @@ function About({ stylePlaceholder, styles }) {
                   <div className='flex lg:flex-row flex-col justify-between w-full h-fit'>
                     <div className='flex flex-row gap-[120px]'>
                       <h6 className='lg:min-w-[115px] min-w-[20px]'>Education</h6>
-                      <h6 className='text-my-gray text-nowrap'>What I've Learned.</h6>
+                      <h6 className='text-my-gray text-nowrap'>What I&apos;ve Learned.</h6>
                     </div>
                     <div className='bg-my-gray w-[8px] h-[8px] rounded-sm'> </div>
                   </div>
