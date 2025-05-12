@@ -11,7 +11,7 @@ import AxisCase from "../../components/AxisCase";
 import About from "../../components/About";
 import { useCase } from "./caseContext";
 import { RiArrowLeftUpLine } from "react-icons/ri";
-import { LuConstruction } from "react-icons/lu";
+import { IoBuildOutline } from "react-icons/io5";
 
 
 
@@ -112,9 +112,9 @@ function Page() {
         <NavButton
           openNav={caseOpen}
           customScroll={true}
-          customScrollDefault={<LuConstruction className='w-[16px] h-auto' />
+          customScrollDefault={<IoBuildOutline className='w-[16px] h-[20px]' />
           }
-          customScrollActive="Still Under Construction!"
+          customScrollActive="Portfolio: Still Building"
           customScrollTarget={"https://github.com/caleb05w/Portfolio-V4"}
           customScrollDotSecondary={true}
         // customScrollDot={true}

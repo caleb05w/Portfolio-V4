@@ -27,13 +27,13 @@ function Footer({ place, color }) {
       className={`relative bottom-[10] pb-[2vh] ${place === "home"
         ? "xl:mx-[7rem] lg:mx-[7rem] mx-[2rem]"
         : place === "about"
-          ? "max-w-[60vw] mx-auto mt-[12rem] mb-[2rem]"
+          ? "lg:max-w-[60vw] md:max-w-[80vw] max-w-[full] mx-auto mt-[12rem] mb-[2rem]"
           : "xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm"
         }`}
     >
       {color === "black" ? (
-        <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-between text-black gap-[5px]">
-          <h3>Designed on Figma, Built on NextJS</h3>
+        <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col-reverse justify-between text-black gap-[5px]">
+          <h3 className='lg:mt-[0] mt-[2rem]'>Designed on Figma, Built on NextJS</h3>
           <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[4%]">
             <button onClick={() => copyEmail()}>
               <h3 className="hover:border-b-[1px] border-b-[1px] border-b-white hover:border-b-black text-black">
@@ -58,8 +58,8 @@ function Footer({ place, color }) {
           </div>
         </div>
       ) : (
-        <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-between text-white gap-[5px]">
-          <h3>Designed on Figma, Built on NextJS</h3>
+        <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col-reverse justify-between text-white gap-[5px]">
+          <h3 className='lg:mt-[0] mt-[2rem]'>Designed on Figma, Built on NextJS</h3>
           <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[4%]">
             <button onClick={() => copyEmail()}>
               <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">

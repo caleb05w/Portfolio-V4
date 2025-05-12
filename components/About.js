@@ -69,9 +69,9 @@ function About({ stylePlaceholder, styles }) {
         style={stylePlaceholder} // Pass dynamic styles for position, scale, etc.\
       >
         <div className="flex flex-row w-[100vw] ">
-          <div className={`flex flex-col items-center gap-my-lg justify-center lg:gap-gap-lg md:gap-gap-md gap-gap-sm  ease-fastEase duration-[1100ms] transition-all ${nav && !isMobile ? "w-[80vw] blur-sm brightness-[60%]" : "w-[100vw]"}`}>
+          <div className={` flex flex-col items-center gap-my-lg justify-center lg:gap-gap-lg md:gap-gap-md gap-gap-sm  ease-fastEase duration-[1100ms] transition-all ${nav && !isMobile ? "w-[80vw] blur-sm brightness-[60%]" : "w-[100vw]"}`}>
 
-            <section className=' w-[60vw] sm:w-[full] xl:mx-gutter-xl lg:mx-gutter-lg mx-gutter-sm '>
+            <section className='lg:w-[60vw] md:w-[80vw] w-[full] xl:mx-gutter-xl lg:mx-gutter-lg mx-gutter-sm'>
               <section className=" flex flex-col lg:gap-[180px] md:gap-gap-md gap-[60px]">
                 <div className='flex flex-col gap-[80px]'>
                   <Image
@@ -100,12 +100,12 @@ function About({ stylePlaceholder, styles }) {
                 </div>
 
                 <section className='w-full h-fit flex flex-col gap-[80px]'>
-                  <div className='flex lg:flex-row flex-col justify-between items-center align-middle w-full h-fit'>
-                    <div className='flex flex-row gap-[120px]'>
+                  <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center align-middle w-full h-fit'>
+                    <div className='flex flex-row gap-[120px] w-full'>
                       <h6 className='lg:min-w-[115px] min-w-[20px]'>Experiences</h6>
                       <h6 className='text-my-gray text-nowrap'>Where I’ve been.</h6>
                     </div>
-                    <div className='bg-my-gray w-[8px] h-[8px] rounded-sm'> </div>
+                    <div className='bg-my-gray lg:w-[8px] lg:h-[8px] md:w-[8px] md:h-[8px] w-0 h-0 rounded-sm'> </div>
                     {/* <h6 className='text-my-gray'> -- </h6> */}
                   </div>
 
@@ -121,12 +121,12 @@ function About({ stylePlaceholder, styles }) {
                 </section>
 
                 <section className='w-full h-fit flex flex-col gap-[80px]'>
-                  <div className='flex lg:flex-row flex-col justify-between w-full h-fit'>
+                  <div className='flex lg:flex-row md:flex-row flex-col justify-between w-full h-fit'>
                     <div className='flex flex-row gap-[120px]'>
                       <h6 className='lg:min-w-[115px] min-w-[20px]'>Education</h6>
                       <h6 className='text-my-gray text-nowrap'>What I&apos;ve Learned.</h6>
                     </div>
-                    <div className='bg-my-gray w-[8px] h-[8px] rounded-sm'> </div>
+                    <div className='bg-my-gray lg:w-[8px] lg:h-[8px] md:w-[8px] md:h-[8px] w-0 h-0 rounded-sm'> </div>
                   </div>
 
                   <div className=' flex lg:flex-row flex-col w-full h-fit'>
@@ -160,12 +160,12 @@ function About({ stylePlaceholder, styles }) {
 
 
                 <section className='w-full h-fit flex flex-col gap-[80px]'>
-                  <div className='flex lg:flex-row flex-col justify-between w-full h-fit'>
+                  <div className='flex lg:flex-row md:flex-row flex-col justify-between w-full h-fit'>
                     <div className='flex flex-row gap-[120px]'>
                       <h6 className='lg:min-w-[115px] min-w-[20px]'>Thesis</h6>
                       <h6 className='text-my-gray text-nowrap'>Who I am</h6>
                     </div>
-                    <div className='bg-my-gray w-[8px] h-[8px] rounded-sm'> </div>
+                    <div className='bg-my-gray lg:w-[8px] lg:h-[8px] md:w-[8px] md:h-[8px] w-0 h-0 rounded-sm'> </div>
                   </div>
 
                   <div className=' flex lg:flex-row flex-col w-full h-fit'>

@@ -72,7 +72,7 @@ function NavButton({
                       target="_blank"
                       className="w-full"
                     >
-                      <p className="text-[12px] max-w-[10px] text-nowrap opacity-[100%] group-hover:opacity-[100%] group-hover:max-w-[180px] duration-[450ms] ease-fastEase transition-all">
+                      <p className="text-[12px] max-w-[10px] text-nowrap opacity-[100%] group-hover:opacity-[100%] group-hover:max-w-[180px] duration-[450ms] ease-fastEase transition-all hover:border-b border-white">
                         {customScrollActive}
                       </p>
                     </a>
