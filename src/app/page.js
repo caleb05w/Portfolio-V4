@@ -23,8 +23,8 @@ function Page() {
 
   // flip-up subtitle lines + timer
   const lines = [
-    "Product design @RevisionDojo (YCF24)",
-    "Previously @MetaLab",
+    "Product Design @RevisionDojo (YCF24)",
+    "Previously Product Design @MetaLab",
   ];
   const [idx, setIdx] = useState(0);
 
@@ -103,7 +103,7 @@ function Page() {
         className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[10px] h-[2rem] fixed w-full z-[12] transition-all 
           ${caseOpen === true ? "top-[-10vh] duration-[400ms] ease-slowEase" : "top-[0vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
       >
-        <div className="h-fit w-full gap-[24px] flex flex-col justify-between mx-[6.2rem] bg-black">
+        <div className="h-fit w-full gap-[24px] flex flex-col justify-between xl:mx-[6.2rem] lg:mx-[4.2rem] mx-[0rem] bg-black">
           <div className={`flex flex-row justify-between ${caseOpen === true ? "pt-[0rem]" : "pt-[2rem]"} duration-[400ms] ease-slowEase`}>
             <div className="flex flex-col gap-[6px]">
               <h3 className="text-white"> Caleb Wu </h3>
@@ -208,7 +208,7 @@ function Page() {
               </div>
             </div>
 
-            <div className="flex flex-col w-[50%] h-fit">
+            <div className="flex flex-col  w-[100%] lg:w-[50%] xl:w-[50%] h-fit">
               <div
                 className="w-[100%] h-[100%] hover:cursor-pointer"
                 onClick={() => {

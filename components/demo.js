@@ -54,9 +54,9 @@ function Demo() {
   return (
     <div className="flex flex-col" ref={containerRef}>
       {isMobile.current ? (
-        <div className="w-fit h-fit flex flex-col items-start justify-start gap-[0.5rem] overflow-hidden">
+        <div className="pt-[8rem] w-fit h-fit flex flex-col items-start justify-start gap-[0.5rem] overflow-hidden">
           <div
-            className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover rounded-[10px] ${toggle
+            className={`transition-all ease-fastEase duration-[500ms] overflow-hidden object-cover rounded-[10px]  ${toggle
               ? "w-[120px] h-[120px] my-[10px] min-w-[70px] min-h-[70px]"
               : "w-[120px] h-[120px] my-[10px] min-w-[20px] min-h-[70px] rounded-[1rem]"
               } transform ${toggle ? "scale-[100%]" : "scale-[30%]"} transform-origin-center flex justify-center items-center`}
@@ -93,7 +93,7 @@ function Demo() {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px] pt-[12rem]">
+        <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px] xl:pt-[12rem] lg:pt-[12rem]">
           {/* <div className='flex flex-col gap-[8px]'>
             <h4 className='text-my-gray'>Hey! I’m Caleb </h4 >
             <h5 className='text-my-gray' >Currently @RevisionDojo (YC F24), Prev Metalab</h5>
