@@ -2,7 +2,7 @@ import React from "react";
 
 function TextBox({ header, body, body2, para, color }) {
   return (
-    <div className="w-fill max-w-[100%] xl:max-w-[40vw] lg:max-w-[50vw]">
+    <div className="w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[50vw]">
       <div className="flex flex-col gap-[1rem] lg:gap-[1rem]">
         {header ? <h5 className="text-my-gray">{header}</h5> : ""}
         {color === "black" ? (

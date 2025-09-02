@@ -82,10 +82,10 @@ function Demo() {
           </div>
 
           <div className="flex flex-col gap-[2rem]">
-            <div className="flex flex-col gap-[5px] text-[#A0A0A0] opacity-[100%]">
+            {/* <div className="flex flex-col gap-[5px] text-[#A0A0A0] opacity-[100%]">
               <h4>Hey! I’m Caleb </h4>
               <h4>Currently @RevisionDojo (YC F24), Prev Metalab</h4>
-            </div>
+            </div> */}
             <div className="flex flex-col gap-[5px]">
               <h1>Designer by Day,</h1>
               <h1>Developer by Night.</h1>
@@ -93,11 +93,11 @@ function Demo() {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px]">
-          <div className='flex flex-col gap-[8px]'>
+        <div className="flex flex-col text-my-gray lg:gap-[40px] xl:gap-[40px] gap-[20px] pt-[12rem]">
+          {/* <div className='flex flex-col gap-[8px]'>
             <h4 className='text-my-gray'>Hey! I’m Caleb </h4 >
             <h5 className='text-my-gray' >Currently @RevisionDojo (YC F24), Prev Metalab</h5>
-          </div>
+          </div> */}
           <div className="w-fit h-fit flex justify-center items-center">
             <div className="h-[128px] flex flex-col items-center justify-center">
               <h1>Designer by Day</h1>

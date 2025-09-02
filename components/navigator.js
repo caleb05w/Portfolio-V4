@@ -21,16 +21,17 @@ function Navigator({ navAppear }) {
         ${nav !== true ? "opacity-[100%] delay-[200ms] duration-[1100ms] ease-fastEase scale-[100%]" : "opacity-[100%] duration-[400ms] ease-slowEase scale-[95%]"}`}
     >
       <button
-        className={` w-fit h-fit flex flex-row gap-[7px] items-center rounded-[5px] px-[16px] py-[16px] backdrop-blur-sm hover:border-[1px]  ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
+        className={` w-fit h-fit flex flex-row gap-[7px] items-center rounded-[5px] px-[16px] py-[16px] backdrop-blur-sm 
+          :border-[1px]  ease-in-out duration-[200ms] transition-all border-[1px]  hover:cursor-pointer
             ${nav === true ? "bg-white/50 text-white rounded-[10px] opacity-[40%]" : "opacity-[100%] bg-white/30 backdrop-filter rounded-[120px]"}
-            ${caseContent === "Innota" ? "bg-white/30 hover:border-white text-white border-transparent" :
+            ${caseContent === "Innota" || "RevisionDojo" ? "bg-white/30 hover:border-white text-white border-transparent" :
             caseContent === "Axis" ? "border-black hover:bg-black/20 text-black" :
               "hidden"}`}
         onClick={() => setNav(!nav)}
       >
         {nav === true ? (
           <p
-            className={`text-[12px] z-[12] ${caseContent === "Innota" ? "text-white" : "text-black"}`}
+            className={`text-[12px] z-[12] ${caseContent === "Innota" || "RevisionDojo" ? "text-white" : "text-black"}`}
           >
             {/* Close Directory{" "} */}
             <CiCompass1 className='w-[16px] h-auto' />
@@ -38,7 +39,7 @@ function Navigator({ navAppear }) {
           </p>
         ) : (
           <p
-            className={`text-[12px] z-[12] ${caseContent === "Innota" ? "text-white" : "text-black"}`}
+            className={`text-[12px] z-[12] ${caseContent === "Innota" || "RevisionDojo" ? "text-white" : "text-black"}`}
           >
             <CiCompass1 className='w-[16px] h-auto' />
           </p>
@@ -73,16 +74,28 @@ function Navigator({ navAppear }) {
                 <NavigatorCell Case="Handoff" Link="#Innota-Handoff" />
                 <NavigatorCell Case="Reflection" Link="#Innota-Reflection" />
               </>
-            ) : (
-              <>
-                <NavigatorCell Case="Intro" Link="#AxisIntro" />
-                <NavigatorCell Case="Vision" Link="#AxisVision" />
-                <NavigatorCell Case="Problem" Link="#AxisProblem" />
-                <NavigatorCell Case="Branding" Link="#AxisBrand" />
-                <NavigatorCell Case="Media" Link="#AxisMedia" />
-                <NavigatorCell Case="My Impact" Link="#AxisImpact" />
-              </>
-            )}
+            ) :
+              caseContent === "RevisionDojo" ? (
+                <>
+                  <NavigatorCell Case="Intro" Link="#RDIntro" />
+                  <NavigatorCell Case="Problem" Link="#RDProblem" />
+                  <NavigatorCell Case="Solution #1" Link="#Innota-Goal1" />
+                  <NavigatorCell Case="Solution #2" Link="#Innota-Goal2" />
+                  <NavigatorCell Case="Handoff" Link="#Innota-Handoff" />
+                  <NavigatorCell Case="Reflection" Link="#Innota-Reflection" />
+                </>
+              ) :
+
+                (
+                  <>
+                    <NavigatorCell Case="Intro" Link="#AxisIntro" />
+                    <NavigatorCell Case="Vision" Link="#AxisVision" />
+                    <NavigatorCell Case="Problem" Link="#AxisProblem" />
+                    <NavigatorCell Case="Branding" Link="#AxisBrand" />
+                    <NavigatorCell Case="Media" Link="#AxisMedia" />
+                    <NavigatorCell Case="My Impact" Link="#AxisImpact" />
+                  </>
+                )}
           </div>
         )
       }

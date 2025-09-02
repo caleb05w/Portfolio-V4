@@ -3,7 +3,7 @@ import Video from "../components/video";
 
 function CaseContainer({ Case, Title, Body1, Body2, styles }) {
   return (
-    <div className="w-full lg:h-[70vh] min-h-[400px] h-[50vh] relative overflow-hidden">
+    <div className="lg:h-[70vh] min-h-[400px] h-[50vh] relative overflow-hidden w-full">
       <div className="w-full h-full object-cover opacity-[100%]">
         {/* <Image 
               src={Case}
