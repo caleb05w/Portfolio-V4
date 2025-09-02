@@ -139,7 +139,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
               className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm"
               id="RDIntro"
             >
-              <h2 className='text-my-gray text-[20px]'> Disclaimer: This Case Study is still WIP, apologies for any rough mockups.</h2>
+              <h3 className='text-my-gray text-[20px]'> **Disclaimer: This Case Study is still WIP, apologies for any rough mockups.</h3>
               <TextBoxWide
                 header="The Introduction"
                 body="RevisionDojo is the fastest growing edtech startup, supporting over 300,000 users studying IB. Since the product was rapidly expanding into SAT, we needed a central pillar to ground our expansion for new and current users alike."
@@ -175,14 +175,14 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                   alt="Showcase of some of Innota's components"
                   width={580} // Set the width
                   height={900} // Set the height
-                  className="w-[50%] nextImg rounded-[64px]"
+                  className="w-[50%] h-[50vh] nextImg rounded-[64px] overflow-hidden"
                 />
                 <Image
                   src="/images/RD2.svg" // Replace with your image path
                   alt="Showcase of some of Innota's components"
                   width={580} // Set the width
                   height={900} // Set the height
-                  className="w-[50%] nextImg rounded-[64px]"
+                  className="w-[50%] h-[50vh] nextImg rounded-[64px] overflow-hidden"
                 />
                 {/* <div className="w-[50%] h-[80vh] mt-[5vh] rounded-[64px] overflow-hidden ">
                   <Video
@@ -212,19 +212,18 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
             </section>
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <TextBox
-                header="Analyzing Internal Feedback"
-                body="Users dropped off for 2 main reasons:"
+                body="Analyzing Internal Feedback revealed that Users dropped off because of 2 main reasons:"
               />
             </section>
             <section className="flex xl:flex-row lg:flex-row flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
               <Image
-                src="/images/RD6.png"
+                src="/images/RD66.png"
                 alt="Results from our 2 week UXR Campaign"
                 width={1204} // Set the width
                 height={900} // Set the height
-                className="xl:w-[80%] lg:w-[75%] w-[100%] nextImg"
+                className="xl:w-[75%] lg:w-[75%] w-[100%] nextImg"
               />
-              <div className="xl:w-[20%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end items-baseline">
+              <div className="xl:w-[25%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end items-baseline">
                 <p className="text-white">
                   The team monitored user activity, took feedback calls, and interacted with the user base to learn what was working, and what wasn’t.
                 </p>
@@ -273,7 +272,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                 </div>
                 <section className="containerBody">
                   <Image
-                    src="/images/RD8.png"
+                    src="/images/RD88.png"
                     alt="Laptop with Innota's home page open on a wooden desk"
                     width={1608} // Set the width
                     height={900} // Set the height
@@ -324,35 +323,35 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                   />
                 </div>
               </section>
-            </section>
-            {/* Part 2 */}
-            <section className="lg:mt-[10vh] flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
-              <div className="h-0"></div>
-              <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-                <TextBox
-                  header="To differentiate from our illustration heavy approach:"
-                  body="Motion was used to spotlighted milestones making achievements feel rewarding."
-                />
-              </section>
+              <section className="flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
+                <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                  <TextBox
+                    header="To differentiate from our illustration heavy approach:"
+                    body="Motion was used to spotlighted milestones making achievements feel rewarding."
+                  />
+                </section>
 
-              {/* 2 large images */}
-              <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-                <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[60vh] rounded-[64px] overflow-hidden">
-                  <Video
-                    placeholder={"https://www.youtube.com/embed/Pg8OAwx3u2M?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playlist=Pg8OAwx3u2M"
-                    }
-                    brightness={"100%"}
-                  />
-                </div>
-                <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[40vh] rounded-[64px] overflow-hidden">
-                  <Video
-                    placeholder={
-                      "https://www.youtube.com/embed/q5EHOE6XLMY?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&playlist=q5EHOE6XLMY"
-                    }
-                    brightness={"100%"}
-                  />
-                </div>
+                {/* 2 large images */}
+                <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+                  <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[60vh] rounded-[64px] overflow-hidden">
+                    <Video
+                      placeholder={"https://www.youtube.com/embed/Pg8OAwx3u2M?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playlist=Pg8OAwx3u2M"
+                      }
+                      brightness={"100%"}
+                    />
+                  </div>
+                  <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[40vh] rounded-[64px] overflow-hidden">
+                    <Video
+                      placeholder={
+                        "https://www.youtube.com/embed/q5EHOE6XLMY?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&playlist=q5EHOE6XLMY"
+                      }
+                      brightness={"100%"}
+                    />
+                  </div>
+                </section>
               </section>
+              {/* Part 2 */}
+
 
               <section id="RDGoal2" className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
                 <TextBox
@@ -426,7 +425,6 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
               </section>
 
               <section className=" flex flex-col xl:gap-gap-xl lg:gap-gap-lg md:gap-gap-md gap-gap-sm ">
-                <div id="Innota-Handoff" className="h-0"></div>
                 <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
                   <TextBox
                     body="Benchmarks such as achievements, streaks, and ranks helped build user retention."

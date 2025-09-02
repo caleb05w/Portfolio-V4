@@ -106,10 +106,10 @@ function Page() {
         <div className="h-fit w-full gap-[24px] flex flex-col justify-between xl:mx-[6.2rem] lg:mx-[4.2rem] mx-[0rem] bg-black">
           <div className={`flex flex-row justify-between ${caseOpen === true ? "pt-[0rem]" : "pt-[2rem]"} duration-[400ms] ease-slowEase`}>
             <div className="flex flex-col gap-[6px]">
-              <h3 className="text-white"> Caleb Wu </h3>
+              <h5 className="text-white"> Caleb Wu </h5>
 
               {/* Swapping, flip-up subtitle */}
-              <h3 className="text-white opacity-[60%]">
+              <h5 className="text-white opacity-[60%]">
                 <span
                   key={idx}
                   className="inline-block [transform-origin:bottom] [animation:flipIn_500ms_ease_both]"
@@ -122,7 +122,7 @@ function Page() {
                     to   { transform: rotateX(0deg);  opacity: 1; }
                   }
                 `}</style>
-              </h3>
+              </h5>
             </div>
 
             <div className="flex flex-row justify-between w-[40%]">
@@ -133,11 +133,11 @@ function Page() {
                   scrollToTop();
                 }}
               >
-                <h3 className="text-white hover:opacity-[60%] hover:cursor-pointer transition-ease-in-out duration-300">
+                <h5 className="text-white hover:opacity-[60%] hover:cursor-pointer transition-ease-in-out duration-300">
                   About Me
-                </h3>
+                </h5>
               </div>
-              <h3 className="text-white"> Gallery </h3>
+              <h5 className="text-white"> Gallery </h5>
             </div>
           </div>
           <div className="border-b border-white opacity-[20%] w-full"></div>
