@@ -1,19 +1,24 @@
 import React from "react";
 import Video from "../components/video";
+import Image from "next/image";
 
-function CaseContainer({ Case, Title, Body1, Body2, styles }) {
+function CaseContainer({ Case, Title, Body1, Body2, styles, Img }) {
   return (
     <div className="lg:h-[70vh] min-h-[400px] h-[50vh] relative overflow-hidden w-full">
       <div className="w-full h-full object-cover opacity-[100%]">
-        {/* <Image 
-              src={Case}
+
+        <div className="w-full h-full min-h-[80vh] object-cover">
+          {Img ? (
+            <Image
+              src={Img}
               alt="Case Study"
               width={900}
               height={900}
-              className='w-full h-full object-cover brightness-[75%]'
-            /> */}
-        <div className="w-full h-full min-h-[80vh] object-cover">
-          <Video placeholder={Case} styles={styles} />
+              className="w-full h-full object-cover brightness-[75%]"
+            />
+          ) : (
+            <Video placeholder={Case} styles={styles} />
+          )}
         </div>
       </div>
       <div className="absolute top-0 flex flex-row gap-[16%] w-full pt-[4%] px-[2%] whitespace-nowrap z-[2] opacity-[100%] ">

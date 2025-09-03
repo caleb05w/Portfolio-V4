@@ -137,10 +137,7 @@ function Page() {
                   About Me
                 </h5>
               </div>
-              <a
-                href="/resume.pdf"
-                download="Caleb_Wu_Resume.pdf"
-              >
+              <a href="/assets/caleb-wu-resume.pdf" download="caleb-wu-resume.pdf">
                 <h5 className="text-white cursor-pointe hover:opacity-[60%] hover:cursor-pointer transition-ease-in-out duration-300">
                   Resume
                 </h5>
@@ -194,6 +191,7 @@ function Page() {
                   Body1="Product Design"
                   Body2="Illustration"
                   Case="https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&loop=1&controls=0&playlist=Hm-B_KlY6bw"
+                  Img="/images/RD15.png"
                   styles={"opacity-[20%] bg-black"}
                 />
               </div>
