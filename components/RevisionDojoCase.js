@@ -71,12 +71,12 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
           <div className='flex flex-col  justify-between h-[100%] py-[32px] px-[32px]'>
             <div className="flex flex-col gap-[24px]">
               <h2 className='text-my-gray text-[20px]'> About the Company</h2>
-              <p>RevisionDojo is the fastest growing edtech startup, supporting over 300,000 users studying IB. Since the product was rapidly expanding into SAT, we needed a central pillar to ground our expansion for new and current users alike.</p>
+              <h5>RevisionDojo is the fastest growing edtech startup, supporting over 300,000 users studying IB. Since the product was rapidly expanding into SAT, we needed a central pillar to ground our expansion for new and current users alike.</h5>
             </div>
 
             <div className="flex flex-col gap-[24px]">
               <h2 className='text-my-gray text-[20px]'> My Role</h2>
-              <p>As the sole product designer, I developed a scalable visual identity that made room for gamified growth.</p>
+              <h5>As the sole product designer, I developed a scalable visual identity that made room for gamified growth.</h5>
             </div>
 
 
@@ -163,7 +163,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                 />
               </div> */}
               <Image
-                src="/images/RD3.png" // Replace with your image path
+                src="/images/RD1.svg" // Replace with your image path
                 alt="Showcase of some of Innota's components"
                 width={580} // Set the width
                 height={900} // Set the height
@@ -518,37 +518,22 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                   <TextBox
                     body="Key Learnings"
                   />
-                  <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
-                    <div className="flex flex-col gap-[15px]">
-                      <h5 className="text-my-gray">
+                  <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[60vw] lg:max-w-[100vw]">
+                    <div className="flex flex-col gap-[15px] w-full">
+                      <p className="text-my-gray">
                         {" "}
-                        Importance of data driven insights
-                      </h5>
+                        Speak Up!!!
+                      </p>
                       <p>
-                        Learning to lean on the numbers helped me understand
-                        consensus on pain points -- and also justify my designs in
-                        weekly standups.
+                        Pitch your ideas during meetings, be excited and passionate about them and stand your ground.
+                        Coming from a design perspective allowed me to advocate for user centric solutions in our standups and take more ownership on feature development.
                       </p>
                     </div>
 
-                    <div className="flex flex-col gap-[15px]">
-                      <h5 className="text-my-gray"> Moderating my ideas</h5>
+                    <div className="flex flex-col gap-[15px] w-full">
+                      <p className="text-my-gray"> Take Risks</p>
                       <p>
-                        Given the teams tiny size, I had to learn how to
-                        understand which solutions could realistically be
-                        implemented.
-                      </p>
-                    </div>
-
-                    <div className="flex flex-col gap-[15px]">
-                      <h5 className="text-my-gray">
-                        {" "}
-                        Importance of data driven insights
-                      </h5>
-                      <p>
-                        Learning to lean on the numbers helped me understand
-                        consensus on pain points -- and also justify my designs in
-                        weekly standups.
+                        Despite never taking an animation or character design course, I saw an opportunity to bring the brand to life and seized it. I initially joined as a Design Engineer but quickly pivoted and now lead product and illustration.
                       </p>
                     </div>
                   </div>

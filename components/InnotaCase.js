@@ -71,7 +71,7 @@ function InnotaCase({ stylePlaceholder, styles }) {
           <div className='flex flex-col  justify-between h-[100%] py-[32px] px-[32px]'>
             <div className="flex flex-col gap-[24px]">
               <h2 className='text-my-gray text-[20px]'> About the Project</h2>
-              <p>Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch.</p>
+              <h5>Innota Technology is an educational startup, gamifying learning through mind maps and flash cards. As the sole product designer, I worked to redesign the web identity in preparation for the products launch.</h5>
             </div>
 
 
@@ -464,12 +464,12 @@ function InnotaCase({ stylePlaceholder, styles }) {
                     header="The Reflection"
                     body="Being the sole product designer meant I had to learn how to make alot of decisions on my own."
                   />
-                  <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
-                    <div className="flex flex-col gap-[15px]">
-                      <h5 className="text-my-gray">
+                  <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[60vw] lg:max-w-[100vw]">
+                    <div className="flex flex-col gap-[15px] w-full">
+                      <p className="text-my-gray">
                         {" "}
-                        Importance of data driven insights
-                      </h5>
+                        Importance of Data Driven Insights
+                      </p>
                       <p>
                         Learning to lean on the numbers helped me understand
                         consensus on pain points -- and also justify my designs in
@@ -477,26 +477,26 @@ function InnotaCase({ stylePlaceholder, styles }) {
                       </p>
                     </div>
 
-                    <div className="flex flex-col gap-[15px]">
-                      <h5 className="text-my-gray"> Moderating my ideas</h5>
+                    <div className="flex flex-col gap-[15px] w-full">
+                      <p className="text-my-gray"> Moderating My Ideas</p>
                       <p>
                         Given the teams tiny size, I had to learn how to
                         understand which solutions could realistically be
                         implemented.
                       </p>
                     </div>
-
+                    {/* 
                     <div className="flex flex-col gap-[15px]">
-                      <h5 className="text-my-gray">
+                      <p className="text-my-gray">
                         {" "}
-                        Importance of data driven insights
-                      </h5>
+                        Importance of Data
+                      </p>
                       <p>
                         Learning to lean on the numbers helped me understand
                         consensus on pain points -- and also justify my designs in
                         weekly standups.
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </section>
               </section>

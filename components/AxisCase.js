@@ -69,7 +69,7 @@ function AxisCase({ stylePlaceholder, styles }) {
           <div className='flex flex-col  justify-between h-[100%] py-[32px] px-[32px]'>
             <div className="flex flex-col gap-[24px]">
               <p className="text-white/30">About the Project</p>
-              <p>Axis Consulting, a pro bono consulting club at Simon Fraser University, needed a bold rebrand to reignite engagement. As the Design Director, I developed a striking visual identity to inspire and captivate its audience.</p>
+              <h5>Axis Consulting, a pro bono consulting club at Simon Fraser University, needed a bold rebrand to reignite engagement. As the Design Director, I developed a striking visual identity to inspire and captivate its audience.</h5>
             </div>
 
 
@@ -453,12 +453,12 @@ function AxisCase({ stylePlaceholder, styles }) {
                 body="What I learned"
                 color="black"
               />
-              <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[50vw] lg:max-w-[100vw]">
+              <div className=" flex xl:flex-row lg:flex-row flex-col gap-[40px] mt-[80px] w-fill max-w-[100%] xl:max-w-[80vw] lg:max-w-[100vw]">
                 <div className="flex flex-col gap-[15px]">
-                  <h5 className="text-my-gray">
+                  <p className="text-my-gray">
                     {" "}
-                    Good ideas come from anywhere
-                  </h5>
+                    Good Ideas Come Anywhere
+                  </p>
                   <p className="text-black">
                     Leading a powerhouse team meant balancing visions and
                     fostering collaboration. Weekly meetings became a creative
@@ -469,10 +469,10 @@ function AxisCase({ stylePlaceholder, styles }) {
                 </div>
 
                 <div className="flex flex-col gap-[15px]">
-                  <h5 className="text-my-gray">
+                  <p className="text-my-gray">
                     {" "}
-                    Chase feedback, in moderation
-                  </h5>
+                    Chase Feedback, In Moderation
+                  </p>
                   <p className="text-black">
                     Early on, I sought feedback from the entire exec team on
                     every design. But catering to 13+ perspectives quickly
@@ -483,14 +483,14 @@ function AxisCase({ stylePlaceholder, styles }) {
                 </div>
 
                 <div className="flex flex-col gap-[15px]">
-                  <h5 className="text-my-gray"> There is no I in team.</h5>
+                  {/* <p className="text-my-gray"> There is no I in team.</p>
                   <p className="text-black">
                     Early on, I sought feedback from the entire exec team on
                     every design. But catering to 13+ perspectives quickly
                     became unsustainable. I learned to scope feedback
                     effectively—ensuring it was constructive without being
                     drowned in excessive critique.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </section>
