@@ -72,7 +72,7 @@ function Demo() {
                     alt="Display"
                     width={128}
                     height={128}
-                    className={`absolute top-0 left-0 w-[10rem] h-[10rem] min-w-full min-h-full object-cover transition-all ease-fastEase duration-[400ms]
+                    className={`absolute top-0 left-0 w-[10rem] min-h-[10rem] h-[10rem] min-w-[10rem] object-cover transition-all ease-fastEase duration-[400ms]
                       ${toggle ? "opacity-[100%]" : "opacity-[0%]"}`}
                     priority
                   />

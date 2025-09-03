@@ -101,7 +101,7 @@ function Page() {
       {/* Home Page Section */}
       <section
         className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[10px] h-[2rem] fixed w-full z-[12] transition-all 
-          ${caseOpen === true ? "top-[-10vh] duration-[400ms] ease-slowEase" : "top-[0vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
+          ${caseOpen === true ? "lg:top-[-10vh] top-[-20vh] duration-[400ms] ease-slowEase" : "top-[0vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
       >
         <div className="h-fit w-full gap-[24px] flex flex-col justify-between xl:mx-[6.2rem] lg:mx-[4.2rem] mx-[0rem] bg-black">
           <div className={`flex flex-row justify-between ${caseOpen === true ? "pt-[0rem]" : "pt-[2rem]"} duration-[400ms] ease-slowEase`}>
@@ -125,7 +125,7 @@ function Page() {
               </h5>
             </div>
 
-            <div className="flex flex-row justify-between w-[40%]">
+            <div className="flex flex-row justify-between lg:w-[40%] w-[30%]">
               <div
                 className="w-fit h-fit"
                 onClick={() => {
@@ -137,7 +137,14 @@ function Page() {
                   About Me
                 </h5>
               </div>
-              <h5 className="text-white"> Gallery </h5>
+              <a
+                href="/resume.pdf"
+                download="Caleb_Wu_Resume.pdf"
+              >
+                <h5 className="text-white cursor-pointe hover:opacity-[60%] hover:cursor-pointer transition-ease-in-out duration-300">
+                  Resume
+                </h5>
+              </a>
             </div>
           </div>
           <div className="border-b border-white opacity-[20%] w-full"></div>

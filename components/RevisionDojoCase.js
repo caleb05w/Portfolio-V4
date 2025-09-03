@@ -276,7 +276,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                     alt="Laptop with Innota's home page open on a wooden desk"
                     width={1608} // Set the width
                     height={900} // Set the height
-                    className="w-[100%] nextImg rounded-[64px]"
+                    className="w-[100%] nextImg rounded-[64px] lg:min-h-full min-h-[50vh]"
                   />
                 </section>
 
@@ -367,7 +367,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                     alt="Laptop with Innota's home page open on a wooden desk"
                     width={1608} // Set the width
                     height={900} // Set the height
-                    className="w-[100%] nextImg overflow-hidden rounded-[64px]"
+                    className="w-[100%] nextImg overflow-hidden rounded-[64px] lg:min-h-full min-h-[50vh]"
                   />
                 </section>
 
@@ -396,20 +396,20 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
               </section>
 
               <section className="flex flex-col gap-img-gap-lg xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-                <div className="container-2-img max-h-[60vh]">
+                <div className="container-2-img h-[full] lg:max-h-[60vh]">
                   <Image
                     src="/images/RD17.png" // Replace with your image path
                     alt="Mobile view of app Q&A Page"
                     width={998} // Set the width
-                    height={600} // Set the height
-                    className="w-[70%] nextImg overflow-hidden rounded-[64px]"
+                    height={800} // Set the height
+                    className="w-[70%] lg:h-full min-h-[50vh] nextImg overflow-hidden rounded-[64px]"
                   />
                   <Image
                     src="/images/RD18.png" // Replace with your image path
                     alt="Showcase of some of Innota's components"
                     width={580} // Set the width
                     height={600} // Set the height
-                    className="w-[30%] nextImg overflow-hidden rounded-[64px]"
+                    className="w-[30%] min-h-[20vh] nextImg overflow-hidden rounded-[64px]"
                   />
 
                 </div>
@@ -419,7 +419,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                     alt="Laptop with Innota's home page open on a wooden desk"
                     width={1608} // Set the width
                     height={900} // Set the height
-                    className="w-[100%] nextImg overflow-hidden rounded-[64px]"
+                    className="lg:min-h-full min-h-[50vh] w-[100%] nextImg overflow-hidden rounded-[64px]"
                   />
                 </section>
               </section>

@@ -42,7 +42,7 @@ function Video({ placeholder, styles }) {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full  overflow-hidden hover:cursor-pointer"
+      className="relative w-full h-full min-h-[40vh] overflow-hidden hover:cursor-pointer"
     >
       {/* YouTube iframe with dynamic scaling */}
       <iframe
@@ -53,7 +53,7 @@ function Video({ placeholder, styles }) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute inset-0 w-full lg:h-full lg:min-h-full min-h-[80vh]"
         style={{
           transform: `scale(${scale})`,
           transformOrigin: "center center", // Ensure scaling happens from the center

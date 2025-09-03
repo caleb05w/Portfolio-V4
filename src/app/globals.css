@@ -137,7 +137,7 @@ h6 {
 
 @media screen and (max-width: 1200px) {
   p {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     letter-spacing: 0.5px;
   }
@@ -164,10 +164,10 @@ h6 {
 
   p {
     font-family: "PP Neue Montreal", Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;
     letter-spacing: 0.3px;
-    font-weight: 400;
+    font-weight: 500;
     color: white;
   }
 
