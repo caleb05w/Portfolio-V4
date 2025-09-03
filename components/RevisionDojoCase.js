@@ -128,20 +128,14 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
               </div>
               <div className="w-[100%] h-[80vh] mt-[5vh] overflow-hidden">
                 <section className="">
-                  <Image
-                    src="/images/RD15.png"
-                    alt="Pro Plan component"
-                    width={1608} // Set the width
-                    height={900} // Set the height
-                    className="w-[100%] nextImg"
-                  />
+
                 </section>
-                {/* <Video
+                <Video
                   placeholder={
                     "https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&playsinline=1&loop=1&controls=0&playlist=Hm-B_KlY6bw&rel=0&modestbranding=1"
                   }
                   brightness={"100%"}
-                /> */}
+                />
               </div>
             </section>
             <section
@@ -176,7 +170,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                 alt="Showcase of some of Innota's components"
                 width={580} // Set the width
                 height={900} // Set the height
-                className="w-[100%] nextImg rounded-[64px]"
+                className="w-[100%] lg:h-full min-h-[50vh] nextImg rounded-[64px]"
               />
               <div className="container-2-img">
                 <Image
@@ -230,7 +224,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                 alt="Results from our 2 week UXR Campaign"
                 width={1204} // Set the width
                 height={900} // Set the height
-                className="xl:w-[75%] lg:w-[75%] w-[100%] nextImg"
+                className="xl:w-[75%] lg:w-[75%] w-[100%] nextImg rounded-[64px] overflow-hidden"
               />
               <div className="xl:w-[25%] lg:w-[25%] w-[100%] flex flex-col gap-[2rem] h-fill justify-end items-baseline">
                 <p className="text-white">

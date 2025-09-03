@@ -191,7 +191,7 @@ function Page() {
                   Body1="Product Design"
                   Body2="Illustration"
                   Case="https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&loop=1&controls=0&playlist=Hm-B_KlY6bw"
-                  Img="/images/RD15.png"
+                  // Img="/images/RD15.png"
                   styles={"opacity-[20%] bg-black"}
                 />
               </div>
