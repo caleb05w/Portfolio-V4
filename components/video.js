@@ -53,7 +53,7 @@ function Video({ placeholder, styles }) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        className="absolute inset-0 w-full lg:h-full lg:min-h-full min-h-[80vh]"
+        className="absolute inset-0 w-full h-full"
         style={{
           transform: `scale(${scale})`,
           transformOrigin: "center center", // Ensure scaling happens from the center

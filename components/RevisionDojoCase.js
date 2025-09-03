@@ -129,7 +129,7 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
               <div className="w-[100%] h-[80vh] mt-[5vh]">
                 <Video
                   placeholder={
-                    "https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&loop=1&controls=0&playlist=Hm-B_KlY6bw"
+                    "https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&playsinline=1&loop=1&controls=0&playlist=Hm-B_KlY6bw&rel=0&modestbranding=1"
                   }
                   brightness={"100%"}
                 />
