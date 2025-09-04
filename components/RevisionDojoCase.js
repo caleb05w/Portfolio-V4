@@ -156,45 +156,41 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
             </section>
 
 
-            {/* 1 Large image with 2 smaller images flex rowed's underneath */}
-            <section className="flex flex-col gap-img-gap-lg xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
-              {/* <div className="w-[100%] h-[80vh] mt-[5vh] rounded-[64px] overflow-hidden ">
+
+            {/* <div className="w-[100%] h-[80vh] mt-[5vh] rounded-[64px] overflow-hidden ">
                 <Video
                   placeholder=
                   "https://www.youtube.com/embed/FduaH_kDzQQ?autoplay=1&mute=1&loop=1&controls=0&playlist=FduaH_kDzQQ"
                   brightness={"100%"}
                 />
               </div> */}
-              <Image
-                src="/images/RD1.svg" // Replace with your image path
-                alt="Showcase of some of Innota's components"
-                width={580} // Set the width
-                height={900} // Set the height
-                className="w-[100%] lg:h-full min-h-[50vh] nextImg rounded-[64px]"
-              />
+            <section className="flex flex-col gap-img-gap-lg xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
+              <section className="containerBody">
+                <Image
+                  src="/images/RD1.svg"
+                  alt="Laptop with Innota's home page open on a wooden desk"
+                  width={1608} // Set the width
+                  height={900} // Set the height
+                  className="w-[100%] nextImg rounded-[64px] lg:min-h-full min-h-[50vh]"
+                />
+              </section>
               <div className="container-2-img">
                 <Image
                   src="/images/RD1.png" // Replace with your image path
                   alt="Showcase of some of Innota's components"
                   width={580} // Set the width
                   height={900} // Set the height
-                  className="w-[50%] h-[50vh] lg:h-full min-h-[50vh] nextImg rounded-[64px] overflow-hidden"
+                  className="w-[50%] nextImg rounded-[64px] max-h-[50vh] h-[50vh]"
                 />
                 <Image
                   src="/images/RD2.svg" // Replace with your image path
-                  alt="Showcase of some of Innota's components"
-                  width={580} // Set the width
+                  alt="Mobile view of app Q&A Page"
+                  width={998} // Set the width
                   height={900} // Set the height
-                  className="w-[50%] h-[50vh] nextImg rounded-[64px] overflow-hidden"
+                  className="w-[50%] nextImg rounded-[64px] overflow-hidden max-h-[50vh] h-[50vh]"
                 />
-                {/* <div className="w-[50%] h-[80vh] mt-[5vh] rounded-[64px] overflow-hidden ">
-                  <Video
-                    placeholder=
-                    "https://www.youtube.com/embed/Gq5k4x0tjvo?autoplay=1&mute=1&loop=1&controls=0&playlist=Gq5k4x0tjvo"
-                    brightness={"100%"}
-                  />
-                </div> */}
               </div>
+
             </section>
             <div id="RDProblem" className="h-0"></div>
             <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
@@ -440,14 +436,14 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                     alt="Showcase of the component system"
                     width={580} // Set the width
                     height={900} // Set the height
-                    className="w-[35%] nextImg rounded-[64px] overflow-hidden"
+                    className="w-[35%] nextImg rounded-[64px] overflow-hidden min-h-[50vh]"
                   />
                   <Image
                     src="/images/RD21.png" // Replace with your image path
                     alt="Breaking down an individual component and its anatomy"
                     width={998} // Set the width
                     height={900} // Set the height
-                    className="w-[65%] nextImg rounded-[64px] overflow-hidden"
+                    className="w-[65%] nextImg rounded-[64px] overflow-hidden min-h-[50vh]"
                   />
                 </section>
 
