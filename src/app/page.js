@@ -137,7 +137,7 @@ function Page() {
                   About Me
                 </h5>
               </div>
-              <a href="/assets/caleb-wu-resume.pdf" download="caleb-wu-resume.pdf">
+              <a href="/caleb-wu-resume.pdf" download="caleb-wu-resume.pdf">
                 <h5 className="text-white cursor-pointe hover:opacity-[60%] hover:cursor-pointer transition-ease-in-out duration-300">
                   Resume
                 </h5>
@@ -213,6 +213,8 @@ function Page() {
               </div>
             </div>
 
+
+            {/* Axis Case Study */}
             <div className="flex flex-col  w-[100%] lg:w-[50%] xl:w-[50%] h-fit">
               <div
                 className="w-[100%] h-[100%] hover:cursor-pointer"

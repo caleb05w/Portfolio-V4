@@ -2,7 +2,6 @@
 // 1702
 import React, { useState, useEffect, useRef } from "react";
 import { useCase } from "../src/app/caseContext";
-import { IoIosArrowDown } from "react-icons/io";
 import NavigatorCell from "./navigatorCell";
 import { CiCompass1 } from "react-icons/ci";
 

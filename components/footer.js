@@ -2,25 +2,6 @@
 import React from "react";
 
 function Footer({ place, color }) {
-  const copyEmail = () => {
-    // Define the email to copy
-    const email = "caleb05w@gmail.com";
-
-    // Create a temporary textarea element to copy the email
-    const textArea = document.createElement("textarea");
-    textArea.value = email;
-    document.body.appendChild(textArea);
-
-    // Select and copy the text
-    textArea.select();
-    document.execCommand("copy");
-
-    // Remove the temporary textarea
-    document.body.removeChild(textArea);
-
-    // Show an alert
-    window.alert("Email copied to clipboard :D");
-  };
 
   return (
     <div
@@ -35,11 +16,11 @@ function Footer({ place, color }) {
         <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col-reverse justify-between text-black gap-[5px]">
           <h3 className='lg:mt-[0] mt-[2rem]'>Designed on Figma, Built on NextJS</h3>
           <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[4%]">
-            <button onClick={() => copyEmail()}>
+            <a href="mailto:caleb05w@gmail.com">
               <h3 className="hover:border-b-[1px] border-b-[1px] border-b-white hover:border-b-black text-black">
                 Email
               </h3>
-            </button>
+            </a>
             <a href="https://www.linkedin.com/in/caleb-wu-/" target="_blank">
               <h3 className="hover:border-b-[1px] border-b-[1px] text-black border-b-white hover:border-b-black">
                 Linkedin
@@ -61,11 +42,11 @@ function Footer({ place, color }) {
         <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col-reverse justify-between text-white gap-[5px]">
           <h3 className='lg:mt-[0] mt-[2rem]'>Designed on Figma, Built on NextJS</h3>
           <div className="flex lg:flex-row xl:flex-row md:flex-row flex-col xl:justify-end lg:justify-end md:justify-end xl:items-end lg:items-end md:items-end items-start text-white xl:w-[50%] lg:w-[50%] w-[100%] gap-[4%]">
-            <button onClick={() => copyEmail()}>
+            <a href="mailto:caleb05w@gmail.com">
               <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">
                 Email
               </h3>
-            </button>
+            </a>
             <a href="https://www.linkedin.com/in/caleb-wu-/" target="_blank">
               <h3 className="hover:border-b-[1px] border-b-[1px] border-b-black hover:border-b-white">
                 Linkedin
