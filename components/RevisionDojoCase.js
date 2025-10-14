@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Video from "./video";
+import SimpleVideo from "./SimpleVideo";
 import TextBox from "./textBox";
 import TextBoxWide from "./textBoxWide";
 import Image from "next/image";
@@ -130,11 +130,13 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                 <section className="">
 
                 </section>
-                <Video
+                <SimpleVideo
                   placeholder={
                     "https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&playsinline=1&loop=1&controls=0&playlist=Hm-B_KlY6bw&rel=0&modestbranding=1"
                   }
                   brightness={"100%"}
+                  title="RevisionDojo Product Demo"
+                  priority={true}
                 />
               </div>
             </section>
@@ -333,18 +335,20 @@ function RevisionDojoCase({ stylePlaceholder, styles }) {
                 {/* 2 large images */}
                 <section className="container-2-img xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
                   <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[60vh] rounded-[64px] overflow-hidden">
-                    <Video
-                      placeholder={"https://www.youtube.com/embed/Pg8OAwx3u2M?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playlist=Pg8OAwx3u2M"
+                    <SimpleVideo
+                      placeholder={"https://www.youtube.com/embed/yxs9om7NMH8?autoplay=1&mute=1&loop=1&playlist=yxs9om7NMH8&controls=0"
                       }
                       brightness={"100%"}
+                      title="RevisionDojo Feature Demo"
                     />
                   </div>
                   <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[40vh] rounded-[64px] overflow-hidden">
-                    <Video
+                    <SimpleVideo
                       placeholder={
                         "https://www.youtube.com/embed/q5EHOE6XLMY?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&playlist=q5EHOE6XLMY"
                       }
                       brightness={"100%"}
+                      title="RevisionDojo User Interface"
                     />
                   </div>
                 </section>

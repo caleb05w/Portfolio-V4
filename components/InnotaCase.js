@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Video from "./video";
+import SimpleVideo from "./SimpleVideo";
 import TextBox from "./textBox";
 import TextBoxWide from "./textBoxWide";
 import Image from "next/image";
@@ -123,11 +123,13 @@ function InnotaCase({ stylePlaceholder, styles }) {
                 </div>
               </div>
               <div className="w-[100%] h-[80vh] mt-[5vh]">
-                <Video
+                <SimpleVideo
                   placeholder={
                     "https://www.youtube.com/embed/w8R3G3Anpjo?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1&loop=1&playlist=w8R3G3Anpjo"
                   }
                   brightness={"100%"}
+                  title="Innota Technologies Demo"
+                  priority={true}
                 />
               </div>
             </section>
@@ -325,11 +327,12 @@ function InnotaCase({ stylePlaceholder, styles }) {
 
               <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row lg:flex-row flex-col xl:gap-[2%] lg:gap-[2%] gap-[20px] min-h-[50vh]">
                 <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[60vh] lg:h-[60vh] md:h-[60vh] h-[40vh]">
-                  <Video
+                  <SimpleVideo
                     placeholder={
                       "https://www.youtube.com/embed/WhKiRTptHEk?autoplay=1&mute=1&modestbranding=1&loop=1&playlist=WhKiRTptHEk"
                     }
                     brightness={"100%"}
+                    title="Innota Technologies Feature"
                   />
                 </div>
                 <div className="lg:w-[21%] xl:w-[21%] w-fill h-fill flex flex-col justify-end justify-items-end ">
@@ -403,11 +406,12 @@ function InnotaCase({ stylePlaceholder, styles }) {
 
                 <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
                   {/* <div className="xl:w-[80%] lg:w-[80%] w-[100%] xl:h-auto lg:h-auto h-[50vh]">
-                  <Video
+                  <SimpleVideo
                     placeholder={
                       "https://www.youtube.com/embed/lhfgqkCaHc0?si=pnDNXC7tzlso1ukB&autoplay=1&mute=1&loop=1&playlist=lhfgqkCaHc0&modestbranding=1&rel=0&fs=1"
                     }
                     brightness={"100%"}
+title="Innota Technologies Feature"
                   />
                 </div> */}
 
@@ -501,11 +505,12 @@ function InnotaCase({ stylePlaceholder, styles }) {
                 </section>
               </section>
               <div className="w-[100%] h-[80vh] mt-[5vh] xl:px-gutter-xl lg:px-gutter-lg md:px-gutter-md px-gutter-sm ">
-                <Video
+                <SimpleVideo
                   placeholder={
                     "https://www.youtube.com/embed/Otu-EEEURys?autoplay=1&loop=1&mute=1&modestbranding=1&controls=0&playlist=Otu-EEEURys"
                   }
                   brightness={"100%"}
+                  title="Innota Technologies Feature"
                 />
               </div>
             </section>

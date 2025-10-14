@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Video from "./video";
+import SimpleVideo from "./SimpleVideo";
 import TextBox from "./textBox";
 import TextBoxWide from "./textBoxWide";
 import Image from "next/image";
@@ -120,11 +120,12 @@ function AxisCase({ stylePlaceholder, styles }) {
               </div>
             </div>
             <div className="w-[100%] h-[80vh] mt-[5vh]">
-              <Video
+              <SimpleVideo
                 placeholder={
                   "https://www.youtube.com/embed/vM9dsLqdgRI?autoplay=1&mute=1&loop=1&playlist=vM9dsLqdgRI&controls=1&modestbranding=1"
                 }
                 brightness={"100%"}
+                title="Axis Consulting Demo"
               />
             </div>
           </section>
@@ -143,11 +144,12 @@ function AxisCase({ stylePlaceholder, styles }) {
           {/* 2 large images */}
           <section className=" flex flex-col gap-[20px] xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm">
             <div className="w-[100%] xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh] ">
-              <Video
+              <SimpleVideo
                 placeholder={
                   "https://www.youtube.com/embed/1Y5oL4GVUpo?autoplay=1&mute=1&loop=1&playlist=1Y5oL4GVUpo&controls=1&modestbranding=1"
                 }
                 brightness={"100%"}
+                title="Axis Consulting Demo"
               />
             </div>
             <div className="container-2-img">
@@ -357,11 +359,12 @@ function AxisCase({ stylePlaceholder, styles }) {
 
           <section className="containerBody xl:mx-gutter-xl lg:mx-gutter-lg md:mx-gutter-md mx-gutter-sm flex xl:flex-row flex-col xl:gap-[2%] lg:gap-[2rem] gap-[20px] min-h-[50vh]">
             <div className="xl:w-[80%] lg:w-[100%] w-[100%]  xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[40vh]">
-              <Video
+              <SimpleVideo
                 placeholder={
                   "https://www.youtube.com/embed/ecyOBWauVDM?autoplay=1&mute=1&loop=1&playlist=ecyOBWauVDM&controls=1&modestbranding=1"
                 }
                 brightness={"100%"}
+                title="Axis Consulting Demo"
               />
             </div>
             <div className="xl:w-[20%]  w-[100%] flex flex-col gap-[2rem] h-fill justify-end  items-baseline">

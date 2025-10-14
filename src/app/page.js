@@ -24,7 +24,7 @@ function Page() {
   // flip-up subtitle lines + timer
   const lines = [
     "Product Design @RevisionDojo (YCF24)",
-    "Previously Product Design @MetaLab",
+    "Previously Product Design @Metalab",
   ];
   const [idx, setIdx] = useState(0);
 
@@ -103,29 +103,13 @@ function Page() {
         className={`flex flex-row justify-between xl:px-[1vw] lg:px-[2vw] px-[10px] h-[2rem] fixed w-full z-[12] transition-all 
           ${caseOpen === true ? "lg:top-[-10vh] top-[-20vh] duration-[400ms] ease-slowEase" : "top-[0vh] delay-[300ms] duration-[500ms] ease-fastEase"}`}
       >
-        <div className="h-fit w-full gap-[24px] flex flex-col justify-between xl:mx-[6.2rem] lg:mx-[4.2rem] mx-[0rem] bg-black">
-          <div className={`flex flex-row justify-between ${caseOpen === true ? "pt-[0rem]" : "pt-[2rem]"} duration-[400ms] ease-slowEase`}>
+        <div className="h-fit w-full gap-[8px] lg:gap-[8px] flex flex-col justify-between xl:mx-[6.2rem] lg:mx-[4.2rem] mx-[0rem] bg-black ">
+          <div className={`flex flex-row justify-between ${caseOpen === true ? "pt-[0rem]" : "pt-[2rem]"} duration-[400ms] ease-slowEase `}>
             <div className="flex flex-col gap-[6px]">
               <h5 className="text-white"> Caleb Wu </h5>
-
-              {/* Swapping, flip-up subtitle */}
-              <h5 className="text-white opacity-[60%]">
-                <span
-                  key={idx}
-                  className="inline-block [transform-origin:bottom] [animation:flipIn_500ms_ease_both]"
-                >
-                  {lines[idx]}
-                </span>
-                <style jsx>{`
-                  @keyframes flipIn {
-                    from { transform: rotateX(90deg); opacity: 0; }
-                    to   { transform: rotateX(0deg);  opacity: 1; }
-                  }
-                `}</style>
-              </h5>
             </div>
 
-            <div className="flex flex-row justify-between lg:w-[40%] w-[30%]">
+            <div className="flex flex-row justify-between lg:w-[40%] w-[40%]">
               <div
                 className="w-fit h-fit"
                 onClick={() => {
@@ -144,7 +128,22 @@ function Page() {
               </a>
             </div>
           </div>
-          <div className="border-b border-white opacity-[20%] w-full"></div>
+          {/* Swapping, flip-up subtitle */}
+          <h5 className="text-white opacity-[60%] lg:max-w-fit  w-[100%]">
+            <span
+              key={idx}
+              className="inline-block [transform-origin:bottom] [animation:flipIn_500ms_ease_both]"
+            >
+              {lines[idx]}
+            </span>
+            <style jsx>{`
+                  @keyframes flipIn {
+                    from { transform: rotateX(90deg); opacity: 0; }
+                    to   { transform: rotateX(0deg);  opacity: 1; }
+                  }
+                `}</style>
+          </h5>
+          <div className="border-b border-white opacity-[20%] w-full pt-[16px]"></div>
         </div>
       </section>
 
@@ -193,6 +192,7 @@ function Page() {
                   Case="https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&loop=1&controls=0&playlist=Hm-B_KlY6bw"
                   // Img="/images/RD15.png"
                   styles={"opacity-[20%] bg-black"}
+                  priority={true}
                 />
               </div>
 

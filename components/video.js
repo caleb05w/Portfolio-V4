@@ -1,64 +1,118 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
-function Video({ placeholder, styles }) {
+function Video({ placeholder, styles, priority = false }) {
   const iframeRef = useRef(null);
   const containerRef = useRef(null);
   const [scale, setScale] = useState(1);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const observerRef = useRef(null);
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (priority) {
+      setIsInView(true);
+      return;
+    }
+
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observerRef.current?.disconnect();
+        }
+      },
+      {
+        rootMargin: '50px', // Start loading 50px before entering viewport
+        threshold: 0.1
+      }
+    );
+
+    if (containerRef.current) {
+      observerRef.current.observe(containerRef.current);
+    }
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, [priority]);
+
+  const updateScale = useCallback(() => {
+    if (iframeRef.current && containerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      const containerHeight = containerRef.current.offsetHeight;
+      const containerRatio = containerWidth / containerHeight;
+
+      // YouTube video aspect ratio (16:9)
+      const videoRatio = 16 / 9;
+
+      // Calculate scale to cover the container (like object-fit: cover)
+      // If container is wider than video, scale by width; if taller, scale by height
+      const newScale = containerRatio > videoRatio
+        ? containerWidth / (containerHeight * videoRatio)
+        : containerHeight / (containerWidth / videoRatio);
+
+      setScale(newScale);
+    }
+  }, []);
 
   useEffect(() => {
-    const updateScale = () => {
-      if (iframeRef.current && containerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        const containerHeight = containerRef.current.offsetHeight;
+    if (!isInView) return;
 
-        // Calculate aspect ratio of the YouTube video (16:9)
-        const iframeAspectRatio = 16 / 9;
-
-        // Calculate the scale factor to cover the container
-        const widthScale =
-          containerWidth / (containerHeight * iframeAspectRatio);
-        const heightScale =
-          containerHeight / (containerWidth / iframeAspectRatio);
-
-        // The scale factor is the maximum of the two, ensuring the iframe fills the container
-        const newScale = Math.max(widthScale, heightScale);
-
-        setScale(newScale);
-      }
+    // Throttled resize handler
+    let timeoutId;
+    const handleResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(updateScale, 100);
     };
 
-    // Update the scale when the window is resized
-    window.addEventListener("resize", updateScale);
-
-    // Initial scale calculation
+    window.addEventListener("resize", handleResize);
     updateScale();
 
-    // Cleanup the event listener when the component is unmounted
-    return () => window.removeEventListener("resize", updateScale);
-  }, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timeoutId);
+    };
+  }, [isInView, updateScale]);
+
+  const handleIframeLoad = () => {
+    setIsLoaded(true);
+  };
 
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full min-h-[40vh] overflow-hidden hover:cursor-pointer"
+      className="relative w-full h-full min-h-[40vh] overflow-hidden hover:cursor-pointer border-2 border-orange-500"
     >
-      {/* YouTube iframe with dynamic scaling */}
-      <iframe
-        ref={iframeRef}
-        src={placeholder}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-        className="absolute inset-0 w-full h-full"
-        style={{
-          transform: `scale(${scale})`,
-          transformOrigin: "center center", // Ensure scaling happens from the center
-        }}
-      ></iframe>
+      {/* Placeholder while loading */}
+      {!isLoaded && isInView && (
+        <div className="absolute inset-0 bg-gray-900 animate-pulse flex items-center justify-center">
+          <div className="w-16 h-16  border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
+
+      {/* YouTube iframe with lazy loading */}
+      {isInView && (
+        <iframe
+          ref={iframeRef}
+          src={placeholder}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          loading={priority ? "eager" : "lazy"}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          style={{
+            transform: `scale(${scale})`,
+            transformOrigin: "center center",
+          }}
+          onLoad={handleIframeLoad}
+        />
+      )}
 
       {/* Overlay div to prevent any unwanted UI or popup effects on hover */}
       <div
