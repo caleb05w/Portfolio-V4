@@ -25,6 +25,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "autoprefixer": "^10.4.21",
+    "critters": "^0.0.23",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
     "file-loader": "^6.2.0",
