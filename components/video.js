@@ -10,6 +10,17 @@ function Video({ placeholder, styles, priority = false }) {
   const [isInView, setIsInView] = useState(false);
   const observerRef = useRef(null);
 
+  // Add autoplay parameters for mobile compatibility
+  const getAutoplayUrl = (url) => {
+    if (!url) return url;
+    const urlObj = new URL(url);
+    urlObj.searchParams.set('autoplay', '1');
+    urlObj.searchParams.set('mute', '1');
+    urlObj.searchParams.set('playsinline', '1');
+    urlObj.searchParams.set('loop', '1');
+    return urlObj.toString();
+  };
+
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority) {
@@ -97,12 +108,13 @@ function Video({ placeholder, styles, priority = false }) {
       {isInView && (
         <iframe
           ref={iframeRef}
-          src={placeholder}
+          src={getAutoplayUrl(placeholder)}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          playsInline
           loading={priority ? "eager" : "lazy"}
           className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
             }`}

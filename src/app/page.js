@@ -189,7 +189,7 @@ function Page() {
                   Title="RevisionDojo"
                   Body1="Product Design"
                   Body2="Illustration"
-                  Case="https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&loop=1&controls=0&playlist=Hm-B_KlY6bw"
+                  Case="https://www.youtube.com/embed/Hm-B_KlY6bw?autoplay=1&mute=1&loop=1&playlist=Hm-B_KlY6bw&controls=0&playsinline=1&rel=0&modestbranding=1"
                   // Img="/images/RD15.png"
                   styles={"opacity-[20%] bg-black"}
                   priority={true}

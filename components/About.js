@@ -83,7 +83,7 @@ function About({ stylePlaceholder, styles }) {
                     className="max-w-[180px] h-fit nextImg"
                   />
                   <section className='flex lg:flex-row flex-col lg:gap-[120px] gap-[40px]'>
-                    <h6 className='min-w-[115px]'>TLDR</h6>
+                    <h6 className='min-w-[115px]'>About Me</h6>
                     <div className='max-w-[450px] flex flex-col gap-[20px]'>
                       <p className='text-[16px] text-my-gray'>
                         Roblox? 2000 Hours. Front End? Self taught. Trackpad warrior? Since 2014.

@@ -10,6 +10,17 @@ function SimpleVideo({ placeholder, styles, brightness, priority = false, title 
     const [isInView, setIsInView] = useState(priority); // Start with true if priority
     const observerRef = useRef(null);
 
+    // Add autoplay parameters for mobile compatibility
+    const getAutoplayUrl = (url) => {
+        if (!url) return url;
+        const urlObj = new URL(url);
+        urlObj.searchParams.set('autoplay', '1');
+        urlObj.searchParams.set('mute', '1');
+        urlObj.searchParams.set('playsinline', '1');
+        urlObj.searchParams.set('loop', '1');
+        return urlObj.toString();
+    };
+
     // Intersection Observer for lazy loading
     useEffect(() => {
         if (priority) {
@@ -112,14 +123,14 @@ function SimpleVideo({ placeholder, styles, brightness, priority = false, title 
             {isInView && (
                 <iframe
                     ref={iframeRef}
-                    src={placeholder}
+                    src={getAutoplayUrl(placeholder)} // this function must output the final URL below
                     title={`${title} - YouTube video player`}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allow="autoplay; encrypted-media; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                     loading={priority ? "eager" : "lazy"}
-                    className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
+                    className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"
                         }`}
                     style={{
                         transform: `scale(${scale})`,
